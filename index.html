@@ -1,0 +1,3980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Quality Laundry – Professional Laundry & Dry Cleaning Services. Fast pickup and delivery, premium cleaning, affordable prices.">
+<meta name="keywords" content="laundry, dry cleaning, ironing, carpet cleaning, laundry service, pickup delivery">
+<meta name="author" content="Quality Laundry">
+<meta property="og:title" content="Quality Laundry – Premium Cleaning Services">
+<meta property="og:description" content="Professional laundry, dry cleaning, and ironing services with fast pickup & delivery.">
+<link rel="canonical" href="https://qualitylaundry.com/">
+<title>Quality Laundry – Premium Cleaning Services</title>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quality Laundry – Premium Cleaning Services">
+<meta name="twitter:description" content="Professional laundry, dry cleaning, and ironing services with fast pickup & delivery.">
+<meta name="twitter:image" content="https://i.postimg.cc/hvHdzf4P/Picsart-26-06-08-00-31-07-804.png">
+
+
+<link rel="icon" href="https://i.postimg.cc/hvHdzf4P/Picsart-26-06-08-00-31-07-804.png">
+<link rel="shortcut icon" href="https://i.postimg.cc/hvHdzf4P/Picsart-26-06-08-00-31-07-804.png">
+<link rel="apple-touch-icon" href="https://i.postimg.cc/hvHdzf4P/Picsart-26-06-08-00-31-07-804.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap&font-display=swap" rel="stylesheet">
+
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --white: #FFFFFF;
+  --brand-primary: #0C4D67;
+  --brand-secondary: #2080A7;
+  --brand-accent: #39BCF2;
+  --brand-light: #D1E8EE;
+  --brand-gray: #7EA6B4;
+  --sky: #39BCF2;
+  --sky-light: #D1E8EE;
+  --sky-dark: #2080A7;
+  --navy: #0C4D67;
+  --navy-mid: #2080A7;
+  --navy-light: #39BCF2;
+  --gray: #D1E8EE;
+  --gray-mid: #bcd8e0;
+  --gray-dark: #7EA6B4;
+  --text: #0C4D67;
+  --text-light: #4a7a8a;
+
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+
+  --shadow-sm: 0 2px 12px rgba(12,77,103,0.07);
+  --shadow-md: 0 8px 32px rgba(12,77,103,0.12);
+  --shadow-lg: 0 20px 60px rgba(12,77,103,0.16);
+  --radius: 16px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== ACTIVE NAV LINK ===== */
+.nav-links a.nav-active {
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+.nav-links a.nav-active::after {
+  transform: scaleX(1);
+}
+#mobile-nav a.nav-active {
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+/* ===== MOBILE OVERFLOW FIX ===== */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+img, video, iframe, embed, object {
+  max-width: 100%;
+}
+section {
+  overflow-x: visible;
+}
+#hero, #about, #services, #packages, #products, #gallery, #contact {
+  overflow-x: clip;
+}
+/* Slider elements must NOT have max-width:100% — they need to be wider than viewport */
+.testimonials-track { max-width: none !important; }
+.testimonials-grid  { max-width: none !important; }
+.testimonial-slide-inner { max-width: none !important; }
+.hero-card-stack {
+  max-width: 100%;
+}
+.services-features-strip {
+  overflow-x: hidden;
+}
+.testimonials-slider-wrap {
+  overflow-x: hidden;
+}
+.footer-grid {
+  overflow-x: hidden;
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+img { max-width:100%; display:block; }
+a { text-decoration:none; color:inherit; }
+ul { list-style:none; }
+button { cursor:pointer; border:none; font-family:inherit; }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+
+/* ===== NAVBAR ===== */
+#navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(57,188,242,0.15);
+  padding: 0 5%;
+  height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: box-shadow var(--transition), background var(--transition);
+}
+#navbar.scrolled { box-shadow: var(--shadow-md); }
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+}
+.nav-logo-img {
+  height: 44px; width: auto;
+  object-fit: contain;
+}
+.nav-logo-text {
+  font-family: var(--font-body);
+  font-size: 1.25rem; font-weight: 700;
+  color: var(--brand-primary);
+  letter-spacing: 0.01em;
+}
+.nav-logo-text span { color: var(--brand-secondary); }
+.nav-links {
+  display: flex; align-items: center; gap: 32px;
+}
+.nav-links a {
+  font-size: 0.875rem; font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.02em;
+  transition: color var(--transition);
+  position: relative;
+}
+.nav-links a::after {
+  content:''; position:absolute; bottom:-4px; left:0; right:0;
+  height:2px; background:var(--brand-accent);
+  transform:scaleX(0); transform-origin:center;
+  transition: transform var(--transition);
+}
+.nav-links a:hover { color: var(--brand-primary); }
+.nav-links a:hover::after { transform:scaleX(1); }
+.nav-cta {
+  background: var(--brand-primary);
+  color: var(--white) !important;
+  padding: 9px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background var(--transition), transform var(--transition) !important;
+}
+.nav-cta::after { display:none; }
+.nav-cta:hover { background: var(--brand-secondary) !important; transform: translateY(-1px); }
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  background: none; padding: 4px;
+}
+.hamburger span {
+  width: 24px; height: 2px;
+  background: var(--brand-primary);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+.hamburger.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity:0; }
+.hamburger.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+/* Mobile Nav */
+#mobile-nav {
+  display: none;
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 999;
+  background: var(--white);
+  border-bottom: 2px solid var(--brand-light);
+  padding: 20px 5%;
+  flex-direction: column; gap: 4px;
+  transform: translateY(-10px); opacity:0;
+  transition: var(--transition);
+}
+#mobile-nav.open { display:flex; transform:translateY(0); opacity:1; }
+#mobile-nav a {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--brand-light);
+  font-weight: 500; color: var(--text);
+  font-size: 0.95rem;
+}
+#mobile-nav a:last-child { border-bottom:none; }
+
+/* ===== BACK TO TOP ===== */
+#back-to-top {
+  position: fixed; bottom: 28px; right: 28px; z-index: 500;
+  width: 48px; height: 48px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-md);
+  opacity: 0; visibility: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+#back-to-top.visible { opacity:1; visibility:visible; }
+#back-to-top:hover { background:var(--brand-secondary); transform:translateY(-3px); }
+
+/* ===== SCROLL ANIMATE ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+.reveal-left { opacity:0; transform:translateX(-32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-left.visible { opacity:1; transform:translateX(0); }
+.reveal-right { opacity:0; transform:translateX(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-right.visible { opacity:1; transform:translateX(0); }
+
+/* ===== SECTION BASE ===== */
+section { padding: 80px 5%; }
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--brand-secondary);
+  background: rgba(57,188,242,0.1);
+  padding: 6px 14px; border-radius: 50px;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--brand-primary);
+  margin-bottom: 16px;
+}
+.section-sub {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  max-width: 540px;
+  line-height: 1.7;
+}
+.center { text-align: center; }
+.center .section-sub { margin: 0 auto; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 0.9rem; font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--brand-primary);
+  color: var(--white);
+  box-shadow: 0 4px 20px rgba(12,77,103,0.25);
+}
+.btn-primary:hover { background: var(--brand-secondary); transform:translateY(-2px); box-shadow: 0 8px 28px rgba(12,77,103,0.3); }
+.btn-wa {
+  background: #25D366;
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+}
+.btn-wa:hover { background: #1da851; transform:translateY(-2px); }
+.btn-outline {
+  background: transparent;
+  color: var(--brand-primary);
+  border: 2px solid rgba(12,77,103,0.25);
+}
+.btn-outline:hover { border-color:var(--brand-primary); background:var(--brand-primary); color:var(--white); transform:translateY(-2px); }
+.btn-sky {
+  background: var(--brand-primary);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(12,77,103,0.3);
+}
+.btn-sky:hover { background: var(--brand-secondary); transform:translateY(-2px); }
+
+/* ===== HERO ===== */
+#hero {
+  min-height: 100vh;
+  background: url('https://i.postimg.cc/Qd7LyN60/alsfhh-alryysyh.png') center center / cover no-repeat;
+  display: flex; align-items: center;
+  padding: 110px 5% 70px;
+  position: relative; overflow: hidden;
+}
+#hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(155deg, rgba(12,77,103,0.82) 0%, rgba(14,94,125,0.75) 50%, rgba(32,128,167,0.70) 100%);
+  z-index: 0;
+}
+.hero-bg-circle { z-index: 1; }
+.hero-grid { position: relative; z-index: 2; }
+.hero-bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero-bg-circle-1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(57,188,242,0.1) 0%, transparent 70%);
+  top: -200px; right: -100px;
+}
+.hero-bg-circle-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(57,188,242,0.06) 0%, transparent 70%);
+  bottom: -150px; left: 10%;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px; margin: 0 auto; width:100%;
+}
+.hero-label {
+  display: inline-flex; align-items:center; gap:8px;
+  background: rgba(57,188,242,0.15);
+  border: 1px solid rgba(57,188,242,0.35);
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform:uppercase;
+  color: var(--brand-accent);
+  margin-bottom: 24px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 20px;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+.hero-title em {
+  font-style: normal;
+  color: var(--brand-accent);
+}
+.hero-desc {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 440px;
+  line-height: 1.75;
+  margin-bottom: 36px;
+  animation: fadeUp 0.8s ease 0.6s both;
+}
+.hero-btns {
+  display: flex; gap: 14px; flex-wrap:wrap;
+  animation: fadeUp 0.8s ease 0.8s both;
+}
+.hero-stats {
+  display: flex; gap: 36px; margin-top: 48px;
+  animation: fadeUp 0.8s ease 1s both;
+}
+.hero-stat-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 800;
+  color: var(--brand-accent);
+  line-height:1;
+}
+.hero-stat-label {
+  font-size: 0.8rem; color: rgba(255,255,255,0.55);
+  margin-top:4px; letter-spacing:0.04em;
+}
+
+/* Hero Illustration */
+.hero-illustration {
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeUp 0.8s ease 0.5s both;
+}
+.hero-card-stack {
+  position: relative;
+  width: 340px; height: 380px;
+}
+.hero-card {
+  position: absolute;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(57,188,242,0.25);
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+  padding: 28px;
+}
+.hero-card-main {
+  width: 300px; height: 320px;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.09);
+  display: flex; flex-direction:column; align-items:center; justify-content:center;
+  gap: 20px;
+}
+.hero-machine-icon {
+  width: 100px; height: 100px;
+  background: rgba(57,188,242,0.18);
+  border-radius: 50%;
+  display: flex; align-items:center; justify-content:center;
+  font-size: 2.5rem;
+  animation: pulse-ring 2.5s ease infinite;
+}
+@keyframes pulse-ring {
+  0%,100% { box-shadow:0 0 0 0 rgba(57,188,242,0.3); }
+  50% { box-shadow:0 0 0 18px rgba(57,188,242,0); }
+}
+.hero-card-features {
+  display: flex; flex-direction:column; gap:10px; width:100%;
+}
+.hero-feat-row {
+  display: flex; align-items:center; gap:10px;
+  color: rgba(255,255,255,0.8); font-size:0.85rem;
+}
+.hero-feat-dot {
+  width:8px; height:8px; border-radius:50%;
+  background: var(--brand-accent); flex-shrink:0;
+}
+.hero-badge {
+  position: absolute;
+  background: var(--brand-secondary);
+  color: var(--white);
+  border-radius: 14px;
+  padding: 10px 16px;
+  font-size: 0.78rem; font-weight: 600;
+  display: flex; align-items:center; gap:6px;
+  box-shadow: 0 4px 16px rgba(12,77,103,0.3);
+}
+.hero-badge-1 { bottom: 20px; left: -20px; animation: float 3s ease infinite; }
+.hero-badge-2 { top: 40px; right: -10px; animation: float 3s ease 1.5s infinite; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+/* ===== ABOUT ===== */
+#about { background: var(--brand-light); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+  max-width:1200px; margin:0 auto;
+}
+.about-image-wrap {
+  position: relative;
+}
+.about-img {
+  width: 100%; height: 480px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+}
+.about-img-badge {
+  position: absolute;
+  bottom: -20px; right: -20px;
+  background: var(--brand-primary);
+  color: var(--white);
+  padding: 20px 24px;
+  border-radius: 20px;
+  text-align:center;
+  box-shadow: var(--shadow-md);
+}
+.about-img-badge-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem; font-weight: 800; line-height:1;
+  color: var(--brand-accent);
+}
+.about-img-badge-text { font-size:0.8rem; color:rgba(255,255,255,0.7); margin-top:4px; }
+
+/* Animated premium border for Who We Are image */
+.about-img-card-glow {
+  position: relative;
+  border-radius: 24px;
+  padding: 3px;
+  background: linear-gradient(var(--about-angle, 0deg), var(--brand-accent), var(--brand-secondary), var(--brand-primary), var(--brand-accent));
+  animation: rotateGradient 4s linear infinite, floatImg 5s ease-in-out infinite;
+  box-shadow: 0 0 32px rgba(57,188,242,0.25), 0 0 64px rgba(57,188,242,0.1);
+}
+.about-img-card-glow::before {
+  content:'';
+  position:absolute; inset:-4px;
+  border-radius:28px;
+  background: linear-gradient(var(--about-angle, 0deg), rgba(57,188,242,0.5), rgba(32,128,167,0.2), rgba(12,77,103,0.1), rgba(57,188,242,0.5));
+  animation: rotateGradient 4s linear infinite;
+  z-index:-1; filter:blur(10px);
+}
+.about-img-card-glow .about-img {
+  border-radius: 22px;
+  box-shadow: none;
+  display:block;
+}
+@property --about-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes rotateGradient {
+  to { --about-angle: 360deg; }
+}
+@keyframes floatImg {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.feature-cards {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin-top: 32px;
+}
+.feature-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  border: 1px solid var(--gray-mid);
+  transition: var(--transition);
+}
+.feature-card:hover {
+  border-color: var(--brand-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+.feature-icon {
+  width: 48px; height: 48px;
+  background: rgba(57,188,242,0.12);
+  border-radius: 12px;
+  display:flex; align-items:center; justify-content:center;
+  font-size: 1.3rem; margin-bottom: 12px;
+  color: var(--brand-accent);
+}
+.feature-title {
+  font-weight: 700; font-size: 0.95rem;
+  color: var(--brand-primary); margin-bottom: 6px;
+}
+.feature-desc { font-size: 0.83rem; color: var(--text-light); line-height:1.6; }
+
+/* ===== SERVICES ===== */
+#services { background: var(--white); }
+
+/* Services Tab Navigation */
+.services-tabs {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  justify-content: center;
+  max-width: 1200px; margin: 36px auto 0;
+}
+.svc-tab {
+  background: var(--white);
+  border: 1.5px solid var(--gray-mid);
+  color: var(--text-light);
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: 0.82rem; font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+.svc-tab:hover { border-color: var(--brand-accent); color: var(--brand-secondary); }
+.svc-tab.active {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: var(--white);
+}
+
+/* Mobile: show only active tab + arrows */
+.svc-tab-mobile-nav {
+  display: none;
+}
+@media(max-width:768px) {
+  .services-tabs {
+    display: none !important;
+  }
+  .svc-tab-mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    max-width: 1200px;
+    margin: 28px auto 0;
+    padding: 0 5%;
+  }
+  .svc-tab-mobile-nav .svc-nav-arrow {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--brand-primary);
+    color: var(--white);
+    border: none;
+    font-size: 1.2rem;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: var(--transition);
+  }
+  .svc-tab-mobile-nav .svc-nav-arrow:hover { background: var(--brand-secondary); }
+  .svc-tab-mobile-nav .svc-nav-label {
+    flex: 1;
+    text-align: center;
+    background: var(--brand-primary);
+    color: var(--white);
+    border-radius: 50px;
+    padding: 11px 20px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    font-family: var(--font-body);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .svc-tab-mobile-nav .svc-nav-counter {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+/* Services Categories Wrapper */
+.services-categories {
+  max-width: 1200px; margin: 40px auto 0;
+}
+.services-category {
+  display: none;
+  animation: fadeUp 0.45s ease both;
+}
+.services-category.active { display: block; }
+
+/* Category Header */
+.svc-cat-header {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  margin-bottom: 28px;
+}
+.svc-cat-title-wrap { display: flex; align-items: center; gap: 14px; }
+.svc-cat-icon {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, rgba(57,188,242,0.15), rgba(32,128,167,0.1));
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  border: 1px solid rgba(57,188,242,0.25);
+  flex-shrink: 0;
+}
+.svc-cat-name {
+  font-family: var(--font-display);
+  font-size: 1.45rem; font-weight: 700;
+  color: var(--brand-primary);
+}
+.svc-cat-sub { font-size: 0.82rem; color: var(--text-light); margin-top: 2px; }
+.svc-cat-price-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(12,77,103,0.2);
+}
+.svc-cat-price-badge.express-badge {
+  background: linear-gradient(135deg, #c8780a, #f59e0b);
+  box-shadow: 0 4px 16px rgba(245,158,11,0.35);
+}
+
+/* Service Cards Grid */
+.svc-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  align-items: start; /* prevent cards from stretching to match an expanded sibling in the same row */
+}
+.svc-item-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-mid);
+  border-radius: 16px;
+  padding: 22px 18px;
+  display: flex; flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  min-height: 130px;
+}
+.svc-item-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-accent), var(--brand-secondary));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.svc-item-card:hover {
+  border-color: var(--brand-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+.svc-item-card:hover::before { transform: scaleX(1); }
+.svc-item-card.express-card {
+  border-color: rgba(245,158,11,0.35);
+  background: linear-gradient(135deg, #fffdf5, #fff9ec);
+}
+.svc-item-card.express-card:hover { border-color: #f59e0b; }
+.svc-item-card.express-card::before {
+  background: linear-gradient(90deg, #f59e0b, #c8780a);
+}
+
+.svc-item-icon {
+  width: 42px; height: 42px;
+  background: rgba(57,188,242,0.1);
+  border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+.svc-item-card.express-card .svc-item-icon {
+  background: rgba(245,158,11,0.12);
+}
+.svc-item-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem; font-weight: 700;
+  color: var(--brand-primary);
+  line-height: 1.3;
+  word-break: break-word;
+}
+.svc-item-wa {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #25D366;
+  color: var(--white);
+  padding: 7px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem; font-weight: 600;
+  margin-top: auto;
+  transition: background var(--transition), transform var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.svc-item-wa:hover { background: #1da851; transform: translateY(-1px); }
+.svc-item-wa svg { flex-shrink: 0; }
+
+/* ===== MULTI-TIER PRICING SELECTOR ===== */
+.svc-item-card.has-tiers { padding-bottom: 18px; }
+.svc-item-price-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-top: 2px;
+}
+.svc-item-price-display {
+  display: flex; flex-direction: column; gap: 2px;
+  min-width: 0;
+}
+.svc-tier-current-label {
+  font-size: 0.66rem; font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase; letter-spacing: 0.03em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.svc-tier-current-price {
+  font-size: 0.92rem; font-weight: 700;
+  color: var(--brand-secondary);
+}
+.svc-tier-toggle {
+  width: 30px; height: 30px; flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(57,188,242,0.1);
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.svc-tier-toggle:hover { background: rgba(57,188,242,0.2); }
+.svc-tier-toggle svg {
+  width: 14px; height: 14px;
+  color: var(--brand-primary);
+  transition: transform 0.3s ease;
+}
+.svc-tier-toggle.open svg { transform: rotate(180deg); }
+
+.svc-tier-panel {
+  display: flex; flex-direction: column; gap: 7px;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease, margin-top 0.4s ease;
+}
+.svc-tier-panel.open {
+  max-height: 420px;
+  opacity: 1;
+  margin-top: 4px;
+}
+.svc-tier-option {
+  position: relative;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  padding: 9px 12px 9px 30px;
+  border-radius: 10px;
+  border: 1.5px solid var(--gray-mid);
+  background: var(--white);
+  font-family: inherit;
+  text-align: left;
+  transition: var(--transition);
+}
+.svc-tier-option::before {
+  content: '';
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gray-mid);
+  background: var(--white);
+  transition: var(--transition);
+}
+.svc-tier-option:hover { border-color: var(--brand-accent); background: rgba(57,188,242,0.05); }
+.svc-tier-option.selected {
+  border-color: var(--brand-secondary);
+  background: linear-gradient(135deg, rgba(32,128,167,0.1), rgba(57,188,242,0.07));
+}
+.svc-tier-option.selected::before {
+  border-color: var(--brand-secondary);
+  background: var(--brand-secondary);
+  box-shadow: inset 0 0 0 3px var(--white);
+}
+.svc-tier-option-label {
+  font-size: 0.74rem; font-weight: 600;
+  color: var(--text-light);
+}
+.svc-tier-option-price {
+  font-size: 0.8rem; font-weight: 700;
+  color: var(--brand-primary);
+  white-space: nowrap; margin-left: 8px;
+}
+.svc-tier-option.selected .svc-tier-option-price { color: var(--brand-secondary); }
+@media(max-width:480px){
+  .svc-tier-option { padding: 8px 10px 8px 26px; }
+  .svc-tier-option-label { font-size: 0.68rem; }
+  .svc-tier-option-price { font-size: 0.74rem; }
+  .svc-tier-current-price { font-size: 0.84rem; }
+}
+
+/* Express Badge on Card */
+.express-tag {
+  position: absolute; top: 12px; right: 12px;
+  background: linear-gradient(135deg, #f59e0b, #c8780a);
+  color: var(--white);
+  font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 50px;
+}
+
+/* Special Features Strip */
+.services-features-strip {
+  max-width: 1200px; margin: 40px auto 0;
+  background: linear-gradient(135deg, var(--brand-primary) 0%, #0e5e7d 60%, var(--brand-secondary) 100%);
+  border-radius: 20px;
+  padding: 32px 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+.svc-feature-pill {
+  display: flex; align-items: center; gap: 10px;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.875rem; font-weight: 500;
+}
+.svc-feature-check {
+  width: 26px; height: 26px;
+  background: rgba(57,188,242,0.2);
+  border: 1px solid rgba(57,188,242,0.4);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; color: var(--brand-accent);
+  flex-shrink: 0;
+}
+
+/* ===== LEGACY SERVICE CARD (keep for backward compat if needed) ===== */
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--gray-mid);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.service-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+  border-color: var(--brand-accent);
+}
+.service-img {
+  width:100%; height: 200px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.service-card:hover .service-img { transform:scale(1.05); }
+.service-img-wrap { overflow:hidden; position:relative; }
+.service-icon-badge {
+  position:absolute; bottom:14px; left:14px;
+  background:var(--white);
+  width:44px; height:44px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.2rem; box-shadow:var(--shadow-sm);
+}
+.service-body { padding: 24px; }
+.service-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--brand-primary); margin-bottom: 8px;
+}
+.service-desc { font-size:0.875rem; color:var(--text-light); line-height:1.65; margin-bottom:20px; }
+
+/* ===== PRODUCTS ===== */
+#products { background: var(--white); }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap: 24px;
+  max-width: 1200px; margin: 40px auto 0;
+}
+.product-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow:hidden;
+  border:1px solid var(--gray-mid);
+  transition:var(--transition);
+  box-shadow:var(--shadow-sm);
+}
+.product-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); border-color:var(--brand-accent); }
+.product-img {
+  width:100%; height:200px; object-fit:cover;
+  transition: transform 0.5s ease;
+}
+.product-card:hover .product-img { transform:scale(1.05); }
+.product-img-wrap { overflow:hidden; }
+.product-body { padding:22px; }
+.product-title { font-family:var(--font-display); font-size:1.1rem; font-weight:700; color:var(--brand-primary); margin-bottom:4px; }
+.product-price { font-size:1.1rem; font-weight:700; color:var(--brand-secondary); margin-bottom:8px; }
+.product-desc { font-size:0.83rem; color:var(--text-light); line-height:1.6; margin-bottom:18px; }
+
+/* ===== GALLERY ===== */
+#gallery { background: var(--brand-light); }
+.gallery-grid {
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2, 220px);
+  gap:16px;
+  max-width:1200px; margin: 40px auto 0;
+}
+.gallery-item {
+  position:relative; overflow:hidden; border-radius:16px; cursor:pointer;
+}
+.gallery-item:nth-child(1) { grid-column:span 2; grid-row:span 2; }
+.gallery-item:nth-child(4) { grid-column:span 2; }
+.gallery-img {
+  width:100%; height:100%; object-fit:cover;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover .gallery-img { transform:scale(1.08); }
+.gallery-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(12,77,103,0.75) 0%, transparent 60%);
+  opacity:0; transition:opacity var(--transition);
+  display:flex; align-items:flex-end; padding:16px;
+}
+.gallery-item:hover .gallery-overlay { opacity:1; }
+.gallery-overlay-text { color:var(--white); font-size:0.85rem; font-weight:500; }
+.gallery-zoom-icon {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(0.8);
+  width:44px; height:44px; background:rgba(255,255,255,0.9); border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.1rem; color:var(--navy);
+  opacity:0; transition:var(--transition);
+}
+.gallery-item:hover .gallery-zoom-icon { opacity:1; transform:translate(-50%,-50%) scale(1); }
+
+/* Lightbox */
+#lightbox {
+  display:none; position:fixed; inset:0; z-index:9000;
+  background:rgba(5,15,30,0.95);
+  align-items:center; justify-content:center;
+}
+#lightbox.open { display:flex; }
+#lightbox-img {
+  max-width:90vw; max-height:85vh;
+  border-radius:12px; box-shadow:var(--shadow-lg);
+  object-fit:contain;
+}
+#lightbox-close {
+  position:absolute; top:20px; right:28px;
+  color:var(--white); font-size:2rem;
+  background:none; cursor:pointer; line-height:1; opacity:0.7;
+  transition:opacity var(--transition);
+}
+#lightbox-close:hover { opacity:1; }
+#lightbox-prev, #lightbox-next {
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:rgba(255,255,255,0.12); color:var(--white);
+  width:48px; height:48px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.4rem; cursor:pointer;
+  transition:background var(--transition);
+}
+#lightbox-prev { left:20px; }
+#lightbox-next { right:20px; }
+#lightbox-prev:hover, #lightbox-next:hover { background:rgba(255,255,255,0.25); }
+
+/* ===== TESTIMONIALS ===== */
+#testimonials { background:var(--white); }
+.testimonials-slider-wrap {
+  max-width:1200px; margin:48px auto 0;
+  position:relative; overflow:visible;
+  padding: 8px 4px 16px;
+}
+.testimonials-slider-clip {
+  overflow: hidden;
+  padding: 8px 0 16px;
+}
+.testimonials-track {
+  display:flex;
+  transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
+  overflow:visible;
+  max-width: none !important;
+}
+.testimonials-grid {
+  display:flex;
+  flex-shrink:0;
+  width:100%;
+  gap:0;
+  max-width: none !important;
+}
+.testimonial-slide-inner {
+  display:flex;
+  gap:24px;
+  width:100%;
+  padding:0 4px;
+  max-width: none !important;
+}
+.testimonial-card {
+  flex:0 0 calc(33.333% - 16px);
+  min-width: 0;
+  background:var(--white);
+  border-radius:20px; padding:28px;
+  border:1px solid var(--brand-light);
+  box-shadow:var(--shadow-sm);
+  transition:var(--transition);
+  box-sizing: border-box;
+}
+@media(max-width:768px){
+  .testimonial-card { flex:0 0 calc(50% - 12px); }
+}
+@media(max-width:520px){
+  .testimonial-card { flex:0 0 100%; }
+}
+.testimonial-card:hover { box-shadow:var(--shadow-md); transform:translateY(-4px); border-color:var(--brand-accent); }
+.testimonial-stars { color:#f59e0b; font-size:0.95rem; margin-bottom:14px; letter-spacing:2px; }
+.testimonial-text { font-size:0.9rem; color:var(--text-light); line-height:1.7; margin-bottom:20px; font-style:italic; }
+.testimonial-author { display:flex; align-items:center; gap:12px; }
+.testimonial-avatar {
+  width:44px; height:44px; border-radius:50%;
+  background:linear-gradient(135deg, var(--brand-light), var(--brand-secondary));
+  display:flex; align-items:center; justify-content:center;
+  font-size:1rem; color:var(--white); font-weight:700;
+  flex-shrink:0;
+}
+.testimonial-name { font-weight:700; font-size:0.9rem; color:var(--brand-primary); }
+.testimonial-role { font-size:0.78rem; color:var(--text-light); }
+.testimonial-avatar-img {
+  width:44px; height:44px; border-radius:50%;
+  object-fit:cover; flex-shrink:0;
+  border:2px solid var(--brand-light);
+  box-shadow:0 2px 8px rgba(12,77,103,0.12);
+}
+/* Slider controls */
+.slider-controls {
+  display:flex; align-items:center; justify-content:center; gap:16px;
+  margin-top:32px;
+}
+.slider-btn {
+  width:40px; height:40px; border-radius:50%;
+  background:var(--brand-primary); color:var(--white);
+  border:none; font-size:1.1rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition:var(--transition); flex-shrink:0;
+}
+.slider-btn:hover { background:var(--brand-secondary); transform:scale(1.1); }
+.slider-dots { display:flex; gap:8px; align-items:center; }
+.slider-dot {
+  width:8px; height:8px; border-radius:50%;
+  background:var(--brand-light); border:none; cursor:pointer;
+  transition:var(--transition); padding:0;
+}
+.slider-dot.active { background:var(--brand-primary); width:20px; border-radius:4px; }
+
+/* ===== CONTACT ===== */
+#contact { background: var(--brand-light); }
+.contact-grid {
+  display:grid; grid-template-columns:1fr 1.2fr; gap:60px;
+  max-width:1100px; margin:48px auto 0; align-items:start;
+}
+.contact-info { display:flex; flex-direction:column; gap:24px; }
+.contact-info-item {
+  display:flex; gap:16px; align-items:flex-start;
+}
+.contact-info-icon {
+  width:48px; height:48px; border-radius:14px;
+  background: rgba(57,188,242,0.15);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.2rem; flex-shrink:0;
+  border:1px solid rgba(57,188,242,0.25);
+}
+.contact-info-label { font-size:0.8rem; color:var(--text-light); font-weight:600; margin-bottom:3px; text-transform:uppercase; letter-spacing:0.06em; }
+.contact-info-value { font-weight:600; color:var(--brand-primary); font-size:0.95rem; }
+.contact-form {
+  background:var(--white);
+  border-radius:24px; padding:36px;
+  border:1px solid var(--brand-light);
+  box-shadow: var(--shadow-md);
+}
+.form-group { margin-bottom:18px; }
+.form-label { display:block; font-size:0.82rem; font-weight:700; color:var(--brand-primary); margin-bottom:7px; }
+.form-input, .form-select, .form-textarea {
+  width:100%; padding:13px 16px;
+  background:var(--white);
+  border:1.5px solid var(--brand-light);
+  border-radius:12px;
+  font-family:var(--font-body); font-size:0.9rem;
+  color:var(--text);
+  transition:border-color var(--transition), box-shadow var(--transition);
+  outline:none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color:var(--brand-secondary);
+  box-shadow:0 0 0 3px rgba(57,188,242,0.15);
+}
+.form-textarea { resize:vertical; min-height:110px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+
+/* ===== FOOTER ===== */
+#footer {
+  background: var(--brand-primary);
+  color:var(--white);
+  padding:64px 5% 32px;
+}
+.footer-grid {
+  display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:48px; max-width:1200px; margin:0 auto;
+  padding-bottom:48px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.footer-logo-img {
+  height:56px; width:auto; object-fit:contain; margin-bottom:14px;
+}
+.footer-logo-text {
+  font-family:var(--font-body);
+  font-size:1.5rem; font-weight:700; color:var(--white); margin-bottom:12px;
+}
+.footer-logo-text span { color:var(--brand-accent); }
+.footer-tagline { font-size:0.875rem; color:rgba(255,255,255,0.5); line-height:1.7; max-width:240px; }
+.footer-social { display:flex; gap:12px; margin-top:20px; }
+.footer-social a {
+  width:38px; height:38px; border-radius:10px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.1);
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.95rem; color:rgba(255,255,255,0.6);
+  transition:var(--transition);
+}
+.footer-social a:hover { background:var(--brand-accent); color:var(--white); border-color:var(--brand-accent); }
+.footer-col-title { font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:18px; }
+.footer-links { display:flex; flex-direction:column; gap:10px; }
+.footer-links a { font-size:0.875rem; color:rgba(255,255,255,0.6); transition:color var(--transition); }
+.footer-links a:hover { color:var(--sky); }
+.footer-bottom {
+  max-width:1200px; margin:24px auto 0;
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:12px;
+}
+.footer-copy { font-size:0.82rem; color:rgba(255,255,255,0.35); }
+.footer-copy a { color:var(--sky); }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .gallery-grid { grid-template-columns:repeat(2,1fr); grid-template-rows:auto; }
+  .gallery-item:nth-child(1) { grid-column:span 2; grid-row:span 1; height:260px; }
+  .gallery-item:nth-child(4) { grid-column:span 2; }
+  .gallery-item { height:200px; }
+  .footer-grid { grid-template-columns:1fr 1fr; gap:32px; }
+  .svc-items-grid { grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); }
+  .services-features-strip { padding: 24px 24px; }
+  .featured-offers-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 30px; }
+  .featured-offer-card.featured { transform: none; }
+  .testimonials-slider-wrap { margin-top: 36px; }
+  .gallery-grid { margin-top: 36px; }
+  .products-grid { margin-top: 36px; }
+  .contact-grid { margin-top: 36px; }
+  .pricing-list-section { margin-top: 40px; }
+  section { padding: 70px 5%; }
+}
+@media(max-width:768px){
+  section { padding:60px 5%; }
+  .nav-links, .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .hero-grid { grid-template-columns:1fr; text-align:center; }
+  .hero-desc { margin:0 auto 32px; }
+  .hero-btns { justify-content:center; }
+  .hero-stats { justify-content:center; }
+  .hero-illustration { display:none; }
+  .about-grid { grid-template-columns:1fr; gap:40px; }
+  .about-img { height:300px; }
+  .about-img-badge { bottom:-12px; right:-8px; }
+  .feature-cards { grid-template-columns:1fr 1fr; }
+  .products-grid { grid-template-columns:1fr 1fr; }
+  .gallery-grid { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+  .gallery-item:nth-child(1) { grid-column:span 2; height:220px; }
+  .gallery-item:nth-child(4) { grid-column:span 1; }
+  .gallery-item { height:160px; }
+  .contact-grid { grid-template-columns:1fr; gap:36px; }
+  .footer-grid { grid-template-columns:1fr 1fr; gap:28px; }
+  .form-row { grid-template-columns:1fr; }
+  .svc-items-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-cat-header { flex-direction:column; align-items:flex-start; }
+  .services-features-strip { grid-template-columns: repeat(2,1fr); padding:24px 20px; }
+  .svc-tab { font-size:0.78rem; padding:8px 15px; }
+}
+@media(max-width:480px){
+  .hero-stats { flex-wrap:wrap; gap:24px; }
+  .feature-cards { grid-template-columns:1fr; }
+  .products-grid { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr; }
+  .footer-bottom { flex-direction:column; text-align:center; }
+  .gallery-grid { grid-template-columns:1fr; }
+  .gallery-item:nth-child(1) { grid-column:span 1; }
+  .gallery-item:nth-child(4) { grid-column:span 1; }
+  .svc-items-grid { grid-template-columns: repeat(2,1fr); gap:12px; }
+  .svc-item-card { padding:16px 14px; min-height:120px; }
+  .svc-item-name { font-size:0.88rem; }
+  .svc-cat-name { font-size:1.2rem; }
+  .services-tabs { gap:8px; }
+  .svc-tab { font-size:0.75rem; padding:7px 13px; }
+  .services-features-strip { grid-template-columns:1fr 1fr; padding:20px 16px; gap:12px; }
+  .svc-feature-pill { font-size:0.8rem; }
+  .featured-offers-grid { gap: 16px; margin-top: 24px; }
+  .featured-offer-image { height: 170px; }
+  .featured-offer-title { font-size: 1.05rem; }
+  .featured-offer-price { font-size: 1rem; }
+}
+@media(max-width:360px){
+  .svc-items-grid { grid-template-columns:1fr 1fr; gap:10px; }
+  .svc-item-card { padding:14px 12px; }
+  .svc-item-icon { width:36px; height:36px; font-size:1rem; }
+  .svc-item-name { font-size:0.82rem; }
+  .services-features-strip { grid-template-columns:1fr; }
+}
+
+/* ===== MOBILE OVERFLOW COMPREHENSIVE FIX ===== */
+@media(max-width:768px){
+  html { overflow-x:hidden; }
+  body { overflow-x:hidden; position:relative; }
+  .hero-card-stack { width:100%; max-width:100%; overflow:hidden; }
+  .hero-card-main { width:calc(100% - 20px); max-width:280px; }
+  .hero-badge { display:none; }
+  .about-img-card-glow { max-width:100%; }
+  .about-grid { overflow:hidden; }
+  .feature-cards { overflow:hidden; }
+  .svc-items-grid { overflow:hidden; }
+  .services-features-strip { overflow:hidden; }
+  .products-grid { overflow:hidden; }
+  .gallery-grid { overflow:hidden; }
+  .contact-grid { overflow:hidden; }
+  .footer-grid { overflow:hidden; }
+  .contact-form { padding:24px 20px; }
+  .hero-stats { gap:20px; }
+  .hero-stat-num { font-size:1.8rem; }
+  section { padding:64px 4%; }
+}
+@media(max-width:480px){
+  .hero-title { font-size:2.2rem; }
+  .section-title { font-size:1.7rem; }
+  .svc-items-grid { grid-template-columns:repeat(2,1fr); }
+  .contact-form { padding:20px 16px; }
+  .services-tabs { gap:6px; }
+  .testimonial-card { padding:20px; }
+  .form-row { grid-template-columns:1fr; }
+  #navbar { padding:0 4%; }
+  section { padding:56px 4%; }
+}
+@media(max-width:375px){
+  .hero-title { font-size:1.9rem; }
+  .hero-stat-num { font-size:1.5rem; }
+  .svc-items-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+  .svc-item-card { padding:14px 10px; min-height:110px; }
+  .btn { padding:12px 20px; font-size:0.85rem; }
+}
+@media(max-width:320px){
+  .hero-title { font-size:1.7rem; }
+  .section-title { font-size:1.5rem; }
+  .svc-items-grid { grid-template-columns:1fr 1fr; gap:8px; }
+  .svc-item-card { padding:12px 8px; }
+  .svc-item-name { font-size:0.78rem; }
+  .svc-item-icon { width:32px; height:32px; font-size:0.9rem; }
+  section { padding:48px 3%; }
+  #navbar { padding:0 3%; }
+  .hero-btns { flex-direction:column; align-items:center; }
+  .btn { width:100%; justify-content:center; text-align:center; }
+}
+
+/* ===== SHOPPING CART ===== */
+.nav-cart-btn {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--brand-primary);
+  color: var(--white);
+  padding: 9px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background var(--transition), transform var(--transition);
+  cursor: pointer;
+  border: none;
+  position: relative;
+  margin-left: 12px;
+}
+.nav-cart-btn:hover { background: var(--brand-secondary); transform: translateY(-1px); }
+.cart-badge {
+  position: absolute;
+  top: -8px; right: -8px;
+  background: #f59e0b;
+  color: var(--white);
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Cart Modal */
+#cart-modal {
+  display: none;
+  position: fixed; inset: 0; z-index: 9500;
+  background: rgba(0,0,0,0.5);
+  align-items: center; justify-content: center;
+  padding: 20px;
+}
+#cart-modal.open { display: flex; }
+.cart-modal-content {
+  background: var(--white);
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  padding: 32px;
+}
+.cart-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--brand-light);
+}
+.cart-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+.cart-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: color var(--transition);
+}
+.cart-modal-close:hover { color: var(--brand-primary); }
+
+.cart-items-list {
+  margin-bottom: 24px;
+}
+.cart-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--brand-light);
+}
+.cart-item:last-child { border-bottom: none; }
+.cart-item-info {
+  flex: 1;
+}
+.cart-item-name {
+  font-weight: 600;
+  color: var(--brand-primary);
+  margin-bottom: 4px;
+}
+.cart-item-price {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+.cart-item-remove {
+  background: #ef4444;
+  color: var(--white);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.cart-item-remove:hover { background: #dc2626; }
+.cart-item-type {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 9px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  border-radius: 20px;
+  background: rgba(57,188,242,0.12);
+  color: var(--brand-secondary);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.cart-checkout-form {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--brand-light);
+  border-radius: 12px;
+}
+.form-group {
+  margin-bottom: 14px;
+}
+.form-group:last-child { margin-bottom: 0; }
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-primary);
+  margin-bottom: 6px;
+}
+.form-input, .form-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid var(--gray-mid);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color var(--transition);
+}
+.form-input:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--brand-accent);
+}
+
+.cart-summary {
+  background: var(--brand-light);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.summary-row {
+  display: flex; justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+.summary-row.total {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--brand-primary);
+  border-top: 2px solid var(--gray-mid);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.cart-empty-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-light);
+}
+.cart-empty-message-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+/* Featured Offers */
+.featured-offers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1280px;
+  margin: 36px auto 0;
+  align-items: stretch;
+}
+.featured-offer-card {
+  background: linear-gradient(135deg, rgba(57,188,242,0.1), rgba(32,128,167,0.05));
+  border: 2px solid var(--brand-accent);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(57,188,242,0.15);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+.featured-offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(57,188,242,0.25);
+  border-color: var(--brand-secondary);
+}
+.featured-offer-card.featured {
+  background: linear-gradient(135deg, var(--brand-primary), #0e5e7d 70%, var(--brand-secondary));
+  border-color: var(--brand-accent);
+  box-shadow: 0 12px 40px rgba(12,77,103,0.32);
+  transform: translateY(-6px);
+}
+.featured-offer-card.featured:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 50px rgba(12,77,103,0.4);
+}
+.featured-offer-card.featured .featured-offer-title,
+.featured-offer-card.featured .featured-offer-price,
+.featured-offer-card.featured .featured-offer-features li {
+  color: var(--white);
+}
+.featured-offer-card.featured .featured-offer-desc {
+  color: rgba(255,255,255,0.78);
+}
+.featured-offer-features {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.featured-offer-features li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: start;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+.featured-offer-features li::before {
+  content: '\2713';
+  width: 18px;
+  height: 18px;
+  background: rgba(57,188,242,0.18);
+  color: var(--brand-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 1px;
+  box-sizing: border-box;
+}
+.featured-offer-card.featured .featured-offer-features li::before {
+  background: rgba(255,255,255,0.18);
+  color: var(--white);
+}
+.featured-offer-card .featured-offer-btn {
+  margin-top: auto;
+}
+.featured-offer-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: linear-gradient(135deg, #f59e0b, #c8780a);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.featured-offer-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--brand-light), var(--sky-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.featured-offer-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent);
+  pointer-events: none;
+}
+.featured-offer-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.featured-offer-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin-bottom: 8px;
+}
+.featured-offer-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-secondary);
+  margin-bottom: 12px;
+}
+.featured-offer-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.featured-offer-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--brand-primary);
+  color: var(--white);
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.featured-offer-btn:hover {
+  background: var(--brand-secondary);
+  transform: translateY(-2px);
+}
+
+@media(max-width: 768px) {
+  .cart-modal-content {
+    max-width: 95vw;
+    padding: 20px;
+  }
+  .featured-offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+@media(max-width: 480px) {
+  .featured-offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== MINIMUM ORDER NOTIFICATION ===== */
+.cart-minimum-notice {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #856404;
+  display: none;
+}
+.cart-minimum-notice.show { display: block; }
+
+.cart-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.cart-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #39BCF2, #0C4D67);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.cart-total-status {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #0C4D67;
+  font-weight: 600;
+}
+
+.checkout-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.footer-social a svg {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.footer-social a:hover svg {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+/* ===== SINGLE WIDE FEATURED OFFER ===== */
+.featured-offers-single {
+  max-width: 900px;
+  margin: 36px auto 0;
+}
+.featured-offer-wide {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(12,77,103,0.18);
+}
+.featured-offer-wide-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  min-height: 320px;
+}
+.featured-offer-wide-img {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+.featured-offer-wide-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media(max-width: 768px) {
+  .featured-offer-wide-inner {
+    grid-template-columns: 1fr;
+  }
+  .featured-offer-wide-img {
+    height: 220px;
+    position: relative;
+  }
+  .featured-offer-wide-img img {
+    position: absolute;
+  }
+}
+
+/* ===== PACKAGES INSIDE PRICE LIST ===== */
+.packages-in-pricelist {
+  margin-top: 0;
+}
+.packages-inline-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.packages-inline-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.packages-inline-sub {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ===== COMING SOON — PRODUCTS ===== */
+.products-coming-soon {
+  max-width: 680px;
+  margin: 48px auto 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--brand-light), rgba(57,188,242,0.08));
+  border: 2px solid rgba(57,188,242,0.25);
+  border-radius: 28px;
+  padding: 60px 48px;
+  box-shadow: var(--shadow-md);
+}
+.coming-soon-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  display: block;
+  animation: float 3s ease infinite;
+}
+.coming-soon-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--brand-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.coming-soon-desc {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 32px;
+}
+.coming-soon-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.coming-soon-feature {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--white);
+  border: 1.5px solid var(--gray-mid);
+  border-radius: 50px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-primary);
+}
+@media(max-width: 480px) {
+  .products-coming-soon {
+    padding: 40px 24px;
+  }
+}
+
+/* ===== CUSTOMER REVIEWS SECTION ===== */
+#reviews {
+  background: linear-gradient(160deg, var(--brand-light) 0%, rgba(255,255,255,0.6) 100%);
+}
+.reviews-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 48px auto 0;
+  align-items: start;
+}
+.reviews-form-panel {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(57,188,242,0.15);
+}
+.reviews-form-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin-bottom: 20px;
+}
+.reviews-star-picker {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.reviews-star-picker input[type="radio"] {
+  display: none;
+}
+.reviews-star-picker label {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #d1d5db;
+  transition: color 0.12s ease, transform 0.1s ease;
+  line-height: 1;
+  user-select: none;
+}
+.reviews-star-picker label.hovered,
+.reviews-star-picker label.selected {
+  color: #f59e0b;
+  transform: scale(1.15);
+}
+.review-form-input,
+.review-form-textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--gray-mid);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color var(--transition);
+  margin-bottom: 14px;
+  display: block;
+}
+.review-form-input:focus,
+.review-form-textarea:focus {
+  outline: none;
+  border-color: var(--brand-accent);
+}
+.review-form-textarea {
+  min-height: 100px;
+  resize: vertical;
+  margin-bottom: 6px;
+}
+.review-char-count {
+  font-size: 0.75rem;
+  color: var(--gray-dark);
+  text-align: right;
+  margin-bottom: 14px;
+}
+.reviews-submit-btn {
+  background: var(--brand-primary);
+  color: var(--white);
+  border: none;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  width: 100%;
+}
+.reviews-submit-btn:hover {
+  background: var(--brand-secondary);
+  transform: translateY(-2px);
+}
+.review-form-error {
+  color: #ef4444;
+  font-size: 0.82rem;
+  margin-bottom: 10px;
+  display: none;
+  font-weight: 500;
+}
+.review-success-toast {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: #dcfce7;
+  color: #166534;
+  border: 1.5px solid #86efac;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 14px;
+}
+.reviews-right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.reviews-avg-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, var(--brand-primary), #0e5e7d);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 22px 28px;
+}
+.reviews-avg-score {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.reviews-avg-stars-row {
+  font-size: 1.1rem;
+  color: #f59e0b;
+  letter-spacing: 3px;
+  margin-bottom: 3px;
+}
+.reviews-avg-count {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.65);
+}
+.reviews-list-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 440px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.reviews-list-panel::-webkit-scrollbar {
+  width: 4px;
+}
+.reviews-list-panel::-webkit-scrollbar-track {
+  background: var(--brand-light);
+  border-radius: 4px;
+}
+.reviews-list-panel::-webkit-scrollbar-thumb {
+  background: var(--brand-accent);
+  border-radius: 4px;
+}
+.review-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(57,188,242,0.14);
+  animation: fadeUp 0.4s ease both;
+}
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.review-card-name {
+  font-weight: 700;
+  color: var(--brand-primary);
+  font-size: 0.92rem;
+}
+.review-card-stars {
+  color: #f59e0b;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+.review-card-text {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+.review-card-date {
+  font-size: 0.72rem;
+  color: var(--gray-dark);
+  margin-top: 8px;
+}
+.reviews-empty {
+  text-align: center;
+  padding: 36px 20px;
+  color: var(--text-light);
+}
+.reviews-empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+@media(max-width: 768px) {
+  .reviews-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 36px;
+  }
+  .reviews-form-panel { padding: 24px 20px; }
+  .reviews-avg-score { font-size: 2.6rem; }
+}
+
+/* ===== PRICING LIST SECTION ===== */
+.pricing-list-section {
+  max-width: 1200px;
+  margin: 44px auto 0;
+  padding: 0 0 8px;
+}
+.pricing-list-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.pricing-list-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.pricing-list-sub {
+  font-size: 1rem;
+  color: var(--text-light);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+@media (max-width: 768px) {
+  .pricing-list-section {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pricing-list-section {
+    padding: 0 0 8px;
+  }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LaundryService",
+  "name": "Quality Laundry",
+  "image": "https://i.postimg.cc/hvHdzf4P/Picsart-26-06-08-00-31-07-804.png",
+  "@id": "",
+  "url": "https://qualitylaundry.com/",
+  "telephone": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "",
+    "addressLocality": "Doha",
+    "addressCountry": "QA"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "22:00"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- LOADER -->
+<!-- SHOPPING CART MODAL -->
+<div id="cart-modal">
+  <div class="cart-modal-content">
+    <div class="cart-modal-header">
+      <h2 class="cart-modal-title">Shopping Cart</h2>
+      <button class="cart-modal-close" onclick="closeCart()">✕</button>
+    </div>
+    
+    <div id="cart-items-container">
+      <div class="cart-items-list" id="cart-items-list"></div>
+      
+      <div class="cart-checkout-form">
+        <div class="form-group">
+          <label class="form-label" for="cart-name">Full Name *</label>
+          <input type="text" id="cart-name" class="form-input" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cart-phone">Phone Number *</label>
+          <input type="tel" id="cart-phone" class="form-input" placeholder="Your phone number" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cart-house">House Number *</label>
+          <input type="text" id="cart-house" class="form-input" placeholder="Enter your house number" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cart-maps-link">Google Maps Location Link *</label>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+            <input type="url" id="cart-maps-link" class="form-input" placeholder="Paste your Google Maps location link here" required style="flex:1;min-width:0;">
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:var(--brand-primary);color:#fff;padding:10px 16px;border-radius:8px;font-size:0.82rem;font-weight:600;white-space:nowrap;text-decoration:none;transition:background 0.3s ease;flex-shrink:0;" onmouseover="this.style.background='var(--brand-secondary)'" onmouseout="this.style.background='var(--brand-primary)'">
+              📍 Open Google Maps
+            </a>
+          </div>
+          <div style="margin-top:10px;background:rgba(57,188,242,0.08);border:1.5px solid rgba(57,188,242,0.25);border-radius:10px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;">
+            <span style="font-size:1.1rem;flex-shrink:0;margin-top:1px;">💡</span>
+            <p style="font-size:0.8rem;color:var(--text-light);line-height:1.6;margin:0;">
+              <strong style="color:var(--brand-primary);">Need your exact location?</strong> Open Google Maps, navigate to your home, tap <strong>Share</strong>, then <strong>Copy Link</strong> — and paste it in the field above.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="cart-minimum-notice" class="cart-minimum-notice"></div>
+      
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal">0 QAR</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total:</span>
+          <span id="cart-total">0 QAR</span>
+        </div>
+        <div class="cart-progress-bar">
+          <div class="cart-progress-fill" id="cart-progress-fill"></div>
+        </div>
+        <div id="cart-total-status" class="cart-total-status"></div>
+      </div>
+      
+      <button id="checkout-whatsapp-btn" class="btn btn-wa" style="width:100%;justify-content:center;font-size:1rem;padding:14px;" onclick="checkoutViaWhatsApp()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Buy via WhatsApp
+      </button>
+    </div>
+    
+    <div id="cart-empty-state" style="display:none;">
+      <div class="cart-empty-message">
+        <div class="cart-empty-message-icon">🛒</div>
+        <p>Your cart is empty</p>
+        <p style="font-size:0.85rem;margin-top:8px;">Add services or products to get started</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">
+    <img loading="lazy" src="https://i.postimg.cc/hvHdzf4P/Picsart-26-06-08-00-31-07-804.png" alt="Quality Laundry" class="nav-logo-img">
+    <span class="nav-logo-text" data-en="Quality <span>Laundry</span>">Quality <span>Laundry</span></span>
+  </div>
+  <ul class="nav-links" role="list">
+    <li><a href="#about" data-en="About">About</a></li>
+    <li><a href="#services" data-en="Services">Services</a></li>
+    <li><a href="#products" data-en="Products">Products</a></li>
+    <li><a href="#gallery" data-en="Gallery">Gallery</a></li>
+    <li><a href="#testimonials" data-en="Reviews">Reviews</a></li>
+    <li><a href="#reviews" data-en="Our Reviews">Our Reviews</a></li>
+    <li><a href="#contact" class="nav-cta" data-en="Contact Us">Contact Us</a></li>
+  </ul>
+  <button class="nav-cart-btn" onclick="openCart()">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+    <span id="cart-count">0</span>
+    <span class="cart-badge" id="cart-badge" style="display:none;">0</span>
+  </button>
+  <button class="hamburger" aria-label="Menu" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="#about" onclick="closeMenu()" data-en="About">About</a>
+  <a href="#services" onclick="closeMenu()" data-en="Services">Services</a>
+  <a href="#products" onclick="closeMenu()" data-en="Products">Products</a>
+  <a href="#gallery" onclick="closeMenu()" data-en="Gallery">Gallery</a>
+  <a href="#testimonials" onclick="closeMenu()" data-en="Reviews">Reviews</a>
+  <a href="#reviews" onclick="closeMenu()" data-en="Our Reviews">Our Reviews</a>
+  <a href="#contact" onclick="closeMenu()" data-en="Contact Us">Contact Us</a>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ===== HERO ===== -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg-circle hero-bg-circle-1"></div>
+  <div class="hero-bg-circle hero-bg-circle-2"></div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-label">
+        <span>⭐</span> <span data-en="Trusted by 2,000+ Happy Customers">Trusted by 2,000+ Happy Customers</span>
+      </div>
+      <h1 class="hero-title" data-en="Professional<br><em>Laundry &amp; Dry</em><br>Cleaning Services">Professional<br><em>Laundry &amp; Dry</em><br>Cleaning Services</h1>
+      <p class="hero-desc" data-en="We handle your clothes with exceptional care — fast pickup &amp; delivery, premium cleaning, and affordable prices you'll love.">We handle your clothes with exceptional care — fast pickup &amp; delivery, premium cleaning, and affordable prices you'll love.</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn btn-sky" data-en="Browse Services →">Browse Services →</a>
+        <a id="hero-wa-btn" href="#" class="btn btn-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-en="Contact on WhatsApp">Contact on WhatsApp</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">2K+</div>
+          <div class="hero-stat-label" data-en="Happy Clients">Happy Clients</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">5★</div>
+          <div class="hero-stat-label" data-en="Average Rating">Average Rating</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">24h</div>
+          <div class="hero-stat-label" data-en="Fast Delivery">Fast Delivery</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-illustration">
+      <div class="hero-card-stack">
+        <div class="hero-card hero-card-main">
+          <div class="hero-machine-icon">🫧</div>
+          <div class="hero-card-features">
+            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Free Pickup &amp; Delivery">Free Pickup &amp; Delivery</span></div>
+            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Eco-Friendly Products">Eco-Friendly Products</span></div>
+            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Same-Day Service">Same-Day Service</span></div>
+            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Premium Quality">Premium Quality</span></div>
+          </div>
+        </div>
+        <div class="hero-badge hero-badge-1">✓ &nbsp;<span data-en="Order Ready in 24h">Order Ready in 24h</span></div>
+        <div class="hero-badge hero-badge-2">🚚 &nbsp;<span data-en="Free Delivery">Free Delivery</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" aria-label="About">
+  <div class="about-grid">
+    <div class="about-image-wrap reveal-left">
+      <div class="about-img-card-glow">
+        <img src="https://i.postimg.cc/d0CMcSXk/Who-We-Are.jpg" alt="Who We Are – Quality Laundry" class="about-img" loading="lazy">
+      </div>
+    </div>
+    <div class="reveal-right">
+      <span class="section-label" data-en="Who We Are">Who We Are</span>
+      <h2 class="section-title" data-en="The Cleanest Clothes<br>Start Here">The Cleanest Clothes<br>Start Here</h2>
+      <p class="section-sub" data-en="Quality Laundry has been serving our community with professional-grade cleaning services. We combine modern technology with eco-friendly products to deliver spotless results every time.">Quality Laundry has been serving our community with professional-grade cleaning services. We combine modern technology with eco-friendly products to deliver spotless results every time.</p>
+      <div class="feature-cards">
+        <div class="feature-card reveal">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-title" data-en="Fast Service">Fast Service</div>
+          <div class="feature-desc" data-en="Same-day and 24-hour turnaround options available for all services.">Same-day and 24-hour turnaround options available for all services.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🚚</div>
+          <div class="feature-title" data-en="Pickup &amp; Delivery">Pickup &amp; Delivery</div>
+          <div class="feature-desc" data-en="Free door-to-door pickup and delivery within our service area.">Free door-to-door pickup and delivery within our service area.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">✨</div>
+          <div class="feature-title" data-en="Premium Cleaning">Premium Cleaning</div>
+          <div class="feature-desc" data-en="Professional-grade products that are gentle on fabrics and tough on stains.">Professional-grade products that are gentle on fabrics and tough on stains.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">💰</div>
+          <div class="feature-title" data-en="Affordable Prices">Affordable Prices</div>
+          <div class="feature-desc" data-en="Competitive pricing with no hidden fees. Quality you can afford.">Competitive pricing with no hidden fees. Quality you can afford.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" aria-label="Services">
+  <div class="center reveal">
+    <span class="section-label" data-en="What We Offer">What We Offer</span>
+    <h2 class="section-title" data-en="Our Services">Our Services</h2>
+    <p class="section-sub" data-en="From everyday garments to delicate fabrics — we handle it all with care and precision.">From everyday garments to delicate fabrics — we handle it all with care and precision.</p>
+  
+
+  <!-- FEATURED OFFERS -->
+  <div class="featured-offers-single reveal">
+    <div class="featured-offer-card featured-offer-wide">
+      <div class="featured-offer-badge">⚡ LIMITED OFFER</div>
+      <div class="featured-offer-wide-inner">
+        <div class="featured-offer-wide-img">
+          <img loading="lazy" src="https://i.postimg.cc/9fqG9KQc/baqh.png" alt="Family Laundry Package" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="featured-offer-body">
+          <div class="featured-offer-title">Family Laundry Bag</div>
+          <div class="featured-offer-price">Wash &amp; Iron — 79 QAR</div>
+          <div class="featured-offer-price" style="font-size:0.98rem;color:var(--text-light);margin-top:-6px;">Iron Only — 75 QAR</div>
+          <p class="featured-offer-desc">Perfect for families! Get complete laundry and ironing service for your entire household at an unbeatable price. Ideal for weekly family laundry needs — includes free pickup &amp; delivery.</p>
+          <ul class="featured-offer-features">
+            <li>Full wash &amp; iron for your entire household</li>
+            <li>Eco-friendly, fabric-safe cleaning products</li>
+            <li>Free pickup &amp; delivery included</li>
+            <li>Same-day &amp; 24-hour turnaround available</li>
+          </ul>
+          <button class="featured-offer-btn" onclick="addFeaturedOfferToCart('Family Laundry Bag', '79 QAR')" style="max-width:280px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            Add to Cart — 79 QAR
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBSCRIPTION PACKAGES (moved here — above services list) -->
+  <div class="pricing-list-section reveal">
+
+    <!-- Subscription Packages inside price list area -->
+    <div class="packages-in-pricelist">
+      <div class="packages-inline-header">
+        <span class="section-label" style="margin-bottom:8px;">Monthly Plans</span>
+        <h4 class="packages-inline-title">Subscription Packages</h4>
+        <p class="packages-inline-sub">Choose a monthly plan that fits your household — save more with bundled pickup and delivery.</p>
+      </div>
+      <div class="featured-offers-grid">
+        <!-- Plan Card 1: Silver Package -->
+        <div class="featured-offer-card">
+          <div class="featured-offer-image">
+            <img loading="lazy" src="https://i.postimg.cc/JnmpKMgj/silver.jpg" alt="Silver Package" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="featured-offer-body">
+            <div class="featured-offer-title">Silver Package</div>
+            <div class="featured-offer-price">Subscribe for 100 QAR</div>
+            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;">Get 125 QAR Credit</div>
+            <ul class="featured-offer-features">
+              <li>2 Small Blankets</li>
+              <li>2 Large Blankets</li>
+              <li>4 Free Pickup &amp; Delivery Services (Monthly)</li>
+            </ul>
+            <button class="featured-offer-btn" onclick="subscribePackage('Silver Package', '350 QAR', '350 QAR / Month', ['70 Items','2 Small Blankets','2 Large Blankets','4 Free Pickup &amp; Delivery Services (Monthly)'])">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Subscribe Now
+            </button>
+          </div>
+        </div>
+        <!-- Plan Card 2: Platinum Package -->
+        <div class="featured-offer-card featured">
+          <div class="featured-offer-badge" style="background:linear-gradient(135deg,#39BCF2,#2080A7);">🚀 BEST VALUE</div>
+          <div class="featured-offer-image">
+            <img loading="lazy" src="https://i.postimg.cc/cHZFT0jR/plantinum.jpg" alt="Platinum Package" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="featured-offer-body">
+            <div class="featured-offer-title">Platinum Package</div>
+            <div class="featured-offer-price">Subscribe for 200 QAR</div>
+            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;">Get 250 QAR Credit</div>
+            <ul class="featured-offer-features">
+              <li>4 Small Blankets</li>
+              <li>4 Large Blankets</li>
+              <li>4 Free Pickup &amp; Delivery Services (Monthly)</li>
+            </ul>
+            <button class="featured-offer-btn" onclick="subscribePackage('Platinum Package', '700 QAR', '700 QAR / Month', ['140 Items','4 Small Blankets','4 Large Blankets','4 Free Pickup &amp; Delivery Services (Monthly)'])">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Subscribe Now
+            </button>
+          </div>
+        </div>
+        <!-- Plan Card 3: Gold Package -->
+        <div class="featured-offer-card">
+          <div class="featured-offer-badge" style="background:linear-gradient(135deg,#c8780a,#f59e0b);">⭐ POPULAR</div>
+          <div class="featured-offer-image">
+            <img loading="lazy" src="https://i.postimg.cc/TwGtQfSr/gold.jpg" alt="Gold Package" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="featured-offer-body">
+            <div class="featured-offer-title">Gold Package</div>
+            <div class="featured-offer-price">Subscribe for 300 QAR</div>
+            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;">Get 375 QAR Credit</div>
+            <ul class="featured-offer-features">
+              <li>3 Small Blankets</li>
+              <li>3 Large Blankets</li>
+              <li>4 Free Pickup &amp; Delivery Services (Monthly)</li>
+            </ul>
+            <button class="featured-offer-btn" onclick="subscribePackage('Gold Package', '500 QAR', '500 QAR / Month', ['100 Items','3 Small Blankets','3 Large Blankets','4 Free Pickup &amp; Delivery Services (Monthly)'])">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Subscribe Now
+            </button>
+          </div>
+        </div>
+        <!-- Plan Card 4: Diamond Package -->
+        <div class="featured-offer-card">
+          <div class="featured-offer-badge" style="background:linear-gradient(135deg,#7c3aed,#c026d3);">💎 PREMIUM</div>
+          <div class="featured-offer-image">
+            <img loading="lazy" src="https://i.postimg.cc/501spbG5/Diomnd.jpg" alt="Diamond Package" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="featured-offer-body">
+            <div class="featured-offer-title">Diamond Package</div>
+            <div class="featured-offer-price">Subscribe for 400 QAR</div>
+            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;">Get 500 QAR Credit</div>
+            <ul class="featured-offer-features">
+              <li>6 Small Blankets</li>
+              <li>6 Large Blankets</li>
+              <li>4 Free Pickup &amp; Delivery Services (Monthly)</li>
+              <li>Priority Service</li>
+              <li>Free Stain Removal</li>
+            </ul>
+            <button class="featured-offer-btn" onclick="subscribePackage('Diamond Package', '1000 QAR', '1000 QAR / Month', ['200 Items','6 Small Blankets','6 Large Blankets','4 Free Pickup &amp; Delivery Services (Monthly)','Priority Service','Free Stain Removal'])">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Subscribe Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Tabs (Desktop) -->
+  <div class="services-tabs reveal">
+    <button class="svc-tab active" onclick="switchCat('everyday')">👕 Everyday Clothing</button>
+    <button class="svc-tab" onclick="switchCat('suits')">🥼 Suits & Formal</button>
+    <button class="svc-tab" onclick="switchCat('women')">👗 Women's Garments</button>
+    <button class="svc-tab" onclick="switchCat('bedding')">🛏️ Bedding & Household</button>
+    <button class="svc-tab" onclick="switchCat('curtains')">🪟 Curtains & Upholstery</button>
+    <button class="svc-tab" onclick="switchCat('carpet')">🏠 Carpet Cleaning</button>
+    <button class="svc-tab" onclick="switchCat('shoes')">👟 Shoes Cleaning</button>
+    <button class="svc-tab" onclick="switchCat('express')">⚡ Express Service</button>
+  </div>
+
+  <!-- Category Nav (Mobile only) -->
+  <div class="svc-tab-mobile-nav">
+    <button class="svc-nav-arrow" id="svc-prev-btn" onclick="svcPrev()">‹</button>
+    <div class="svc-nav-label" id="svc-mobile-label">👕 Everyday Clothing</div>
+    <button class="svc-nav-arrow" id="svc-next-btn" onclick="svcNext()">›</button>
+  </div>
+
+  <div class="services-categories reveal">
+
+    <!-- CAT 1: Everyday Clothing -->
+    <div class="services-category active" id="cat-everyday">
+      <div class="svc-cat-header">
+        <div class="svc-cat-title-wrap">
+          <div class="svc-cat-icon">👕</div>
+          <div>
+            <div class="svc-cat-name">Everyday Clothing</div>
+            <div class="svc-cat-sub">Thobes, shirts, pants, and all daily wear garments</div>
+          </div>
+        </div>
+        <div class="svc-cat-price-badge">✦ Starting From 3 QR</div>
+      </div>
+      <div class="svc-items-grid" id="grid-everyday"></div>
+    </div>
+
+    <!-- CAT 2: Suits & Formal -->
+    <div class="services-category" id="cat-suits">
+      <div class="svc-cat-header">
+        <div class="svc-cat-title-wrap">
+          <div class="svc-cat-icon">🥼</div>
+          <div>
+            <div class="svc-cat-name">Suits & Formal Wear</div>
+            <div class="svc-cat-sub">Professional dry cleaning for men's formal attire</div>
+          </div>
+        </div>
+        <div class="svc-cat-price-badge">✦ Starting From 6 QR</div>
+      </div>
+      <div class="svc-items-grid" id="grid-suits"></div>
+    </div>
+
+    <!-- CAT 3: Women's Garments -->
+    <div class="services-category" id="cat-women">
+      <div class="svc-cat-header">
+        <div class="svc-cat-title-wrap">
+          <div class="svc-cat-icon">👗</div>
+          <div>
+            <div class="svc-cat-name">Women's Garments</div>
+            <div class="svc-cat-sub">Dresses, abayas, hijabs, and ladies' apparel</div>
+          </div>
+        </div>
+        <div class="svc-cat-price-badge">✦ Starting From 3 QR</div>
+      </div>
+      <div class="svc-items-grid" id="grid-women"></div>
+    </div>
+
+    <!-- CAT 4: Bedding & Household -->
+    <div class="services-category" id="cat-bedding">
+      <div class="svc-cat-header">
+        <div class="svc-cat-title-wrap">
+          <div class="svc-cat-icon">🛏️</div>
+          <div>
+            <div class="svc-cat-name">Bedding & Household Items</div>
+            <div class="svc-cat-sub">Sheets, blankets, towels, and bath linens</div>
+          </div>
+        </div>
+        <div class="svc-cat-price-badge">✦ Starting From 2 QR</div>
+      </div>
+      <div class="svc-items-grid" id="grid-bedding"></div>
+    </div>
+
+    <!-- CAT 5: Curtains & Upholstery -->
+    <div class="services-category" id="cat-curtains">
+      <div class="svc-cat-header">
+        <div class="svc-cat-title-wrap">
+          <div class="svc-cat-icon">🪟</div>
+          <div>
+            <div class="svc-cat-name">Curtains & Upholstery</div>
+            <div class="svc-cat-sub">Curtains and sofa covers — all sizes</div>
+          </div>
+        </div>
+        <div class="svc-cat-price-badge">✦ Starting From 3 QR</div>
+      </div>
+      <div class="svc-items-grid" id="grid-curtains"></div>
+    </div>
+
+    <!-- CAT 6: Carpet Cleaning -->
+    <div class="services-category" id="cat-carpet">
+      <div class="svc-cat-header">
+        <div class="svc-cat-title-wrap">
+          <div class="svc-cat-icon">🏠</div>
+          <div>
+            <div class="svc-cat-name">Carpet Cleaning</div>
+            <div class="svc-cat-sub">Deep-clean carpets with professional equipment</div>
+          </div>
+        </div>
+        <div class="svc-cat-price-badge">✦ 10 QR / m²</div>
+      </div>
+      <div class="svc-items-grid" id="grid-carpet"></div>
+    </div>
+
+    <!-- CAT 7: Shoes Cleaning -->
+    <div class="services-category" id="cat-shoes">
+      <div class="svc-cat-header">
+        <div class="svc-cat-title-wrap">
+          <div class="svc-cat-icon">👟</div>
+          <div>
+            <div class="svc-cat-name">Shoes Cleaning</div>
+            <div class="svc-cat-sub">Premium cleaning and care for all shoe types</div>
+          </div>
+        </div>
+        <div class="svc-cat-price-badge">✦ 20 QR per pair</div>
+      </div>
+      <div class="svc-items-grid" id="grid-shoes"></div>
+    </div>
+
+    <!-- CAT 8: Express Services -->
+    <div class="services-category" id="cat-express">
+      <div class="svc-cat-header">
+        <div class="svc-cat-title-wrap">
+          <div class="svc-cat-icon">⚡</div>
+          <div>
+            <div class="svc-cat-name">Express Laundry Services</div>
+            <div class="svc-cat-sub">Same-day urgent turnaround — fast and reliable</div>
+          </div>
+        </div>
+        <div class="svc-cat-price-badge express-badge">⚡ Express Service</div>
+      </div>
+      <div class="svc-items-grid" id="grid-express"></div>
+    </div>
+
+  </div><!-- /.services-categories -->
+
+  <!-- Special Features Strip -->
+  <div class="services-features-strip reveal">
+    <div class="svc-feature-pill"><div class="svc-feature-check">✓</div> <span data-en="Professional Dry Cleaning">Professional Dry Cleaning</span></div>
+    <div class="svc-feature-pill"><div class="svc-feature-check">✓</div> <span data-en="Wash &amp; Press">Wash &amp; Press</span></div>
+    <div class="svc-feature-pill"><div class="svc-feature-check">✓</div> <span data-en="Express Service">Express Service</span></div>
+    <div class="svc-feature-pill"><div class="svc-feature-check">✓</div> <span data-en="Carpet Cleaning">Carpet Cleaning</span></div>
+    <div class="svc-feature-pill"><div class="svc-feature-check">✓</div> <span data-en="Curtain Cleaning">Curtain Cleaning</span></div>
+    <div class="svc-feature-pill"><div class="svc-feature-check">✓</div> <span data-en="Sofa Cover Cleaning">Sofa Cover Cleaning</span></div>
+    <div class="svc-feature-pill"><div class="svc-feature-check">✓</div> <span data-en="Shoes Cleaning">Shoes Cleaning</span></div>
+    <div class="svc-feature-pill"><div class="svc-feature-check">✓</div> <span data-en="Household Laundry">Household Laundry</span></div>
+  </div>
+
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section id="products" aria-label="Products">
+  <div class="center reveal">
+    <span class="section-label" data-en="Our Store">Our Store</span>
+    <h2 class="section-title" data-en="Laundry Products">Laundry Products</h2>
+    <p class="section-sub" data-en="Our Laundry Products Store is currently being prepared and will be available soon.">Our Laundry Products Store is currently being prepared and will be available soon.</p>
+  </div>
+  <div class="products-coming-soon reveal">
+    <div class="coming-soon-icon">🧴</div>
+    <h3 class="coming-soon-title">Coming Soon</h3>
+    <p class="coming-soon-desc">We're carefully curating a collection of professional-grade laundry products for you. Stay tuned — our store will be ready shortly!</p>
+    <div class="coming-soon-features">
+      <div class="coming-soon-feature"><span>🧺</span> Premium Detergents</div>
+      <div class="coming-soon-feature"><span>✨</span> Fabric Softeners</div>
+      <div class="coming-soon-feature"><span>🫧</span> Stain Removers</div>
+      <div class="coming-soon-feature"><span>🚚</span> Home Delivery</div>
+    </div>
+    <a href="#contact" class="btn btn-primary" style="margin-top:8px;">Notify Me When Available</a>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" aria-label="Gallery">
+  <div class="center reveal">
+    <span class="section-label" data-en="Our Work">Our Work</span>
+    <h2 class="section-title" data-en="See the Difference">See the Difference</h2>
+    <p class="section-sub" data-en="A glimpse inside our facility and the results we deliver to every customer.">A glimpse inside our facility and the results we deliver to every customer.</p>
+  </div>
+  <div class="gallery-grid" id="gallery-grid"></div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-label="Image preview" aria-modal="true">
+  <button id="lightbox-close" aria-label="Close">✕</button>
+  <button id="lightbox-prev" aria-label="Previous">‹</button>
+  <img loading="lazy" id="lightbox-img" src="" alt="Gallery preview">
+  <button id="lightbox-next" aria-label="Next">›</button>
+</div>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials" aria-label="Customer Reviews">
+  <div class="center reveal">
+    <span class="section-label" data-en="Customer Stories">Customer Stories</span>
+    <h2 class="section-title" data-en="What People Say">What People Say</h2>
+    <p class="section-sub" data-en="Real reviews from our happy customers who trust us with their garments.">Real reviews from our happy customers who trust us with their garments.</p>
+  </div>
+  <div class="testimonials-slider-wrap">
+    <div class="testimonials-slider-clip">
+      <div class="testimonials-track" id="testimonials-track">
+        <!-- slides injected by JS -->
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" id="tsl-prev" aria-label="Previous">‹</button>
+      <div class="slider-dots" id="tsl-dots"></div>
+      <button class="slider-btn" id="tsl-next" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" aria-label="Contact">
+  <div class="center reveal">
+    <span class="section-label" data-en="Get in Touch">Get in Touch</span>
+    <h2 class="section-title" data-en="Contact Us">Contact Us</h2>
+    <p class="section-sub" data-en="Ready to experience premium laundry care? Reach out and we'll get back to you right away.">Ready to experience premium laundry care? Reach out and we'll get back to you right away.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal-left">
+      <div class="contact-info-item">
+        <div class="contact-info-icon">📞</div>
+        <div>
+          <div class="contact-info-label" data-en="Phone Number">Phone Number</div>
+          <div class="contact-info-value"><a href="tel:+97477558870" style="color:inherit;">+974 77558870</a></div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">💬</div>
+        <div>
+          <div class="contact-info-label" data-en="WhatsApp">WhatsApp</div>
+          <div class="contact-info-value">+974 77558870</div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">✉️</div>
+        <div>
+          <div class="contact-info-label" data-en="Email Address">Email Address</div>
+          <div class="contact-info-value">hello@qualitylaundry.com</div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">📍</div>
+        <div>
+          <div class="contact-info-label" data-en="Our Address">Our Address</div>
+          <div class="contact-info-value" data-en="Umm Qarn - Street 260 - Building 81 - Shop 4 - Doha, Qatar">Umm Qarn - Street 260 - Building 81 - Shop 4 - Doha, Qatar</div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">🕐</div>
+        <div>
+          <div class="contact-info-label" data-en="Working Hours">Working Hours</div>
+          <div class="contact-info-value" data-en="Open 24/7">Open 24/7</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form reveal-right">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="form-name" data-en="Full Name *">Full Name *</label>
+          <input type="text" id="form-name" class="form-input" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-phone" data-en="Phone Number *">Phone Number *</label>
+          <input type="tel" id="form-phone" class="form-input" placeholder="Your phone number" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="form-service" data-en="Service Needed">Service Needed</label>
+        <select id="form-service" class="form-select">
+          <option value="" data-en="Select a service...">Select a service...</option>
+          <option data-en="Clothes Washing">Clothes Washing</option>
+          <option data-en="Dry Cleaning">Dry Cleaning</option>
+          <option data-en="Ironing Service">Ironing Service</option>
+          <option data-en="Carpet Cleaning">Carpet Cleaning</option>
+          <option data-en="Curtain Cleaning">Curtain Cleaning</option>
+          <option data-en="Blankets &amp; Bedding Cleaning">Blankets &amp; Bedding Cleaning</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="form-message" data-en="Message">Message</label>
+        <textarea id="form-message" class="form-textarea" placeholder="Tell us about your laundry needs..."></textarea>
+      </div>
+      <button type="button" class="btn btn-wa" style="width:100%;justify-content:center;" onclick="submitForm()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-en="Send via WhatsApp">Send via WhatsApp</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CUSTOMER REVIEWS ===== -->
+<section id="reviews" aria-label="Customer Reviews">
+  <div class="center reveal">
+    <span class="section-label">Share Your Experience</span>
+    <h2 class="section-title">Customer Reviews</h2>
+    <p class="section-sub">We love hearing from our customers. Leave a review and help others discover Quality Laundry.</p>
+  </div>
+
+  <div class="reviews-layout">
+    <!-- LEFT: Submit a review form -->
+    <div class="reviews-form-panel reveal-left">
+      <div class="reviews-form-title">✍️ Write a Review</div>
+
+      <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--brand-primary);margin-bottom:8px;">Your Rating *</label>
+      <div class="reviews-star-picker" id="star-picker" role="radiogroup" aria-label="Star rating">
+        <input type="radio" id="star1" name="review-rating" value="1">
+        <label for="star1" aria-label="1 star"  title="1 star">★</label>
+        <input type="radio" id="star2" name="review-rating" value="2">
+        <label for="star2" aria-label="2 stars" title="2 stars">★</label>
+        <input type="radio" id="star3" name="review-rating" value="3">
+        <label for="star3" aria-label="3 stars" title="3 stars">★</label>
+        <input type="radio" id="star4" name="review-rating" value="4">
+        <label for="star4" aria-label="4 stars" title="4 stars">★</label>
+        <input type="radio" id="star5" name="review-rating" value="5">
+        <label for="star5" aria-label="5 stars" title="5 stars">★</label>
+      </div>
+
+      <input type="text" id="review-name" class="review-form-input" placeholder="Your name *" maxlength="60" autocomplete="name">
+      <textarea id="review-text" class="review-form-textarea" placeholder="Share your experience with Quality Laundry... *" maxlength="400"></textarea>
+      <div class="review-char-count"><span id="review-char-num">0</span> / 400</div>
+
+      <div class="review-form-error" id="review-error">Please fill in all fields and select a star rating.</div>
+
+      <button class="reviews-submit-btn" onclick="submitReview()">Submit Review</button>
+
+      <div class="review-success-toast" id="review-toast">
+        ✅ Thank you! Your review has been posted.
+      </div>
+    </div>
+
+    <!-- RIGHT: Average + list of reviews -->
+    <div class="reviews-right-panel reveal-right">
+      <div class="reviews-avg-banner" id="reviews-avg-banner">
+        <div class="reviews-avg-score" id="reviews-avg-score">—</div>
+        <div>
+          <div class="reviews-avg-stars-row" id="reviews-avg-stars">☆☆☆☆☆</div>
+          <div class="reviews-avg-count" id="reviews-avg-count">No reviews yet</div>
+        </div>
+      </div>
+
+      <div class="reviews-list-panel" id="reviews-list-panel">
+        <div class="reviews-empty">
+          <div class="reviews-empty-icon">💬</div>
+          <p>Be the first to leave a review!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer" aria-label="Footer">
+  <div class="footer-grid">
+    <div>
+      <img loading="lazy" src="https://i.postimg.cc/hvHdzf4P/Picsart-26-06-08-00-31-07-804.png" alt="Quality Laundry" class="footer-logo-img">
+      <div class="footer-logo-text" data-en="Quality <span>Laundry</span>">Quality <span>Laundry</span></div>
+      <p class="footer-tagline" data-en="Professional cleaning services delivered with care, speed, and a smile.">Professional cleaning services delivered with care, speed, and a smile.</p>
+      <div class="footer-social">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/193Gyt3y4u/" target="_blank" rel="noopener" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/quali.tylaundry?igsh=MWo0dno2NTNuczR4Mg==" target="_blank" rel="noopener" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@quality_landryqa?_r=1&_t=ZS-976PoMKvXJy" target="_blank" rel="noopener" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.1 1.82 2.89 2.89 0 0 1 2.31-4.64 2.86 2.86 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.96-.1z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Quick Links">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#about" data-en="About Us">About Us</a></li>
+        <li><a href="#services" data-en="Services">Services</a></li>
+        <li><a href="#products" data-en="Products">Products</a></li>
+        <li><a href="#gallery" data-en="Gallery">Gallery</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Services">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services" data-en="Clothes Washing">Clothes Washing</a></li>
+        <li><a href="#services" data-en="Dry Cleaning">Dry Cleaning</a></li>
+        <li><a href="#services" data-en="Ironing Service">Ironing Service</a></li>
+        <li><a href="#services" data-en="Carpet Cleaning">Carpet Cleaning</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Contact">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:+97477558870">+974 77558870</a></li>
+        <li><a href="mailto:hello@qualitylaundry.com">hello@qualitylaundry.com</a></li>
+        <li><a href="#contact" data-en="123 Fresh Street">Umm Qarn - Street 260 - Building 81 - Shop 4 - Doha, Qatar</a></li>
+        <li><a href="#testimonials" data-en="Reviews">Reviews</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 <a href="#">Quality Laundry</a>. <span data-en="All rights reserved.">All rights reserved.</span></div>
+    <div class="footer-copy" data-en="Developed by Code Nexus">Developed by Code Nexus</div>
+  </div>
+</footer>
+
+<script>
+/* ===== CONFIGURATION ===== */
+const whatsappNumber = "97477558870"; // Qatar +974 77558870
+
+/* ===== WHATSAPP HELPER ===== */
+function waLink(msg) {
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
+}
+
+/* ===== SERVICES DATA ===== */
+const WA_SVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+
+/* Builds a 6-tier pricing set: Pressing(Normal/Urgent), Press Wash(Normal/Urgent), Dry Cleaning(Normal/Urgent).
+   Pass null for any tier that the source price list marks as unavailable for that item. */
+function tierSet(pressNormal, pressUrgent, washNormal, washUrgent, dryNormal, dryUrgent) {
+  const tiers = [];
+  if (pressNormal != null) tiers.push({ label: 'Pressing • Normal', price: pressNormal });
+  if (pressUrgent != null) tiers.push({ label: 'Pressing • Urgent', price: pressUrgent });
+  if (washNormal != null) tiers.push({ label: 'Press Wash • Normal', price: washNormal });
+  if (washUrgent != null) tiers.push({ label: 'Press Wash • Urgent', price: washUrgent });
+  if (dryNormal != null) tiers.push({ label: 'Dry Cleaning • Normal', price: dryNormal });
+  if (dryUrgent != null) tiers.push({ label: 'Dry Cleaning • Urgent', price: dryUrgent });
+  return tiers;
+}
+
+const serviceCategories = [
+  {
+    id: 'everyday',
+    items: [
+      { name: 'Thobe',          icon: '👘', tiers: tierSet(3,6,5,10,10,20), desc: 'Expert wash and press for the classic white thobe. Bright finish with meticulous crease-free folding.' },
+      { name: 'Colour Thobe',   icon: '🎨', tiers: tierSet(4,8,6,12,12,24), desc: 'Color-safe laundering for thobes of all shades. Preserves vibrancy and fabric quality with every wash.' },
+      { name: 'Guthrah',        icon: '🧣', tiers: tierSet(3,6,5,10,6,12), desc: 'Precision cleaning and sharp pressing of the traditional guthrah for a crisp, polished look.' },
+      { name: 'Colour Guthrah', icon: '🌈', tiers: tierSet(3,6,5,10,6,12), desc: 'Gentle fabric care for patterned and coloured guthrabs. Maintains original texture and drape.' },
+      { name: 'Pants',          icon: '👖', tiers: tierSet(3,6,5,10,6,12), desc: 'Professional wash and iron for all trouser types. Sharp creases with a tailored finish every time.' },
+      { name: 'Shirt',          icon: '👔', tiers: tierSet(3,6,5,10,6,12), desc: 'Thorough cleaning and crisp pressing for dress and casual shirts. Collar and cuffs handled with care.' },
+      { name: 'T-Shirt',        icon: '👕', tiers: tierSet(3,6,5,10,6,12), desc: 'Fresh wash with colour-safe detergents for all T-shirt fabrics. Dried flat to preserve shape.' },
+      { name: 'U Shirt',        icon: '🩱', tiers: tierSet(2,4,3,6,6,8), desc: 'Hygienic deep-clean for undershirts using dermatologically safe products. Soft and odour-free finish.' },
+      { name: 'Salwar',         icon: '🪡', tiers: tierSet(2,4,3,6,6,8), desc: 'Careful laundering and pressing for salwar trousers. Fabric shape and comfort retained throughout.' },
+      { name: 'Jalabiya',       icon: '✨', tiers: tierSet(3,6,5,10,12,20), desc: 'Fabric-appropriate cleaning for traditional jalabiya garments. Delicate embroidery handled with care.' },
+      { name: 'Over Roll',      icon: '🦺', tiers: tierSet(2,4,3,6,6,12), desc: 'Heavy-duty cleaning for work overalls and coveralls. Removes stubborn grease, dust, and stains.' },
+      { name: 'Short',          icon: '🩳', tiers: tierSet(2,4,3,8,4,8), desc: 'Quick wash and press for shorts in all fabrics. Returned clean, fresh, and ready to wear.' }
+    ],
+    express: false
+  },
+  {
+    id: 'suits',
+    items: [
+      { name: 'Mens Suit',     icon: '🤵', tiers: tierSet(6,12,15,30,20,40), desc: 'Full dry cleaning for two-piece and three-piece suits. Steam pressed with expert attention to lapels and seams.' },
+      { name: 'Military Suit', icon: '🎖️', tiers: tierSet(6,12,15,30,20,40), desc: 'Specialist cleaning for military and official uniforms. Badges and insignia handled with precision.' },
+      { name: 'Jacket',        icon: '🧥', tiers: tierSet(4,8,6,12,12,24), desc: 'Professional dry clean for all jacket styles. Lining treated carefully and shape fully restored.' },
+      { name: 'Tie',           icon: '🪢', tiers: tierSet(2,4,3,6,5,10), desc: 'Specialist dry cleaning for silk and synthetic ties. Spot treatment and pressing for a like-new finish.' },
+      { name: 'Over Coat',     icon: '🧥', tiers: tierSet(6,12,10,20,20,40), desc: 'Deep clean and steam press for heavy overcoats and winter coats. Shape fully restored with no shrinkage.' }
+    ],
+    express: false
+  },
+  {
+    id: 'women',
+    items: [
+      { name: 'Ladies Dress',   icon: '👗', tiers: tierSet(10,20,15,30,20,40), desc: 'Gentle fabric care for everyday and semi-formal ladies dresses. Colors protected and silhouette maintained.' },
+      { name: 'Special Dress',  icon: '✨', tiers: tierSet(25,50,40,80,60,120), desc: 'Premium cleaning for embellished and special-occasion dresses. Beadwork and delicate fabrics handled with utmost care.' },
+      { name: 'Abaya And Hijab',icon: '🧕', tiers: tierSet(12,20,20,25,30,50), desc: 'Combined cleaning for the full abaya and matching hijab set. Delivered fresh, pressed, and neatly packaged.' },
+      { name: 'Abaya',          icon: '🌙', tiers: tierSet(6,12,12,24,20,40), desc: 'Expert dry cleaning for abayas in all fabric types. Embroidery and stonework preserved with special treatment.' },
+      { name: 'Hijab',          icon: '🧕', tiers: tierSet(3,6,5,10,6,12), desc: 'Delicate laundering for all hijab fabrics including chiffon, jersey, and linen. Returned soft and fresh.' },
+      { name: 'Blouse',         icon: '👚', tiers: tierSet(3,6,6,12,8,16), desc: 'Careful wash and press for ladies blouses. Lace, buttons, and sheer fabrics given individual attention.' },
+      { name: 'Shal',           icon: '🧣', tiers: tierSet(3,6,5,10,6,12), desc: 'Delicate hand-finish wash for shals and wraps. Preserves softness, texture, and fringe details.' },
+      { name: 'Bra',            icon: '🩱', tiers: tierSet(null,null,3,16,5,10), desc: 'Hygienic hand-wash for delicate lingerie using gentle, skin-safe detergents. Shape and elasticity preserved.' }
+    ],
+    express: false
+  },
+  {
+    id: 'bedding',
+    items: [
+      { name: 'Blanket Double', icon: '🌙', price: '25 QAR', desc: 'Deep clean for large double blankets. Heavy-duty washing removes dust mites, odours, and deep-set stains.' },
+      { name: 'Blanket Small',  icon: '🛏️', price: '20 QAR', desc: 'Professional cleaning for single blankets. Fluffy finish with residue-free rinse and fabric-safe softener.' },
+      { name: 'Bed Sheet',      icon: '🛏️', tiers: tierSet(6,12,8,16,20,40), desc: 'High-temperature wash for bed sheets to eliminate allergens and bacteria. Returned crisp and freshly folded.' },
+      { name: 'Pillow Cover',   icon: '😴', tiers: tierSet(2,4,3,6,3,5), desc: 'Thorough hygienic wash for pillow covers of all sizes. Softener treatment leaves them fresh and smooth.' },
+      { name: 'Towel',          icon: '🏖️', tiers: tierSet(3,6,5,10,6,12), desc: 'Hygienic hot wash for towels. Anti-bacterial treatment removes buildup while keeping fibres soft and fluffy.' },
+      { name: 'Bath Towel',     icon: '🛁', tiers: tierSet(3,6,5,10,6,12), desc: 'Deep-clean service for large bath towels. Restores absorbency and removes musty odours effectively.' },
+      { name: 'Face Towel',     icon: '🧼', tiers: tierSet(1,2,3,6,4,8), desc: 'Gentle yet effective cleaning for face and hand towels using skin-safe, hypoallergenic detergents.' },
+      { name: 'Bath Robe',      icon: '🧖', tiers: tierSet(5,10,8,16,10,20), desc: 'Luxurious wash for cotton and terry bath robes. Absorbency and softness fully restored after every clean.' }
+    ],
+    express: false
+  },
+  {
+    id: 'curtains',
+    items: [
+      { name: 'Small Curtain',    icon: '🪟', tiers: tierSet(10,20,15,30,20,40), desc: 'Professional washing and steam pressing for small curtains. Pleats and hooks carefully managed throughout.' },
+      { name: 'Large Curtain',    icon: '🏠', tiers: tierSet(15,30,25,50,30,60), desc: 'Full-service cleaning for heavy floor-to-ceiling curtains. Fabric treated, pressed, and re-hung-ready.' },
+      { name: 'Large Sofa Cover', icon: '🛋️', tiers: tierSet(5,10,10,20,15,30), desc: 'Deep-clean service for large sofa and sectional covers. Stain treatment and full fabric care included.' },
+      { name: 'Small Sofa Cover', icon: '🪑', tiers: tierSet(3,6,5,10,10,20), desc: 'Gentle yet thorough clean for single-seat and small sofa covers. Shape and color fully restored.' }
+    ],
+    express: false
+  },
+  {
+    id: 'carpet',
+    items: [
+      { name: 'Carpet', icon: '🏠', price: '10 QAR/m²', desc: 'Industrial deep-clean for all carpet types. High-pressure extraction removes dust, allergens, and embedded stains.' }
+    ],
+    express: false
+  },
+  {
+    id: 'shoes',
+    items: [
+      { name: 'Shoes', icon: '👟', price: '20 QAR', desc: 'Specialized cleaning for leather, canvas, and suede shoes. Deodorized, polished, and returned box-fresh.' }
+    ],
+    express: false
+  },
+  {
+    id: 'express',
+    items: [
+      { name: 'Saver Bag', icon: '🛍️', price: '45 QAR', desc: 'Economy bundle — fill the bag with mixed clothing items and enjoy a cost-effective wash at a flat rate.' }
+    ],
+    express: true
+  }
+];
+
+/* Lookup maps used by the tier-selector UI (populated during render) */
+const itemsByKey = {};
+const tierSelections = {};
+
+function renderServiceCategories() {
+  serviceCategories.forEach(cat => {
+    const grid = document.getElementById('grid-' + cat.id);
+    if (!grid) return;
+    cat.items.forEach((item, idx) => {
+
+      // ----- Multi-tier service: expandable pricing selector -----
+      if (item.tiers && item.tiers.length) {
+        const itemKey = cat.id + '-' + idx;
+        itemsByKey[itemKey] = item;
+        tierSelections[itemKey] = 0;
+        const defaultTier = item.tiers[0];
+
+        grid.innerHTML += `
+          <div class="svc-item-card has-tiers reveal${cat.express ? ' express-card' : ''}" data-item-key="${itemKey}">
+            ${cat.express ? '<span class="express-tag">Express</span>' : ''}
+            <div class="svc-item-icon">${item.icon}</div>
+            <div class="svc-item-name">${item.name}</div>
+            <div style="font-size:0.78rem;color:var(--text-light);line-height:1.5;margin-top:2px;">${item.desc}</div>
+            <div class="svc-item-price-row">
+              <div class="svc-item-price-display" id="price-display-${itemKey}">
+                <span class="svc-tier-current-label">${defaultTier.label}</span>
+                <span class="svc-tier-current-price">${defaultTier.price} QAR</span>
+              </div>
+              <button type="button" class="svc-tier-toggle" id="tier-toggle-${itemKey}" onclick="toggleTierPanel('${itemKey}')" aria-label="Show pricing options" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="svc-tier-panel" id="tier-panel-${itemKey}">
+              ${item.tiers.map((t, i) => `
+                <button type="button" class="svc-tier-option${i === 0 ? ' selected' : ''}" onclick="selectTier('${itemKey}', ${i})">
+                  <span class="svc-tier-option-label">${t.label}</span>
+                  <span class="svc-tier-option-price">${t.price} QAR</span>
+                </button>`).join('')}
+            </div>
+            <button onclick="addTieredToCart('${itemKey}')" class="svc-item-wa" style="border:none;cursor:pointer;text-decoration:none;display:inline-flex;">
+              ${WA_SVG} Add to Cart
+            </button>
+          </div>`;
+        return;
+      }
+
+      // ----- Flat-rate service: single fixed price (unchanged behavior) -----
+      grid.innerHTML += `
+        <div class="svc-item-card reveal${cat.express ? ' express-card' : ''}">
+          ${cat.express ? '<span class="express-tag">Express</span>' : ''}
+          <div class="svc-item-icon">${item.icon}</div>
+          <div class="svc-item-name">${item.name}</div>
+          <div style="font-size:0.78rem;color:var(--text-light);line-height:1.5;margin-top:2px;">${item.desc}</div>
+          <div style="font-size:0.88rem;font-weight:700;color:var(--brand-secondary);margin-top:4px;">${item.price}</div>
+          <button onclick="addToCart('${item.name}', '${item.price}')" class="svc-item-wa" style="border:none;cursor:pointer;text-decoration:none;display:inline-flex;">
+            ${WA_SVG} Add to Cart
+          </button>
+        </div>`;
+    });
+  });
+}
+
+/* Expand / collapse the pricing-tier panel on a service card */
+function toggleTierPanel(itemKey) {
+  const panel = document.getElementById('tier-panel-' + itemKey);
+  const toggleBtn = document.getElementById('tier-toggle-' + itemKey);
+  if (!panel) return;
+  const willOpen = !panel.classList.contains('open');
+  panel.classList.toggle('open');
+  if (toggleBtn) {
+    toggleBtn.classList.toggle('open');
+    toggleBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+  }
+}
+
+/* Select one pricing tier for a service (only one can be active at a time) */
+function selectTier(itemKey, tierIdx) {
+  const item = itemsByKey[itemKey];
+  if (!item) return;
+  tierSelections[itemKey] = tierIdx;
+  const tier = item.tiers[tierIdx];
+
+  const priceDisplay = document.getElementById('price-display-' + itemKey);
+  if (priceDisplay) {
+    priceDisplay.innerHTML = `<span class="svc-tier-current-label">${tier.label}</span><span class="svc-tier-current-price">${tier.price} QAR</span>`;
+  }
+
+  const panel = document.getElementById('tier-panel-' + itemKey);
+  if (panel) {
+    panel.querySelectorAll('.svc-tier-option').forEach((btn, i) => {
+      btn.classList.toggle('selected', i === tierIdx);
+    });
+  }
+}
+
+/* Add a service to the cart using its currently selected pricing tier */
+function addTieredToCart(itemKey) {
+  const item = itemsByKey[itemKey];
+  if (!item) return;
+  const tierIdx = tierSelections[itemKey] || 0;
+  const tier = item.tiers[tierIdx];
+  addToCart(item.name, tier.price + ' QAR', tier.label);
+}
+
+/* ===== SERVICES INFINITE LOOP ===== */
+const svcCatOrder = ['everyday','suits','women','bedding','curtains','carpet','shoes','express'];
+const svcCatLabels = {
+  'everyday': '👕 Everyday Clothing',
+  'suits':    '🥼 Suits & Formal',
+  'women':    '👗 Women\'s Garments',
+  'bedding':  '🛏️ Bedding & Household',
+  'curtains': '🪟 Curtains & Upholstery',
+  'carpet':   '🏠 Carpet Cleaning',
+  'shoes':    '👟 Shoes Cleaning',
+  'express':  '⚡ Express Service'
+};
+let svcCurrentIdx = 0;
+
+function switchCat(id) {
+  const idx = svcCatOrder.indexOf(id);
+  if (idx !== -1) svcCurrentIdx = idx;
+
+  document.querySelectorAll('.services-category').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.svc-tab').forEach(el => el.classList.remove('active'));
+
+  const cat = document.getElementById('cat-' + id);
+  if (cat) cat.classList.add('active');
+
+  document.querySelectorAll('.svc-tab').forEach(t => {
+    if (t.getAttribute('onclick') === `switchCat('${id}')`) t.classList.add('active');
+  });
+
+  // Update mobile label
+  const mobileLabel = document.getElementById('svc-mobile-label');
+  if (mobileLabel) mobileLabel.textContent = svcCatLabels[id] || id;
+
+  // Scroll active tab into view on desktop
+  const activeTab = document.querySelector(`.svc-tab[onclick="switchCat('${id}')"]`);
+  if (activeTab) activeTab.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
+
+  // re-trigger reveal for newly shown cards
+  setTimeout(() => {
+    if (cat) cat.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  }, 50);
+}
+
+function svcNext() {
+  svcCurrentIdx = (svcCurrentIdx + 1) % svcCatOrder.length;
+  switchCat(svcCatOrder[svcCurrentIdx]);
+}
+function svcPrev() {
+  svcCurrentIdx = (svcCurrentIdx - 1 + svcCatOrder.length) % svcCatOrder.length;
+  switchCat(svcCatOrder[svcCurrentIdx]);
+}
+
+// Touch swipe on the services categories area
+(function(){
+  const area = document.getElementById('services');
+  if (!area) return;
+  let sx = 0, sy = 0, swiping = false;
+  area.addEventListener('touchstart', e => {
+    sx = e.touches[0].clientX;
+    sy = e.touches[0].clientY;
+    swiping = true;
+  }, { passive: true });
+  area.addEventListener('touchmove', e => {
+    if (!swiping) return;
+    const dx = e.touches[0].clientX - sx;
+    const dy = e.touches[0].clientY - sy;
+    if (Math.abs(dy) > Math.abs(dx)) swiping = false;
+  }, { passive: true });
+  area.addEventListener('touchend', e => {
+    if (!swiping) return;
+    const dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 50) {
+      if (dx < 0) svcNext();
+      else svcPrev();
+    }
+    swiping = false;
+  });
+})();
+
+renderServiceCategories();
+
+const products = [
+  {
+    title: "Premium Laundry Detergent",
+    price: "35.99 QAR",
+    desc: "High-performance liquid detergent for deep cleaning and stain removal while protecting fabric quality.",
+    img: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=500&q=80",
+    msg: "Hello Quality Laundry,\nI would like to order: Laundry Detergent\nPlease contact me with details."
+  },
+  {
+    title: "Fabric Softener",
+    price: "9.99 QAR",
+    desc: "Long-lasting softness and a fresh scent with every wash. Gentle formula for sensitive skin.",
+    img: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=500&q=80",
+    msg: "Hello Quality Laundry,\nI would like to order: Fabric Softener\nPlease contact me with details."
+  },
+  {
+    title: "Stain Remover",
+    price: "7.49 QAR",
+    desc: "Targeted stain-fighting gel for tough spots — grease, wine, ink, and more. Works on contact.",
+    img: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500&q=80",
+    msg: "Hello Quality Laundry,\nI would like to order: Stain Remover\nPlease contact me with details."
+  },
+  {
+    title: "Laundry Bags",
+    price: "14.99 QAR",
+    desc: "Durable mesh laundry bags in multiple sizes — protects delicates and keeps items organized.",
+    img: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=500&q=80",
+    msg: "Hello Quality Laundry,\nI would like to order: Laundry Bags\nPlease contact me with details."
+  },
+  {
+    title: "Fabric Freshener",
+    price: "6.99 QAR",
+    desc: "Instant odor-eliminating spray for clothes, sofas, and linens. Leaves a clean, light fragrance.",
+    img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&q=80",
+    msg: "Hello Quality Laundry,\nI would like to order: Fabric Freshener\nPlease contact me with details."
+  },
+  {
+    title: "Cleaning Kit",
+    price: "29.99 QAR",
+    desc: "Complete home laundry kit — detergent, softener, stain remover & freshener bundled at a great value.",
+    img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&q=80",
+    msg: "Hello Quality Laundry,\nI would like to order: Cleaning Kit\nPlease contact me with details."
+  },
+  {
+    title: "Dryer Sheets",
+    price: "5.99 QAR",
+    desc: "Anti-static dryer sheets that reduce wrinkles, soften fabrics, and leave clothes smelling fresh.",
+    img: "https://i.postimg.cc/tCz9LrcM/5.jpg",
+    msg: "Hello Quality Laundry,\nI would like to order: Dryer Sheets\nPlease contact me with details."
+  },
+  {
+    title: "Garment Steamer",
+    price: "49.99 QAR",
+    desc: "Compact handheld garment steamer for home use. Removes wrinkles in minutes on all fabric types.",
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80",
+    msg: "Hello Quality Laundry,\nI would like to order: Garment Steamer\nPlease contact me with details."
+  }
+];
+
+const galleryItems = [
+  { src:"https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=900&q=80", label:"Modern Laundry Facility" },
+  { src:"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80", label:"Garment Care" },
+  { src:"https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=600&q=80", label:"Dry Cleaning Process" },
+  { src:"https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=700&q=80", label:"Professional Ironing" },
+  { src:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80", label:"Carpet Treatment" },
+  { src:"https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80", label:"Fresh Bedding" },
+  { src:"https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80", label:"Delivery Service" },
+  { src:"https://images.unsplash.com/photo-1505693314120-0d443867891c?w=600&q=80", label:"Curtain Cleaning" }
+];
+
+const testimonials = [
+  { name:"Ahmed Hassan", role:"Regular Customer", stars:5, avatar:"https://i.pravatar.cc/150?img=5", text:"Excellent laundry service. My clothes always come back clean, fresh, and neatly folded. The pickup and delivery are always on time." },
+  { name:"Mariam Ali", role:"Working Professional", stars:5, avatar:"https://i.pravatar.cc/150?img=8", text:"Quality Laundry handles all our restaurant linens. Consistently excellent results, very professional staff, and pickup/delivery makes everything so easy." },
+  { name:"Omar Mahmoud", role:"Frequent User", stars:5, avatar:"https://i.pravatar.cc/150?img=47", text:"They cleaned my heavy curtains and carpets — the results were amazing. Looked brand new! Very careful with fabrics and super affordable pricing." },
+  { name:"Nour El-Din", role:"Frequent User", stars:4, avatar:"https://i.pravatar.cc/150?img=12", text:"Great service overall. My shirts are always crisp and the turnaround time is fantastic. The app-free WhatsApp ordering makes it really convenient." },
+  { name:"Yara Mostafa", role:"Frequent User", stars:5, avatar:"https://i.pravatar.cc/150?img=49", text:"I've been a customer for 3 years and the quality never drops. They treat every item with such care. The stain removal on my daughter's dress was a miracle!" },
+  { name:"Khaled Farouk", role:"Frequent User", stars:5, avatar:"https://i.pravatar.cc/150?img=15", text:"We outsource all our hotel laundry to Quality Laundry. Impeccable standards, consistent quality, and they always meet tight deadlines. Highly recommend." }
+];
+
+/* ===== RENDER GALLERY ===== */
+const galGrid = document.getElementById('gallery-grid');
+galleryItems.forEach((g, i) => {
+  galGrid.innerHTML += `
+  <div class="gallery-item reveal" data-index="${i}" onclick="openLightbox(${i})">
+    <img src="${g.src}" alt="${g.label}" class="gallery-img" loading="lazy">
+    <div class="gallery-overlay"><div class="gallery-overlay-text">${g.label}</div></div>
+    <div class="gallery-zoom-icon">🔍</div>
+  </div>`;
+});
+
+/* ===== RENDER TESTIMONIALS AS SLIDER — FULLY FIXED ===== */
+function getCardsPerSlide() {
+  if(window.innerWidth <= 520) return 1;
+  if(window.innerWidth <= 768) return 2;
+  return 3;
+}
+
+let tslCurrent = 0;
+let tslAutoplay = null;
+let tslTotal = 0;
+
+function buildTestimonialSlider() {
+  const track = document.getElementById('testimonials-track');
+  const dotsWrap = document.getElementById('tsl-dots');
+  if(!track || !dotsWrap) return;
+
+  clearInterval(tslAutoplay);
+
+  const perSlide = getCardsPerSlide();
+  tslTotal = Math.ceil(testimonials.length / perSlide);
+  if(tslCurrent >= tslTotal) tslCurrent = 0;
+
+  // Build slide HTML
+  let slidesHTML = '';
+  for(let s = 0; s < tslTotal; s++) {
+    const chunk = testimonials.slice(s * perSlide, s * perSlide + perSlide);
+    let cardsHTML = chunk.map(t => `
+      <div class="testimonial-card">
+        <div class="testimonial-stars">${'★'.repeat(t.stars)}${'☆'.repeat(5-t.stars)}</div>
+        <p class="testimonial-text">"${t.text}"</p>
+        <div class="testimonial-author">
+          <img loading="lazy" src="${t.avatar}" alt="${t.name}" class="testimonial-avatar-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="testimonial-avatar" style="display:none">${t.name.charAt(0)}</div>
+          <div>
+            <div class="testimonial-name">${t.name}</div>
+            <div class="testimonial-role">${t.role}</div>
+          </div>
+        </div>
+      </div>`).join('');
+    slidesHTML += `<div class="testimonials-grid"><div class="testimonial-slide-inner">${cardsHTML}</div></div>`;
+  }
+
+  track.innerHTML = slidesHTML;
+  track.style.width = (tslTotal * 100) + '%';
+  track.style.transform = 'translateX(0)';
+  track.querySelectorAll('.testimonials-grid').forEach(g => {
+    g.style.width = (100 / tslTotal) + '%';
+    g.style.flexShrink = '0';
+  });
+
+  // Build dots
+  dotsWrap.innerHTML = '';
+  for(let i = 0; i < tslTotal; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to slide ' + (i+1));
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsWrap.appendChild(dot);
+  }
+
+  updateSlider();
+  startAutoplay();
+}
+
+function updateSlider() {
+  const track = document.getElementById('testimonials-track');
+  if(!track) return;
+  const pct = tslCurrent * (100 / tslTotal);
+  track.style.transform = `translateX(-${pct}%)`;
+  document.querySelectorAll('.slider-dot').forEach((d,i) => {
+    d.classList.toggle('active', i === tslCurrent);
+  });
+}
+
+function goToSlide(i) {
+  tslCurrent = ((i % tslTotal) + tslTotal) % tslTotal;
+  updateSlider();
+  restartAutoplay();
+}
+
+function startAutoplay() {
+  clearInterval(tslAutoplay);
+  tslAutoplay = setInterval(() => {
+    tslCurrent = (tslCurrent + 1) % tslTotal;
+    updateSlider();
+  }, 4500);
+}
+function restartAutoplay() {
+  clearInterval(tslAutoplay);
+  startAutoplay();
+}
+
+document.getElementById('tsl-prev').addEventListener('click', () => {
+  goToSlide(tslCurrent - 1);
+});
+document.getElementById('tsl-next').addEventListener('click', () => {
+  goToSlide(tslCurrent + 1);
+});
+
+// Touch/swipe support
+(function(){
+  const wrap = document.querySelector('.testimonials-slider-wrap');
+  if(!wrap) return;
+  let startX = 0, startY = 0, isDragging = false;
+  wrap.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    isDragging = true;
+  }, { passive:true });
+  wrap.addEventListener('touchmove', e => {
+    if(!isDragging) return;
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+    if(Math.abs(dy) > Math.abs(dx)) isDragging = false;
+  }, { passive:true });
+  wrap.addEventListener('touchend', e => {
+    if(!isDragging) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if(Math.abs(dx) > 40) {
+      if(dx < 0) goToSlide(tslCurrent + 1);
+      else goToSlide(tslCurrent - 1);
+    }
+    isDragging = false;
+  });
+})();
+
+// Rebuild on resize with debounce
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(buildTestimonialSlider, 250);
+});
+
+buildTestimonialSlider();
+
+/* ===== WHATSAPP LINKS ===== */
+document.getElementById('hero-wa-btn').href = waLink("Hello Quality Laundry,\nI'd like to learn more about your services.\nPlease contact me.");
+const footerWa = document.getElementById('footer-wa');
+if (footerWa) footerWa.href = waLink("Hello Quality Laundry,\nI'd like to get in touch.\nPlease contact me.");
+
+/* ===== LIGHTBOX ===== */
+let currentImg = 0;
+function openLightbox(i) {
+  currentImg = i;
+  document.getElementById('lightbox-img').src = galleryItems[i].src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+document.getElementById('lightbox-close').onclick = () => {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+};
+document.getElementById('lightbox-prev').onclick = () => {
+  currentImg = (currentImg - 1 + galleryItems.length) % galleryItems.length;
+  document.getElementById('lightbox-img').src = galleryItems[currentImg].src;
+};
+document.getElementById('lightbox-next').onclick = () => {
+  currentImg = (currentImg + 1) % galleryItems.length;
+  document.getElementById('lightbox-img').src = galleryItems[currentImg].src;
+};
+document.getElementById('lightbox').addEventListener('click', e => {
+  if(e.target === document.getElementById('lightbox')) {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('lightbox');
+  if(!lb.classList.contains('open')) return;
+  if(e.key === 'Escape') { lb.classList.remove('open'); document.body.style.overflow = ''; }
+  if(e.key === 'ArrowLeft') document.getElementById('lightbox-prev').click();
+  if(e.key === 'ArrowRight') document.getElementById('lightbox-next').click();
+});
+
+/* ===== FORM SUBMIT ===== */
+function submitForm() {
+  const name = document.getElementById('form-name').value.trim();
+  const phone = document.getElementById('form-phone').value.trim();
+  const service = document.getElementById('form-service').value;
+  const msg = document.getElementById('form-message').value.trim();
+  if(!name || !phone) { alert('Please fill in your name and phone number.'); return; }
+  const waMsg = `Hello Quality Laundry,\n\nNew Service Request:\n━━━━━━━━━━━━━━━━━━\nName: ${name}\nPhone: ${phone}\nService: ${service || 'Not specified'}\nMessage: ${msg || 'No message'}\n━━━━━━━━━━━━━━━━━━\nPlease contact me at your earliest convenience.`;
+  window.open(waLink(waMsg), '_blank');
+}
+
+/* ===== NAVBAR SCROLL ===== */
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  const btt = document.getElementById('back-to-top');
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+  btt.classList.toggle('visible', window.scrollY > 400);
+});
+
+/* ===== HAMBURGER ===== */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+hamburger.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('active');
+  hamburger.setAttribute('aria-expanded', open);
+  if(open) mobileNav.classList.add('open');
+  else mobileNav.classList.remove('open');
+});
+function closeMenu() {
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded','false');
+  mobileNav.classList.remove('open');
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+function initObserver() {
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+}
+
+/* ===== ACTIVE NAV HIGHLIGHT ===== */
+(function(){
+  const sections = ['about','services','products','gallery','testimonials','reviews','contact'];
+  const allNavLinks = document.querySelectorAll('.nav-links a, #mobile-nav a');
+
+  function setActive(id) {
+    allNavLinks.forEach(a => {
+      const href = a.getAttribute('href');
+      if(href === '#' + id) {
+        a.classList.add('nav-active');
+      } else {
+        a.classList.remove('nav-active');
+      }
+    });
+  }
+
+  function onScroll() {
+    const scrollY = window.scrollY + 120;
+    let active = null;
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if(el && el.offsetTop <= scrollY) active = id;
+    });
+    if(active) setActive(active);
+    else allNavLinks.forEach(a => a.classList.remove('nav-active'));
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+/* ===== SHOPPING CART SYSTEM ===== */
+let cartItems = [];
+
+// Load cart from localStorage on page load
+function loadCart() {
+  const saved = localStorage.getItem('qualityLaundryCart');
+  if(saved) {
+    cartItems = JSON.parse(saved);
+    updateCartUI();
+  }
+}
+
+// Save cart to localStorage
+function saveCart() {
+  localStorage.setItem('qualityLaundryCart', JSON.stringify(cartItems));
+  updateCartUI();
+}
+
+// Add item to cart (itemType is optional — used for multi-tier priced services)
+function addToCart(itemName, itemPrice, itemType) {
+  cartItems.push({
+    name: itemName,
+    price: itemPrice,
+    type: itemType || null,
+    id: Date.now()
+  });
+  saveCart();
+  showCartNotification();
+}
+
+// Add featured offer to cart
+function addFeaturedOfferToCart(itemName, itemPrice) {
+  addToCart(itemName, itemPrice);
+}
+
+// Subscribe to a package — opens WhatsApp with pre-filled package details
+function subscribePackage(name, price, priceLine, features) {
+  const featuresList = (features && features.length)
+    ? features.map(f => '  • ' + f).join('\n')
+    : '  • Premium cleaning service';
+  const message = `Hello Quality Laundry,\n\nI would like to subscribe to the following package:\n━━━━━━━━━━━━━━━━━━\nPackage: ${name}\nPrice: ${priceLine || price}\n\nFeatures included:\n${featuresList}\n━━━━━━━━━━━━━━━━━━\nPlease confirm my subscription and arrange pickup at your earliest convenience.`;
+  window.open(waLink(message), '_blank');
+}
+
+// Remove item from cart
+function removeFromCart(itemId) {
+  cartItems = cartItems.filter(item => item.id !== itemId);
+  saveCart();
+}
+
+// Update cart UI
+function updateCartUI() {
+  const cartCount = cartItems.length;
+  const cartBadge = document.getElementById('cart-badge');
+  const cartCountSpan = document.getElementById('cart-count');
+  
+  if(cartCount > 0) {
+    cartBadge.style.display = 'flex';
+    cartBadge.textContent = cartCount;
+    cartCountSpan.textContent = cartCount;
+  } else {
+    cartBadge.style.display = 'none';
+    cartCountSpan.textContent = '0';
+  }
+  
+  renderCartItems();
+}
+
+// Render cart items in modal
+function renderCartItems() {
+  const cartList = document.getElementById('cart-items-list');
+  const emptyState = document.getElementById('cart-empty-state');
+  const itemsContainer = document.getElementById('cart-items-container');
+  
+  if(cartItems.length === 0) {
+    cartList.innerHTML = '';
+    emptyState.style.display = 'block';
+    itemsContainer.style.display = 'none';
+  } else {
+    emptyState.style.display = 'none';
+    itemsContainer.style.display = 'block';
+    
+    cartList.innerHTML = cartItems.map(item => `
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}${item.type ? `<span class="cart-item-type">${item.type}</span>` : ''}</div>
+          <div class="cart-item-price">${item.price}</div>
+        </div>
+        <button class="cart-item-remove" onclick="removeFromCart(${item.id})">Remove</button>
+      </div>
+    `).join('');
+    
+    updateCartSummary();
+  }
+}
+
+// Update cart summary
+function updateCartSummary() {
+  let total = 0;
+  cartItems.forEach(item => {
+    const priceStr = item.price.replace(/[^0-9.]/g, '');
+    const price = parseFloat(priceStr) || 0;
+    total += price;
+  });
+  
+  const MIN_ORDER = 50;
+  const remaining = Math.max(0, MIN_ORDER - total);
+  
+  document.getElementById('cart-subtotal').textContent = total.toFixed(2) + ' QAR';
+  document.getElementById('cart-total').textContent = total.toFixed(2) + ' QAR';
+  
+  // Update minimum order notice
+  const notice = document.getElementById('cart-minimum-notice');
+  const progressBar = document.getElementById('cart-progress-fill');
+  const statusText = document.getElementById('cart-total-status');
+  const checkoutBtn = document.getElementById('checkout-whatsapp-btn');
+  
+  if (notice && progressBar && statusText) {
+    const percentage = Math.min(100, (total / MIN_ORDER) * 100);
+    progressBar.style.width = percentage + '%';
+    
+    if (total < MIN_ORDER) {
+      notice.classList.add('show');
+      notice.textContent = 'Minimum order value is 50 QAR. Please add more items to continue.';
+      statusText.textContent = 'Add ' + remaining.toFixed(2) + ' QAR more to place your order.';
+      statusText.style.color = '#dc3545';
+      if (checkoutBtn) checkoutBtn.classList.add('checkout-disabled');
+    } else {
+      notice.classList.remove('show');
+      statusText.textContent = 'Your order is ready for checkout!';
+      statusText.style.color = '#28a745';
+      if (checkoutBtn) checkoutBtn.classList.remove('checkout-disabled');
+    }
+  }
+}
+
+// Open cart modal
+function openCart() {
+  document.getElementById('cart-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+// Close cart modal
+function closeCart() {
+  document.getElementById('cart-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Checkout via WhatsApp
+function checkoutViaWhatsApp() {
+  const name = document.getElementById('cart-name').value.trim();
+  const phone = document.getElementById('cart-phone').value.trim();
+  const house = document.getElementById('cart-house').value.trim();
+  const mapsLink = document.getElementById('cart-maps-link').value.trim();
+  
+  if(!name || !phone || !house || !mapsLink) {
+    alert('Please fill in all required fields: Name, Phone Number, House Number, and Google Maps Location Link.');
+    return;
+  }
+  
+  if(cartItems.length === 0) {
+    alert('Your cart is empty. Please add items before checkout.');
+    return;
+  }
+  
+  // Check minimum order value
+  let total = 0;
+  cartItems.forEach(item => {
+    const priceStr = item.price.replace(/[^0-9.]/g, '');
+    const price = parseFloat(priceStr) || 0;
+    total += price;
+  });
+  
+  if(total < 50) {
+    alert('Minimum order value is 50 QAR. Your current total is ' + total.toFixed(2) + ' QAR. Please add more items to continue.');
+    return;
+  }
+  
+  // Build order items list
+  let itemsList = '';
+  cartItems.forEach((item, index) => {
+    itemsList += `${index + 1}. ${item.name}${item.type ? ' (' + item.type + ')' : ''} - ${item.price}\n`;
+  });
+  
+  const orderMessage = `🧺 New Order — Quality Laundry\n\n👤 Customer Information\n━━━━━━━━━━━━━━━━━━\nName: ${name}\nPhone: ${phone}\nHouse Number: ${house}\nGoogle Maps Location: ${mapsLink}\n\n🛒 Order Details\n━━━━━━━━━━━━━━━━━━\n${itemsList}\n💰 Total: ${total.toFixed(2)} QAR\n━━━━━━━━━━━━━━━━━━\nPlease confirm this order.`;
+  
+  const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`;
+  window.open(waLink, '_blank');
+  
+  // Clear cart after successful order
+  setTimeout(() => {
+    cartItems = [];
+    saveCart();
+    closeCart();
+    document.getElementById('cart-name').value = '';
+    document.getElementById('cart-phone').value = '';
+    document.getElementById('cart-house').value = '';
+    document.getElementById('cart-maps-link').value = '';
+  }, 500);
+}
+
+// Show cart notification
+function showCartNotification() {
+  // You can add a toast notification here if desired
+  console.log('Item added to cart');
+}
+
+// Close cart modal when clicking outside
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('cart-modal');
+  if(modal) {
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal) {
+        closeCart();
+      }
+    });
+  }
+  loadCart();
+  initObserver();
+});
+
+// Keyboard shortcut to close cart (Escape key)
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape') {
+    closeCart();
+  }
+});
+
+/* ===== CUSTOMER REVIEWS SYSTEM ===== */
+const REVIEWS_KEY = 'qualityLaundryReviews';
+
+function loadReviews() {
+  try {
+    const saved = localStorage.getItem(REVIEWS_KEY);
+    return saved ? JSON.parse(saved) : [];
+  } catch(e) {
+    return [];
+  }
+}
+
+function saveReviews(reviews) {
+  try {
+    localStorage.setItem(REVIEWS_KEY, JSON.stringify(reviews));
+  } catch(e) {}
+}
+
+function starsHtml(n, filled) {
+  let html = '';
+  for(let i = 1; i <= 5; i++) {
+    html += i <= n ? (filled ? '★' : '★') : '☆';
+  }
+  return html;
+}
+
+function formatDate(ts) {
+  const d = new Date(ts);
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function renderReviews() {
+  const reviews = loadReviews();
+  const panel = document.getElementById('reviews-list-panel');
+  const avgScore = document.getElementById('reviews-avg-score');
+  const avgStars = document.getElementById('reviews-avg-stars');
+  const avgCount = document.getElementById('reviews-avg-count');
+  if (!panel) return;
+
+  if (reviews.length === 0) {
+    panel.innerHTML = '<div class="reviews-empty"><div class="reviews-empty-icon">💬</div><p>Be the first to leave a review!</p></div>';
+    if (avgScore) avgScore.textContent = '—';
+    if (avgStars) avgStars.textContent = '☆☆☆☆☆';
+    if (avgCount) avgCount.textContent = 'No reviews yet';
+    return;
+  }
+
+  // Average
+  const avg = reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+  const avgRounded = Math.round(avg * 10) / 10;
+  if (avgScore) avgScore.textContent = avgRounded.toFixed(1);
+  if (avgStars) {
+    let stars = '';
+    for (let i = 1; i <= 5; i++) stars += i <= Math.round(avg) ? '★' : '☆';
+    avgStars.textContent = stars;
+  }
+  if (avgCount) {
+    avgCount.textContent = reviews.length === 1 ? '1 review' : reviews.length + ' reviews';
+  }
+
+  // List — newest first
+  const sorted = [...reviews].sort((a, b) => b.ts - a.ts);
+  panel.innerHTML = sorted.map(r => `
+    <div class="review-card">
+      <div class="review-card-top">
+        <div class="review-card-name">${escapeHtml(r.name)}</div>
+        <div class="review-card-stars">${starsHtml(r.rating)}</div>
+      </div>
+      <div class="review-card-text">${escapeHtml(r.text)}</div>
+      <div class="review-card-date">${formatDate(r.ts)}</div>
+    </div>
+  `).join('');
+}
+
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function submitReview() {
+  const nameEl   = document.getElementById('review-name');
+  const textEl   = document.getElementById('review-text');
+  const errorEl  = document.getElementById('review-error');
+  const toastEl  = document.getElementById('review-toast');
+
+  const name = nameEl ? nameEl.value.trim() : '';
+  const text = textEl ? textEl.value.trim() : '';
+
+  // Get selected star rating
+  const ratingInput = document.querySelector('input[name="review-rating"]:checked');
+  const rating = ratingInput ? parseInt(ratingInput.value) : 0;
+
+  // Validate
+  if (!name || !text || !rating) {
+    if (errorEl) { errorEl.style.display = 'block'; }
+    if (toastEl) { toastEl.style.display = 'none'; }
+    return;
+  }
+  if (errorEl) errorEl.style.display = 'none';
+
+  const reviews = loadReviews();
+  reviews.push({ name, text, rating, ts: Date.now() });
+  saveReviews(reviews);
+  renderReviews();
+
+  // Reset form
+  if (nameEl) nameEl.value = '';
+  if (textEl) { textEl.value = ''; updateCharCount(); }
+  // Reset stars via the exposed method
+  const sp = document.getElementById('star-picker');
+  if (sp && sp._resetStars) sp._resetStars();
+
+  // Show success toast
+  if (toastEl) {
+    toastEl.style.display = 'flex';
+    setTimeout(() => { toastEl.style.display = 'none'; }, 4000);
+  }
+}
+
+function updateCharCount() {
+  const textEl = document.getElementById('review-text');
+  const countEl = document.getElementById('review-char-num');
+  if (textEl && countEl) countEl.textContent = textEl.value.length;
+}
+
+// Init reviews on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  renderReviews();
+
+  const textEl = document.getElementById('review-text');
+  if (textEl) {
+    textEl.addEventListener('input', updateCharCount);
+  }
+
+  // JS-driven star picker: highlight stars 1 through N on hover/click
+  const starPicker = document.getElementById('star-picker');
+  if (starPicker) {
+    const labels = Array.from(starPicker.querySelectorAll('label'));
+    let selectedVal = 0;
+
+    function paintStars(hoverVal, selVal) {
+      // هنلوّن كل النجوم من 1 للـ N اللي الماوس فوقها أو المختارة
+      const active = hoverVal > 0 ? hoverVal : selVal;
+      labels.forEach((lbl, idx) => {
+        const starNum = idx + 1; // labels مرتبة 1..5
+        if (starNum <= active) {
+          lbl.classList.add('hovered');
+          lbl.classList.remove('selected');
+        } else {
+          lbl.classList.remove('hovered', 'selected');
+        }
+      });
+      // النجوم المختارة تاخد class selected لو مفيش hover
+      if (hoverVal === 0 && selVal > 0) {
+        labels.forEach((lbl, idx) => {
+          if (idx + 1 <= selVal) {
+            lbl.classList.add('selected');
+            lbl.classList.remove('hovered');
+          }
+        });
+      }
+    }
+
+    labels.forEach((lbl, idx) => {
+      const starNum = idx + 1;
+
+      lbl.addEventListener('mouseenter', () => {
+        paintStars(starNum, selectedVal);
+      });
+
+      lbl.addEventListener('mouseleave', () => {
+        paintStars(0, selectedVal);
+      });
+
+      lbl.addEventListener('click', (e) => {
+        e.preventDefault();
+        selectedVal = starNum;
+        // اختيار الـ radio المناسب
+        const radio = document.getElementById('star' + starNum);
+        if (radio) radio.checked = true;
+        paintStars(0, selectedVal);
+        const err = document.getElementById('review-error');
+        if (err) err.style.display = 'none';
+      });
+    });
+
+    // keyboard support
+    starPicker.querySelectorAll('input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        selectedVal = parseInt(radio.value);
+        paintStars(0, selectedVal);
+      });
+    });
+
+    // expose reset for submitReview
+    starPicker._resetStars = function() {
+      selectedVal = 0;
+      paintStars(0, 0);
+      starPicker.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+    };
+  }
+
+  // Clear error on any form input
+  ['review-name', 'review-text'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', () => {
+      const err = document.getElementById('review-error');
+      if (err) err.style.display = 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
