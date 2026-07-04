@@ -2200,7 +2200,38 @@ section { padding: 80px 5%; }
   .reviews-avg-score { font-size: 2.6rem; }
 }
 
-/* ===== PRICING LIST SECTION ===== */
+/* ===== RTL / ARABIC SUPPORT ===== */
+html[dir="rtl"] .nav-links { direction: rtl; }
+html[dir="rtl"] .hero-grid { direction: rtl; }
+html[dir="rtl"] .hero-desc { direction: rtl; }
+html[dir="rtl"] .hero-btns { direction: rtl; }
+html[dir="rtl"] .hero-stats { direction: rtl; }
+html[dir="rtl"] .about-grid { direction: rtl; }
+html[dir="rtl"] .about-img-badge { right: auto; left: -20px; }
+html[dir="rtl"] .contact-grid { direction: rtl; }
+html[dir="rtl"] .footer-grid { direction: rtl; }
+html[dir="rtl"] .footer-bottom { direction: rtl; }
+html[dir="rtl"] .review-char-count { text-align: left; }
+html[dir="rtl"] .nav-links a::after { transform-origin: center; }
+html[dir="rtl"] #back-to-top { right: auto; left: 28px; }
+html[dir="rtl"] .hero-badge-1 { left: auto; right: -20px; }
+html[dir="rtl"] .hero-badge-2 { right: auto; left: -10px; }
+html[dir="rtl"] .svc-cat-header { direction: rtl; }
+html[dir="rtl"] .reviews-layout { direction: rtl; }
+html[dir="rtl"] .contact-info { direction: rtl; }
+html[dir="rtl"] .form-row { direction: rtl; }
+html[dir="rtl"] .featured-offer-wide-inner { direction: rtl; }
+html[dir="rtl"] .cart-modal-content { direction: rtl; }
+html[dir="rtl"] .cart-modal-header { direction: rtl; }
+html[dir="rtl"] .summary-row { direction: rtl; }
+html[dir="rtl"] .section-sub { direction: rtl; }
+html[dir="rtl"] .cart-checkout-form { direction: rtl; }
+html[dir="rtl"] .featured-offer-body { direction: rtl; }
+html[dir="rtl"] .featured-offers-grid { direction: rtl; }
+
+#lang-toggle-btn:hover { background: var(--brand-secondary) !important; }
+
+/* ===== END RTL ===== */
 .pricing-list-section {
   max-width: 1200px;
   margin: 44px auto 0;
@@ -2276,7 +2307,7 @@ section { padding: 80px 5%; }
 <div id="cart-modal">
   <div class="cart-modal-content">
     <div class="cart-modal-header">
-      <h2 class="cart-modal-title">Shopping Cart</h2>
+      <h2 class="cart-modal-title" data-en="Shopping Cart" data-ar="سلة التسوق">Shopping Cart</h2>
       <button class="cart-modal-close" onclick="closeCart()">✕</button>
     </div>
     
@@ -2317,11 +2348,11 @@ section { padding: 80px 5%; }
       
       <div class="cart-summary">
         <div class="summary-row">
-          <span>Subtotal:</span>
+          <span data-en="Subtotal:" data-ar="المجموع الفرعي:">Subtotal:</span>
           <span id="cart-subtotal">0 QAR</span>
         </div>
         <div class="summary-row total">
-          <span>Total:</span>
+          <span data-en="Total:" data-ar="الإجمالي:">Total:</span>
           <span id="cart-total">0 QAR</span>
         </div>
         <div class="cart-progress-bar">
@@ -2353,13 +2384,13 @@ section { padding: 80px 5%; }
     <span class="nav-logo-text" data-en="Quality <span>Laundry</span>">Quality <span>Laundry</span></span>
   </div>
   <ul class="nav-links" role="list">
-    <li><a href="#about" data-en="About">About</a></li>
-    <li><a href="#services" data-en="Services">Services</a></li>
-    <li><a href="#products" data-en="Products">Products</a></li>
-    <li><a href="#gallery" data-en="Gallery">Gallery</a></li>
-    <li><a href="#testimonials" data-en="Reviews">Reviews</a></li>
-    <li><a href="#reviews" data-en="Our Reviews">Our Reviews</a></li>
-    <li><a href="#contact" class="nav-cta" data-en="Contact Us">Contact Us</a></li>
+    <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
+    <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+    <li><a href="#products" data-en="Products" data-ar="المنتجات">Products</a></li>
+    <li><a href="#gallery" data-en="Gallery" data-ar="معرض الصور">Gallery</a></li>
+    <li><a href="#testimonials" data-en="Reviews" data-ar="آراء العملاء">Reviews</a></li>
+    <li><a href="#reviews" data-en="Our Reviews" data-ar="تقييماتنا">Our Reviews</a></li>
+    <li><a href="#contact" class="nav-cta" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a></li>
   </ul>
   <button class="nav-cart-btn" onclick="openCart()">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2370,20 +2401,21 @@ section { padding: 80px 5%; }
     <span id="cart-count">0</span>
     <span class="cart-badge" id="cart-badge" style="display:none;">0</span>
   </button>
-  <button class="hamburger" aria-label="Menu" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+  <button id="lang-toggle-btn" onclick="toggleLang()" aria-label="Switch language" style="background:var(--brand-primary);color:#fff;border:none;padding:7px 16px;border-radius:50px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:'Tajawal',inherit;letter-spacing:0.02em;transition:background 0.3s ease;flex-shrink:0;">عربي</button>
+  <button class="hamburger" aria-label="Menu" id="hamburger" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- MOBILE NAV -->
 <div id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-  <a href="#about" onclick="closeMenu()" data-en="About">About</a>
-  <a href="#services" onclick="closeMenu()" data-en="Services">Services</a>
-  <a href="#products" onclick="closeMenu()" data-en="Products">Products</a>
-  <a href="#gallery" onclick="closeMenu()" data-en="Gallery">Gallery</a>
-  <a href="#testimonials" onclick="closeMenu()" data-en="Reviews">Reviews</a>
-  <a href="#reviews" onclick="closeMenu()" data-en="Our Reviews">Our Reviews</a>
-  <a href="#contact" onclick="closeMenu()" data-en="Contact Us">Contact Us</a>
+  <a href="#about" onclick="closeMenu()" data-en="About" data-ar="من نحن">About</a>
+  <a href="#services" onclick="closeMenu()" data-en="Services" data-ar="خدماتنا">Services</a>
+  <a href="#products" onclick="closeMenu()" data-en="Products" data-ar="المنتجات">Products</a>
+  <a href="#gallery" onclick="closeMenu()" data-en="Gallery" data-ar="معرض الصور">Gallery</a>
+  <a href="#testimonials" onclick="closeMenu()" data-en="Reviews" data-ar="آراء العملاء">Reviews</a>
+  <a href="#reviews" onclick="closeMenu()" data-en="Our Reviews" data-ar="تقييماتنا">Our Reviews</a>
+  <a href="#contact" onclick="closeMenu()" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
 </div>
 
 <!-- BACK TO TOP -->
@@ -2396,29 +2428,29 @@ section { padding: 80px 5%; }
   <div class="hero-grid">
     <div class="hero-content">
       <div class="hero-label">
-        <span>⭐</span> <span data-en="Trusted by 2,000+ Happy Customers">Trusted by 2,000+ Happy Customers</span>
+        <span>⭐</span> <span data-en="Trusted by 2,000+ Happy Customers" data-ar="موثوق به من أكثر من ٢٠٠٠ عميل سعيد">Trusted by 2,000+ Happy Customers</span>
       </div>
-      <h1 class="hero-title" data-en="Professional<br><em>Laundry &amp; Dry</em><br>Cleaning Services">Professional<br><em>Laundry &amp; Dry</em><br>Cleaning Services</h1>
-      <p class="hero-desc" data-en="We handle your clothes with exceptional care — fast pickup &amp; delivery, premium cleaning, and affordable prices you'll love.">We handle your clothes with exceptional care — fast pickup &amp; delivery, premium cleaning, and affordable prices you'll love.</p>
+      <h1 class="hero-title" data-en="Professional<br><em>Laundry &amp; Dry</em><br>Cleaning Services" data-ar="خدمات غسيل وكوي<br><em>ملابس احترافية</em><br>وتنظيف جاف">Professional<br><em>Laundry &amp; Dry</em><br>Cleaning Services</h1>
+      <p class="hero-desc" data-en="We handle your clothes with exceptional care — fast pickup &amp; delivery, premium cleaning, and affordable prices you'll love." data-ar="نعتني بملابسك بعناية فائقة — استلام وتوصيل سريع، تنظيف احترافي، وأسعار في متناول الجميع.">We handle your clothes with exceptional care — fast pickup &amp; delivery, premium cleaning, and affordable prices you'll love.</p>
       <div class="hero-btns">
-        <a href="#services" class="btn btn-sky" data-en="Browse Services →">Browse Services →</a>
+        <a href="#services" class="btn btn-sky" data-en="Browse Services →" data-ar="تصفح خدماتنا →">Browse Services →</a>
         <a id="hero-wa-btn" href="#" class="btn btn-wa">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span data-en="Contact on WhatsApp">Contact on WhatsApp</span>
+          <span data-en="Contact on WhatsApp" data-ar="تواصل عبر واتساب">Contact on WhatsApp</span>
         </a>
       </div>
       <div class="hero-stats">
         <div>
           <div class="hero-stat-num">2K+</div>
-          <div class="hero-stat-label" data-en="Happy Clients">Happy Clients</div>
+          <div class="hero-stat-label" data-en="Happy Clients" data-ar="عميل سعيد">Happy Clients</div>
         </div>
         <div>
           <div class="hero-stat-num">5★</div>
-          <div class="hero-stat-label" data-en="Average Rating">Average Rating</div>
+          <div class="hero-stat-label" data-en="Average Rating" data-ar="متوسط التقييم">Average Rating</div>
         </div>
         <div>
           <div class="hero-stat-num">24h</div>
-          <div class="hero-stat-label" data-en="Fast Delivery">Fast Delivery</div>
+          <div class="hero-stat-label" data-en="Fast Delivery" data-ar="توصيل سريع">Fast Delivery</div>
         </div>
       </div>
     </div>
@@ -2428,14 +2460,14 @@ section { padding: 80px 5%; }
         <div class="hero-card hero-card-main">
           <div class="hero-machine-icon">🫧</div>
           <div class="hero-card-features">
-            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Free Pickup &amp; Delivery">Free Pickup &amp; Delivery</span></div>
-            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Eco-Friendly Products">Eco-Friendly Products</span></div>
-            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Same-Day Service">Same-Day Service</span></div>
-            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Premium Quality">Premium Quality</span></div>
+            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Free Pickup &amp; Delivery" data-ar="استلام وتوصيل مجاني">Free Pickup &amp; Delivery</span></div>
+            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Eco-Friendly Products" data-ar="منتجات صديقة للبيئة">Eco-Friendly Products</span></div>
+            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Same-Day Service" data-ar="خدمة في نفس اليوم">Same-Day Service</span></div>
+            <div class="hero-feat-row"><div class="hero-feat-dot"></div> <span data-en="Premium Quality" data-ar="جودة عالية">Premium Quality</span></div>
           </div>
         </div>
-        <div class="hero-badge hero-badge-1">✓ &nbsp;<span data-en="Order Ready in 24h">Order Ready in 24h</span></div>
-        <div class="hero-badge hero-badge-2">🚚 &nbsp;<span data-en="Free Delivery">Free Delivery</span></div>
+        <div class="hero-badge hero-badge-1">✓ &nbsp;<span data-en="Order Ready in 24h" data-ar="طلبك جاهز خلال ٢٤ ساعة">Order Ready in 24h</span></div>
+        <div class="hero-badge hero-badge-2">🚚 &nbsp;<span data-en="Free Delivery" data-ar="توصيل مجاني">Free Delivery</span></div>
       </div>
     </div>
   </div>
@@ -2450,29 +2482,29 @@ section { padding: 80px 5%; }
       </div>
     </div>
     <div class="reveal-right">
-      <span class="section-label" data-en="Who We Are">Who We Are</span>
-      <h2 class="section-title" data-en="The Cleanest Clothes<br>Start Here">The Cleanest Clothes<br>Start Here</h2>
-      <p class="section-sub" data-en="Quality Laundry has been serving our community with professional-grade cleaning services. We combine modern technology with eco-friendly products to deliver spotless results every time.">Quality Laundry has been serving our community with professional-grade cleaning services. We combine modern technology with eco-friendly products to deliver spotless results every time.</p>
+      <span class="section-label" data-en="Who We Are" data-ar="من نحن">Who We Are</span>
+      <h2 class="section-title" data-en="The Cleanest Clothes<br>Start Here" data-ar="أنظف الملابس<br>تبدأ من هنا">The Cleanest Clothes<br>Start Here</h2>
+      <p class="section-sub" data-en="Quality Laundry has been serving our community with professional-grade cleaning services. We combine modern technology with eco-friendly products to deliver spotless results every time." data-ar="كواليتي لاندري تخدم مجتمعنا بخدمات تنظيف احترافية. نجمع بين التكنولوجيا الحديثة والمنتجات الصديقة للبيئة لنقدم نتائج مثالية في كل مرة.">Quality Laundry has been serving our community with professional-grade cleaning services. We combine modern technology with eco-friendly products to deliver spotless results every time.</p>
       <div class="feature-cards">
         <div class="feature-card reveal">
           <div class="feature-icon">⚡</div>
-          <div class="feature-title" data-en="Fast Service">Fast Service</div>
-          <div class="feature-desc" data-en="Same-day and 24-hour turnaround options available for all services.">Same-day and 24-hour turnaround options available for all services.</div>
+          <div class="feature-title" data-en="Fast Service" data-ar="خدمة سريعة">Fast Service</div>
+          <div class="feature-desc" data-en="Same-day and 24-hour turnaround options available for all services." data-ar="خيارات إنجاز في نفس اليوم أو خلال ٢٤ ساعة لجميع الخدمات.">Same-day and 24-hour turnaround options available for all services.</div>
         </div>
         <div class="feature-card reveal">
           <div class="feature-icon">🚚</div>
-          <div class="feature-title" data-en="Pickup &amp; Delivery">Pickup &amp; Delivery</div>
-          <div class="feature-desc" data-en="Free door-to-door pickup and delivery within our service area.">Free door-to-door pickup and delivery within our service area.</div>
+          <div class="feature-title" data-en="Pickup &amp; Delivery" data-ar="استلام وتوصيل">Pickup &amp; Delivery</div>
+          <div class="feature-desc" data-en="Free door-to-door pickup and delivery within our service area." data-ar="استلام وتوصيل مجاني من الباب للباب داخل منطقة الخدمة.">Free door-to-door pickup and delivery within our service area.</div>
         </div>
         <div class="feature-card reveal">
           <div class="feature-icon">✨</div>
-          <div class="feature-title" data-en="Premium Cleaning">Premium Cleaning</div>
-          <div class="feature-desc" data-en="Professional-grade products that are gentle on fabrics and tough on stains.">Professional-grade products that are gentle on fabrics and tough on stains.</div>
+          <div class="feature-title" data-en="Premium Cleaning" data-ar="تنظيف فاخر">Premium Cleaning</div>
+          <div class="feature-desc" data-en="Professional-grade products that are gentle on fabrics and tough on stains." data-ar="منتجات احترافية لطيفة على الأقمشة وفعّالة ضد البقع.">Professional-grade products that are gentle on fabrics and tough on stains.</div>
         </div>
         <div class="feature-card reveal">
           <div class="feature-icon">💰</div>
-          <div class="feature-title" data-en="Affordable Prices">Affordable Prices</div>
-          <div class="feature-desc" data-en="Competitive pricing with no hidden fees. Quality you can afford.">Competitive pricing with no hidden fees. Quality you can afford.</div>
+          <div class="feature-title" data-en="Affordable Prices" data-ar="أسعار معقولة">Affordable Prices</div>
+          <div class="feature-desc" data-en="Competitive pricing with no hidden fees. Quality you can afford." data-ar="أسعار تنافسية بدون رسوم خفية. جودة في متناول الجميع.">Competitive pricing with no hidden fees. Quality you can afford.</div>
         </div>
       </div>
     </div>
@@ -2482,29 +2514,29 @@ section { padding: 80px 5%; }
 <!-- ===== SERVICES ===== -->
 <section id="services" aria-label="Services">
   <div class="center reveal">
-    <span class="section-label" data-en="What We Offer">What We Offer</span>
-    <h2 class="section-title" data-en="Our Services">Our Services</h2>
-    <p class="section-sub" data-en="From everyday garments to delicate fabrics — we handle it all with care and precision.">From everyday garments to delicate fabrics — we handle it all with care and precision.</p>
+    <span class="section-label" data-en="What We Offer" data-ar="ما نقدمه">What We Offer</span>
+    <h2 class="section-title" data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+    <p class="section-sub" data-en="From everyday garments to delicate fabrics — we handle it all with care and precision." data-ar="من الملابس اليومية إلى الأقمشة الحساسة — نتعامل مع كل شيء بعناية ودقة.">From everyday garments to delicate fabrics — we handle it all with care and precision.</p>
   
 
   <!-- FEATURED OFFERS -->
   <div class="featured-offers-single reveal">
     <div class="featured-offer-card featured-offer-wide">
-      <div class="featured-offer-badge">⚡ LIMITED OFFER</div>
+      <div class="featured-offer-badge" data-en="⚡ LIMITED OFFER" data-ar="⚡ عرض محدود">⚡ LIMITED OFFER</div>
       <div class="featured-offer-wide-inner">
         <div class="featured-offer-wide-img">
           <img loading="lazy" src="https://i.postimg.cc/9fqG9KQc/baqh.png" alt="Family Laundry Package" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="featured-offer-body">
-          <div class="featured-offer-title">Family Laundry Bag</div>
-          <div class="featured-offer-price">Wash &amp; Iron — 79 QAR</div>
-          <div class="featured-offer-price" style="font-size:0.98rem;color:var(--text-light);margin-top:-6px;">Iron Only — 75 QAR</div>
-          <p class="featured-offer-desc">Perfect for families! Get complete laundry and ironing service for your entire household at an unbeatable price. Ideal for weekly family laundry needs — includes free pickup &amp; delivery.</p>
+          <div class="featured-offer-title" data-en="Family Laundry Bag" data-ar="شنطة الغسيل العائلية">Family Laundry Bag</div>
+          <div class="featured-offer-price" data-en="Wash &amp; Iron — 79 QAR" data-ar="غسيل وكوي — 79 ريال">Wash &amp; Iron — 79 QAR</div>
+          <div class="featured-offer-price" style="font-size:0.98rem;color:var(--text-light);margin-top:-6px;" data-en="Iron Only — 75 QAR" data-ar="كوي فقط — 75 ريال">Iron Only — 75 QAR</div>
+          <p class="featured-offer-desc" data-en="Perfect for families! Get complete laundry and ironing service for your entire household at an unbeatable price. Ideal for weekly family laundry needs — includes free pickup &amp; delivery." data-ar="مثالية للعائلات! احصل على خدمة غسيل وكوي كاملة لجميع أفراد الأسرة بسعر لا يُضاهى. مثالية للغسيل الأسبوعي العائلي — مع استلام وتوصيل مجاني.">Perfect for families! Get complete laundry and ironing service for your entire household at an unbeatable price. Ideal for weekly family laundry needs — includes free pickup &amp; delivery.</p>
           <ul class="featured-offer-features">
-            <li>Full wash &amp; iron for your entire household</li>
-            <li>Eco-friendly, fabric-safe cleaning products</li>
-            <li>Free pickup &amp; delivery included</li>
-            <li>Same-day &amp; 24-hour turnaround available</li>
+            <li data-en="Full wash &amp; iron for your entire household" data-ar="غسيل وكوي كامل لجميع أفراد الأسرة">Full wash &amp; iron for your entire household</li>
+            <li data-en="Eco-friendly, fabric-safe cleaning products" data-ar="منتجات تنظيف صديقة للبيئة وآمنة للأقمشة">Eco-friendly, fabric-safe cleaning products</li>
+            <li data-en="Free pickup &amp; delivery included" data-ar="استلام وتوصيل مجاني مشمول">Free pickup &amp; delivery included</li>
+            <li data-en="Same-day &amp; 24-hour turnaround available" data-ar="إنجاز في نفس اليوم أو خلال ٢٤ ساعة">Same-day &amp; 24-hour turnaround available</li>
           </ul>
           <button class="featured-offer-btn" onclick="addFeaturedOfferToCart('Family Laundry Bag', '79 QAR')" style="max-width:280px;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2512,7 +2544,7 @@ section { padding: 80px 5%; }
               <circle cx="20" cy="21" r="1"></circle>
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
-            Add to Cart — 79 QAR
+            <span data-en="Add to Cart — 79 QAR" data-ar="أضف للسلة — 79 ريال">Add to Cart — 79 QAR</span>
           </button>
         </div>
       </div>
@@ -2525,9 +2557,9 @@ section { padding: 80px 5%; }
     <!-- Subscription Packages inside price list area -->
     <div class="packages-in-pricelist">
       <div class="packages-inline-header">
-        <span class="section-label" style="margin-bottom:8px;">Monthly Plans</span>
-        <h4 class="packages-inline-title">Subscription Packages</h4>
-        <p class="packages-inline-sub">Choose a monthly plan that fits your household — save more with bundled pickup and delivery.</p>
+        <span class="section-label" style="margin-bottom:8px;" data-en="Monthly Plans" data-ar="الباقات الشهرية">Monthly Plans</span>
+        <h4 class="packages-inline-title" data-en="Subscription Packages" data-ar="باقات الاشتراك">Subscription Packages</h4>
+        <p class="packages-inline-sub" data-en="Choose a monthly plan that fits your household — save more with bundled pickup and delivery." data-ar="اختر الباقة الشهرية المناسبة لأسرتك — وفر أكثر مع خدمة الاستلام والتوصيل المجانية.">Choose a monthly plan that fits your household — save more with bundled pickup and delivery.</p>
       </div>
       <div class="featured-offers-grid">
         <!-- Plan Card 1: Silver Package -->
@@ -2536,60 +2568,60 @@ section { padding: 80px 5%; }
             <img loading="lazy" src="https://i.postimg.cc/JnmpKMgj/silver.jpg" alt="Silver Package" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="featured-offer-body">
-            <div class="featured-offer-title">Silver Package</div>
-            <div class="featured-offer-price">Subscribe for 100 QAR</div>
-            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;">Get 125 QAR Credit</div>
+            <div class="featured-offer-title" data-en="Silver Package" data-ar="الباقة الفضية">Silver Package</div>
+            <div class="featured-offer-price" data-en="Subscribe for 100 QAR" data-ar="اشترك بـ 100 ريال">Subscribe for 100 QAR</div>
+            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;" data-en="Get 125 QAR Credit" data-ar="احصل على رصيد 125 ريال">Get 125 QAR Credit</div>
             <button class="featured-offer-btn" onclick="subscribePackage('Silver Package', '350 QAR', '350 QAR / Month', ['70 Items','2 Small Blankets','2 Large Blankets','4 Free Pickup &amp; Delivery Services (Monthly)'])">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Subscribe Now
+              <span data-en="Subscribe Now" data-ar="اشترك الآن">Subscribe Now</span>
             </button>
           </div>
         </div>
         <!-- Plan Card 2: Platinum Package -->
         <div class="featured-offer-card featured">
-          <div class="featured-offer-badge" style="background:linear-gradient(135deg,#39BCF2,#2080A7);">🚀 BEST VALUE</div>
+          <div class="featured-offer-badge" style="background:linear-gradient(135deg,#39BCF2,#2080A7);" data-en="🚀 BEST VALUE" data-ar="🚀 أفضل قيمة">🚀 BEST VALUE</div>
           <div class="featured-offer-image">
             <img loading="lazy" src="https://i.postimg.cc/cHZFT0jR/plantinum.jpg" alt="Platinum Package" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="featured-offer-body">
-            <div class="featured-offer-title">Platinum Package</div>
-            <div class="featured-offer-price">Subscribe for 200 QAR</div>
-            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;">Get 250 QAR Credit</div>
+            <div class="featured-offer-title" data-en="Platinum Package" data-ar="الباقة البلاتينية">Platinum Package</div>
+            <div class="featured-offer-price" data-en="Subscribe for 200 QAR" data-ar="اشترك بـ 200 ريال">Subscribe for 200 QAR</div>
+            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;" data-en="Get 250 QAR Credit" data-ar="احصل على رصيد 250 ريال">Get 250 QAR Credit</div>
             <button class="featured-offer-btn" onclick="subscribePackage('Platinum Package', '700 QAR', '700 QAR / Month', ['140 Items','4 Small Blankets','4 Large Blankets','4 Free Pickup &amp; Delivery Services (Monthly)'])">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Subscribe Now
+              <span data-en="Subscribe Now" data-ar="اشترك الآن">Subscribe Now</span>
             </button>
           </div>
         </div>
         <!-- Plan Card 3: Gold Package -->
         <div class="featured-offer-card">
-          <div class="featured-offer-badge" style="background:linear-gradient(135deg,#c8780a,#f59e0b);">⭐ POPULAR</div>
+          <div class="featured-offer-badge" style="background:linear-gradient(135deg,#c8780a,#f59e0b);" data-en="⭐ POPULAR" data-ar="⭐ الأكثر طلباً">⭐ POPULAR</div>
           <div class="featured-offer-image">
             <img loading="lazy" src="https://i.postimg.cc/TwGtQfSr/gold.jpg" alt="Gold Package" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="featured-offer-body">
-            <div class="featured-offer-title">Gold Package</div>
-            <div class="featured-offer-price">Subscribe for 300 QAR</div>
-            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;">Get 375 QAR Credit</div>
+            <div class="featured-offer-title" data-en="Gold Package" data-ar="الباقة الذهبية">Gold Package</div>
+            <div class="featured-offer-price" data-en="Subscribe for 300 QAR" data-ar="اشترك بـ 300 ريال">Subscribe for 300 QAR</div>
+            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;" data-en="Get 375 QAR Credit" data-ar="احصل على رصيد 375 ريال">Get 375 QAR Credit</div>
             <button class="featured-offer-btn" onclick="subscribePackage('Gold Package', '500 QAR', '500 QAR / Month', ['100 Items','3 Small Blankets','3 Large Blankets','4 Free Pickup &amp; Delivery Services (Monthly)'])">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Subscribe Now
+              <span data-en="Subscribe Now" data-ar="اشترك الآن">Subscribe Now</span>
             </button>
           </div>
         </div>
         <!-- Plan Card 4: Diamond Package -->
         <div class="featured-offer-card">
-          <div class="featured-offer-badge" style="background:linear-gradient(135deg,#7c3aed,#c026d3);">💎 PREMIUM</div>
+          <div class="featured-offer-badge" style="background:linear-gradient(135deg,#7c3aed,#c026d3);" data-en="💎 PREMIUM" data-ar="💎 بريميوم">💎 PREMIUM</div>
           <div class="featured-offer-image">
             <img loading="lazy" src="https://i.postimg.cc/501spbG5/Diomnd.jpg" alt="Diamond Package" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="featured-offer-body">
-            <div class="featured-offer-title">Diamond Package</div>
-            <div class="featured-offer-price">Subscribe for 400 QAR</div>
-            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;">Get 500 QAR Credit</div>
+            <div class="featured-offer-title" data-en="Diamond Package" data-ar="الباقة الماسية">Diamond Package</div>
+            <div class="featured-offer-price" data-en="Subscribe for 400 QAR" data-ar="اشترك بـ 400 ريال">Subscribe for 400 QAR</div>
+            <div class="featured-offer-price" style="font-size:0.95rem;color:var(--text-light);margin-top:-4px;" data-en="Get 500 QAR Credit" data-ar="احصل على رصيد 500 ريال">Get 500 QAR Credit</div>
             <button class="featured-offer-btn" onclick="subscribePackage('Diamond Package', '1000 QAR', '1000 QAR / Month', ['200 Items','6 Small Blankets','6 Large Blankets','4 Free Pickup &amp; Delivery Services (Monthly)','Priority Service','Free Stain Removal'])">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Subscribe Now
+              <span data-en="Subscribe Now" data-ar="اشترك الآن">Subscribe Now</span>
             </button>
           </div>
         </div>
@@ -2599,20 +2631,20 @@ section { padding: 80px 5%; }
 
   <!-- Category Tabs (Desktop) -->
   <div class="services-tabs reveal">
-    <button class="svc-tab active" onclick="switchCat('everyday')">👕 Everyday Clothing</button>
-    <button class="svc-tab" onclick="switchCat('suits')">🥼 Suits & Formal</button>
-    <button class="svc-tab" onclick="switchCat('women')">👗 Women's Garments</button>
-    <button class="svc-tab" onclick="switchCat('bedding')">🛏️ Bedding & Household</button>
-    <button class="svc-tab" onclick="switchCat('curtains')">🪟 Curtains & Upholstery</button>
-    <button class="svc-tab" onclick="switchCat('carpet')">🏠 Carpet Cleaning</button>
-    <button class="svc-tab" onclick="switchCat('shoes')">👟 Shoes Cleaning</button>
-    <button class="svc-tab" onclick="switchCat('express')">⚡ Express Service</button>
+    <button class="svc-tab active" onclick="switchCat('everyday')" data-en="👕 Everyday Clothing" data-ar="👕 الملابس اليومية">👕 Everyday Clothing</button>
+    <button class="svc-tab" onclick="switchCat('suits')" data-en="🥼 Suits & Formal" data-ar="🥼 البدلات والرسمي">🥼 Suits & Formal</button>
+    <button class="svc-tab" onclick="switchCat('women')" data-en="👗 Women's Garments" data-ar="👗 ملابس السيدات">👗 Women's Garments</button>
+    <button class="svc-tab" onclick="switchCat('bedding')" data-en="🛏️ Bedding & Household" data-ar="🛏️ الفراش والمفروشات">🛏️ Bedding & Household</button>
+    <button class="svc-tab" onclick="switchCat('curtains')" data-en="🪟 Curtains & Upholstery" data-ar="🪟 الستائر والأثاث">🪟 Curtains & Upholstery</button>
+    <button class="svc-tab" onclick="switchCat('carpet')" data-en="🏠 Carpet Cleaning" data-ar="🏠 تنظيف السجاد">🏠 Carpet Cleaning</button>
+    <button class="svc-tab" onclick="switchCat('shoes')" data-en="👟 Shoes Cleaning" data-ar="👟 تنظيف الأحذية">👟 Shoes Cleaning</button>
+    <button class="svc-tab" onclick="switchCat('express')" data-en="⚡ Express Service" data-ar="⚡ خدمة إكسبريس">⚡ Express Service</button>
   </div>
 
   <!-- Category Nav (Mobile only) -->
   <div class="svc-tab-mobile-nav">
     <button class="svc-nav-arrow" id="svc-prev-btn" onclick="svcPrev()">‹</button>
-    <div class="svc-nav-label" id="svc-mobile-label">👕 Everyday Clothing</div>
+    <div class="svc-nav-label" id="svc-mobile-label" data-en="👕 Everyday Clothing" data-ar="👕 الملابس اليومية">👕 Everyday Clothing</div>
     <button class="svc-nav-arrow" id="svc-next-btn" onclick="svcNext()">›</button>
   </div>
 
@@ -2624,11 +2656,11 @@ section { padding: 80px 5%; }
         <div class="svc-cat-title-wrap">
           <div class="svc-cat-icon">👕</div>
           <div>
-            <div class="svc-cat-name">Everyday Clothing</div>
-            <div class="svc-cat-sub">Thobes, shirts, pants, and all daily wear garments</div>
+            <div class="svc-cat-name" data-en="Everyday Clothing" data-ar="الملابس اليومية">Everyday Clothing</div>
+            <div class="svc-cat-sub" data-en="Thobes, shirts, pants, and all daily wear garments" data-ar="الثياب والقمصان والبناطيل وجميع الملابس اليومية">Thobes, shirts, pants, and all daily wear garments</div>
           </div>
         </div>
-        <div class="svc-cat-price-badge">✦ Starting From 3 QR</div>
+        <div class="svc-cat-price-badge" data-en="✦ Starting From 3 QR" data-ar="✦ يبدأ من 3 ريال">✦ Starting From 3 QR</div>
       </div>
       <div class="svc-items-grid" id="grid-everyday"></div>
     </div>
@@ -2639,11 +2671,11 @@ section { padding: 80px 5%; }
         <div class="svc-cat-title-wrap">
           <div class="svc-cat-icon">🥼</div>
           <div>
-            <div class="svc-cat-name">Suits & Formal Wear</div>
-            <div class="svc-cat-sub">Professional dry cleaning for men's formal attire</div>
+            <div class="svc-cat-name" data-en="Suits & Formal Wear" data-ar="البدلات والملابس الرسمية">Suits & Formal Wear</div>
+            <div class="svc-cat-sub" data-en="Professional dry cleaning for men's formal attire" data-ar="تنظيف جاف احترافي للزي الرسمي للرجال">Professional dry cleaning for men's formal attire</div>
           </div>
         </div>
-        <div class="svc-cat-price-badge">✦ Starting From 6 QR</div>
+        <div class="svc-cat-price-badge" data-en="✦ Starting From 6 QR" data-ar="✦ يبدأ من 6 ريال">✦ Starting From 6 QR</div>
       </div>
       <div class="svc-items-grid" id="grid-suits"></div>
     </div>
@@ -2654,11 +2686,11 @@ section { padding: 80px 5%; }
         <div class="svc-cat-title-wrap">
           <div class="svc-cat-icon">👗</div>
           <div>
-            <div class="svc-cat-name">Women's Garments</div>
-            <div class="svc-cat-sub">Dresses, abayas, hijabs, and ladies' apparel</div>
+            <div class="svc-cat-name" data-en="Women's Garments" data-ar="ملابس السيدات">Women's Garments</div>
+            <div class="svc-cat-sub" data-en="Dresses, abayas, hijabs, and ladies' apparel" data-ar="الفساتين والعبايات والحجاب وملابس السيدات">Dresses, abayas, hijabs, and ladies' apparel</div>
           </div>
         </div>
-        <div class="svc-cat-price-badge">✦ Starting From 3 QR</div>
+        <div class="svc-cat-price-badge" data-en="✦ Starting From 3 QR" data-ar="✦ يبدأ من 3 ريال">✦ Starting From 3 QR</div>
       </div>
       <div class="svc-items-grid" id="grid-women"></div>
     </div>
@@ -2669,11 +2701,11 @@ section { padding: 80px 5%; }
         <div class="svc-cat-title-wrap">
           <div class="svc-cat-icon">🛏️</div>
           <div>
-            <div class="svc-cat-name">Bedding & Household Items</div>
-            <div class="svc-cat-sub">Sheets, blankets, towels, and bath linens</div>
+            <div class="svc-cat-name" data-en="Bedding & Household Items" data-ar="الفراش والمفروشات المنزلية">Bedding & Household Items</div>
+            <div class="svc-cat-sub" data-en="Sheets, blankets, towels, and bath linens" data-ar="الملاءات والبطاطين والمناشف وبياضات الحمام">Sheets, blankets, towels, and bath linens</div>
           </div>
         </div>
-        <div class="svc-cat-price-badge">✦ Starting From 2 QR</div>
+        <div class="svc-cat-price-badge" data-en="✦ Starting From 2 QR" data-ar="✦ يبدأ من 2 ريال">✦ Starting From 2 QR</div>
       </div>
       <div class="svc-items-grid" id="grid-bedding"></div>
     </div>
@@ -2684,11 +2716,11 @@ section { padding: 80px 5%; }
         <div class="svc-cat-title-wrap">
           <div class="svc-cat-icon">🪟</div>
           <div>
-            <div class="svc-cat-name">Curtains & Upholstery</div>
-            <div class="svc-cat-sub">Curtains and sofa covers — all sizes</div>
+            <div class="svc-cat-name" data-en="Curtains & Upholstery" data-ar="الستائر والأثاث">Curtains & Upholstery</div>
+            <div class="svc-cat-sub" data-en="Curtains and sofa covers — all sizes" data-ar="الستائر وأغطية الكنب — جميع المقاسات">Curtains and sofa covers — all sizes</div>
           </div>
         </div>
-        <div class="svc-cat-price-badge">✦ Starting From 3 QR</div>
+        <div class="svc-cat-price-badge" data-en="✦ Starting From 3 QR" data-ar="✦ يبدأ من 3 ريال">✦ Starting From 3 QR</div>
       </div>
       <div class="svc-items-grid" id="grid-curtains"></div>
     </div>
@@ -2699,11 +2731,11 @@ section { padding: 80px 5%; }
         <div class="svc-cat-title-wrap">
           <div class="svc-cat-icon">🏠</div>
           <div>
-            <div class="svc-cat-name">Carpet Cleaning</div>
-            <div class="svc-cat-sub">Deep-clean carpets with professional equipment</div>
+            <div class="svc-cat-name" data-en="Carpet Cleaning" data-ar="تنظيف السجاد">Carpet Cleaning</div>
+            <div class="svc-cat-sub" data-en="Deep-clean carpets with professional equipment" data-ar="تنظيف عميق للسجاد بمعدات احترافية">Deep-clean carpets with professional equipment</div>
           </div>
         </div>
-        <div class="svc-cat-price-badge">✦ 10 QR / m²</div>
+        <div class="svc-cat-price-badge" data-en="✦ 10 QR / m²" data-ar="✦ 10 ريال / م²">✦ 10 QR / m²</div>
       </div>
       <div class="svc-items-grid" id="grid-carpet"></div>
     </div>
@@ -2714,11 +2746,11 @@ section { padding: 80px 5%; }
         <div class="svc-cat-title-wrap">
           <div class="svc-cat-icon">👟</div>
           <div>
-            <div class="svc-cat-name">Shoes Cleaning</div>
-            <div class="svc-cat-sub">Premium cleaning and care for all shoe types</div>
+            <div class="svc-cat-name" data-en="Shoes Cleaning" data-ar="تنظيف الأحذية">Shoes Cleaning</div>
+            <div class="svc-cat-sub" data-en="Premium cleaning and care for all shoe types" data-ar="تنظيف وعناية فاخرة لجميع أنواع الأحذية">Premium cleaning and care for all shoe types</div>
           </div>
         </div>
-        <div class="svc-cat-price-badge">✦ 20 QR per pair</div>
+        <div class="svc-cat-price-badge" data-en="✦ 20 QR per pair" data-ar="✦ 20 ريال للزوج">✦ 20 QR per pair</div>
       </div>
       <div class="svc-items-grid" id="grid-shoes"></div>
     </div>
@@ -2729,11 +2761,11 @@ section { padding: 80px 5%; }
         <div class="svc-cat-title-wrap">
           <div class="svc-cat-icon">⚡</div>
           <div>
-            <div class="svc-cat-name">Express Laundry Services</div>
-            <div class="svc-cat-sub">Same-day urgent turnaround — fast and reliable</div>
+            <div class="svc-cat-name" data-en="Express Laundry Services" data-ar="خدمة الغسيل السريع">Express Laundry Services</div>
+            <div class="svc-cat-sub" data-en="Same-day urgent turnaround — fast and reliable" data-ar="إنجاز عاجل في نفس اليوم — سريع وموثوق">Same-day urgent turnaround — fast and reliable</div>
           </div>
         </div>
-        <div class="svc-cat-price-badge express-badge">⚡ Express Service</div>
+        <div class="svc-cat-price-badge express-badge" data-en="⚡ Express Service" data-ar="⚡ خدمة إكسبريس">⚡ Express Service</div>
       </div>
       <div class="svc-items-grid" id="grid-express"></div>
     </div>
@@ -2757,9 +2789,9 @@ section { padding: 80px 5%; }
 <!-- ===== PRODUCTS ===== -->
 <section id="products" aria-label="Products">
   <div class="center reveal">
-    <span class="section-label" data-en="Our Store">Our Store</span>
-    <h2 class="section-title" data-en="Laundry Products">Laundry Products</h2>
-    <p class="section-sub" data-en="Our Laundry Products Store is currently being prepared and will be available soon.">Our Laundry Products Store is currently being prepared and will be available soon.</p>
+    <span class="section-label" data-en="Our Store" data-ar="متجرنا">Our Store</span>
+    <h2 class="section-title" data-en="Laundry Products" data-ar="منتجات الغسيل">Laundry Products</h2>
+    <p class="section-sub" data-en="Our Laundry Products Store is currently being prepared and will be available soon." data-ar="متجر منتجات الغسيل قيد التجهيز وسيكون متاحاً قريباً.">Our Laundry Products Store is currently being prepared and will be available soon.</p>
   </div>
   <div class="products-coming-soon reveal">
     <div class="coming-soon-icon">🧴</div>
@@ -2778,9 +2810,9 @@ section { padding: 80px 5%; }
 <!-- ===== GALLERY ===== -->
 <section id="gallery" aria-label="Gallery">
   <div class="center reveal">
-    <span class="section-label" data-en="Our Work">Our Work</span>
-    <h2 class="section-title" data-en="See the Difference">See the Difference</h2>
-    <p class="section-sub" data-en="A glimpse inside our facility and the results we deliver to every customer.">A glimpse inside our facility and the results we deliver to every customer.</p>
+    <span class="section-label" data-en="Our Work" data-ar="أعمالنا">Our Work</span>
+    <h2 class="section-title" data-en="See the Difference" data-ar="شوف الفرق بنفسك">See the Difference</h2>
+    <p class="section-sub" data-en="A glimpse inside our facility and the results we deliver to every customer." data-ar="لمحة من داخل منشأتنا والنتائج التي نقدمها لكل عميل.">A glimpse inside our facility and the results we deliver to every customer.</p>
   </div>
   <div class="gallery-grid" id="gallery-grid"></div>
 </section>
@@ -2796,9 +2828,9 @@ section { padding: 80px 5%; }
 <!-- ===== TESTIMONIALS ===== -->
 <section id="testimonials" aria-label="Customer Reviews">
   <div class="center reveal">
-    <span class="section-label" data-en="Customer Stories">Customer Stories</span>
-    <h2 class="section-title" data-en="What People Say">What People Say</h2>
-    <p class="section-sub" data-en="Real reviews from our happy customers who trust us with their garments.">Real reviews from our happy customers who trust us with their garments.</p>
+    <span class="section-label" data-en="Customer Stories" data-ar="قصص عملائنا">Customer Stories</span>
+    <h2 class="section-title" data-en="What People Say" data-ar="ماذا يقول عملاؤنا">What People Say</h2>
+    <p class="section-sub" data-en="Real reviews from our happy customers who trust us with their garments." data-ar="تقييمات حقيقية من عملائنا السعداء الذين يثقون بنا في العناية بملابسهم.">Real reviews from our happy customers who trust us with their garments.</p>
   </div>
   <div class="testimonials-slider-wrap">
     <div class="testimonials-slider-clip">
@@ -2817,78 +2849,78 @@ section { padding: 80px 5%; }
 <!-- ===== CONTACT ===== -->
 <section id="contact" aria-label="Contact">
   <div class="center reveal">
-    <span class="section-label" data-en="Get in Touch">Get in Touch</span>
-    <h2 class="section-title" data-en="Contact Us">Contact Us</h2>
-    <p class="section-sub" data-en="Ready to experience premium laundry care? Reach out and we'll get back to you right away.">Ready to experience premium laundry care? Reach out and we'll get back to you right away.</p>
+    <span class="section-label" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</span>
+    <h2 class="section-title" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+    <p class="section-sub" data-en="Ready to experience premium laundry care? Reach out and we'll get back to you right away." data-ar="هل أنت مستعد لتجربة خدمة الغسيل الاحترافية؟ تواصل معنا وسنرد عليك فوراً.">Ready to experience premium laundry care? Reach out and we'll get back to you right away.</p>
   </div>
   <div class="contact-grid">
     <div class="contact-info reveal-left">
       <div class="contact-info-item">
         <div class="contact-info-icon">📞</div>
         <div>
-          <div class="contact-info-label" data-en="Phone Number">Phone Number</div>
+          <div class="contact-info-label" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</div>
           <div class="contact-info-value"><a href="tel:+97477558870" style="color:inherit;">+974 77558870</a></div>
         </div>
       </div>
       <div class="contact-info-item">
         <div class="contact-info-icon">💬</div>
         <div>
-          <div class="contact-info-label" data-en="WhatsApp">WhatsApp</div>
+          <div class="contact-info-label" data-en="WhatsApp" data-ar="واتساب">WhatsApp</div>
           <div class="contact-info-value">+974 77558870</div>
         </div>
       </div>
       <div class="contact-info-item">
         <div class="contact-info-icon">✉️</div>
         <div>
-          <div class="contact-info-label" data-en="Email Address">Email Address</div>
+          <div class="contact-info-label" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</div>
           <div class="contact-info-value">hello@qualitylaundry.com</div>
         </div>
       </div>
       <div class="contact-info-item">
         <div class="contact-info-icon">📍</div>
         <div>
-          <div class="contact-info-label" data-en="Our Address">Our Address</div>
-          <div class="contact-info-value" data-en="Umm Qarn - Street 260 - Building 81 - Shop 4 - Doha, Qatar">Umm Qarn - Street 260 - Building 81 - Shop 4 - Doha, Qatar</div>
+          <div class="contact-info-label" data-en="Our Address" data-ar="عنواننا">Our Address</div>
+          <div class="contact-info-value" data-en="Umm Qarn - Street 260 - Building 81 - Shop 4 - Doha, Qatar" data-ar="أم قرن - شارع ٢٦٠ - مبنى ٨١ - محل ٤ - الدوحة، قطر">Umm Qarn - Street 260 - Building 81 - Shop 4 - Doha, Qatar</div>
         </div>
       </div>
       <div class="contact-info-item">
         <div class="contact-info-icon">🕐</div>
         <div>
-          <div class="contact-info-label" data-en="Working Hours">Working Hours</div>
-          <div class="contact-info-value" data-en="Open 24/7">Open 24/7</div>
+          <div class="contact-info-label" data-en="Working Hours" data-ar="ساعات العمل">Working Hours</div>
+          <div class="contact-info-value" data-en="Open 24/7" data-ar="مفتوح ٢٤ ساعة / ٧ أيام">Open 24/7</div>
         </div>
       </div>
     </div>
     <div class="contact-form reveal-right">
       <div class="form-row">
         <div class="form-group">
-          <label class="form-label" for="form-name" data-en="Full Name *">Full Name *</label>
-          <input type="text" id="form-name" class="form-input" placeholder="Your full name" required>
+          <label class="form-label" for="form-name" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+          <input type="text" id="form-name" class="form-input" placeholder="Your full name" data-ph-en="Your full name" data-ph-ar="اسمك الكامل" required>
         </div>
         <div class="form-group">
-          <label class="form-label" for="form-phone" data-en="Phone Number *">Phone Number *</label>
-          <input type="tel" id="form-phone" class="form-input" placeholder="Your phone number" required>
+          <label class="form-label" for="form-phone" data-en="Phone Number *" data-ar="رقم الهاتف *">Phone Number *</label>
+          <input type="tel" id="form-phone" class="form-input" placeholder="Your phone number" data-ph-en="Your phone number" data-ph-ar="رقم هاتفك" required>
         </div>
       </div>
       <div class="form-group">
-        <label class="form-label" for="form-service" data-en="Service Needed">Service Needed</label>
+        <label class="form-label" for="form-service" data-en="Service Needed" data-ar="الخدمة المطلوبة">Service Needed</label>
         <select id="form-service" class="form-select">
-          <option value="" data-en="Select a service...">Select a service...</option>
-          <option data-en="Clothes Washing">Clothes Washing</option>
-          <option data-en="Dry Cleaning">Dry Cleaning</option>
-          <option data-en="Ironing Service">Ironing Service</option>
-          <option data-en="Carpet Cleaning">Carpet Cleaning</option>
-          <option data-en="Curtain Cleaning">Curtain Cleaning</option>
-          <option data-en="Blankets &amp; Bedding Cleaning">Blankets &amp; Bedding Cleaning</option>
+          <option value="" data-en="Select a service..." data-ar="اختر خدمة...">Select a service...</option>
+          <option data-en="Clothes Washing" data-ar="غسيل ملابس">Clothes Washing</option>
+          <option data-en="Dry Cleaning" data-ar="تنظيف جاف">Dry Cleaning</option>
+          <option data-en="Ironing Service" data-ar="خدمة كوي">Ironing Service</option>
+          <option data-en="Carpet Cleaning" data-ar="تنظيف سجاد">Carpet Cleaning</option>
+          <option data-en="Curtain Cleaning" data-ar="تنظيف ستائر">Curtain Cleaning</option>
+          <option data-en="Blankets &amp; Bedding Cleaning" data-ar="تنظيف بطاطين ومفروشات">Blankets &amp; Bedding Cleaning</option>
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label" for="form-message" data-en="Message">Message</label>
-        <textarea id="form-message" class="form-textarea" placeholder="Tell us about your laundry needs..."></textarea>
+        <label class="form-label" for="form-message" data-en="Message" data-ar="الرسالة">Message</label>
+        <textarea id="form-message" class="form-textarea" placeholder="Tell us about your laundry needs..." data-ph-en="Tell us about your laundry needs..." data-ph-ar="أخبرنا عن احتياجاتك من الغسيل..."></textarea>
       </div>
       <button type="button" class="btn btn-wa" style="width:100%;justify-content:center;" onclick="submitForm()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span data-en="Send via WhatsApp">Send via WhatsApp</span>
+        <span data-en="Send via WhatsApp" data-ar="إرسال عبر واتساب">Send via WhatsApp</span>
       </button>
     </div>
   </div>
@@ -2897,17 +2929,17 @@ section { padding: 80px 5%; }
 <!-- ===== CUSTOMER REVIEWS ===== -->
 <section id="reviews" aria-label="Customer Reviews">
   <div class="center reveal">
-    <span class="section-label">Share Your Experience</span>
-    <h2 class="section-title">Customer Reviews</h2>
-    <p class="section-sub">We love hearing from our customers. Leave a review and help others discover Quality Laundry.</p>
+    <span class="section-label" data-en="Share Your Experience" data-ar="شاركنا تجربتك">Share Your Experience</span>
+    <h2 class="section-title" data-en="Customer Reviews" data-ar="تقييمات العملاء">Customer Reviews</h2>
+    <p class="section-sub" data-en="We love hearing from our customers. Leave a review and help others discover Quality Laundry." data-ar="نحب سماع رأيك. اترك تقييماً وساعد الآخرين في اكتشاف كواليتي لاندري.">We love hearing from our customers. Leave a review and help others discover Quality Laundry.</p>
   </div>
 
   <div class="reviews-layout">
     <!-- LEFT: Submit a review form -->
     <div class="reviews-form-panel reveal-left">
-      <div class="reviews-form-title">✍️ Write a Review</div>
+      <div class="reviews-form-title" data-en="✍️ Write a Review" data-ar="✍️ اكتب تقييمك">✍️ Write a Review</div>
 
-      <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--brand-primary);margin-bottom:8px;">Your Rating *</label>
+      <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--brand-primary);margin-bottom:8px;" data-en="Your Rating *" data-ar="تقييمك *">Your Rating *</label>
       <div class="reviews-star-picker" id="star-picker" role="radiogroup" aria-label="Star rating">
         <input type="radio" id="star1" name="review-rating" value="1">
         <label for="star1" aria-label="1 star"  title="1 star">★</label>
@@ -2921,15 +2953,15 @@ section { padding: 80px 5%; }
         <label for="star5" aria-label="5 stars" title="5 stars">★</label>
       </div>
 
-      <input type="text" id="review-name" class="review-form-input" placeholder="Your name *" maxlength="60" autocomplete="name">
-      <textarea id="review-text" class="review-form-textarea" placeholder="Share your experience with Quality Laundry... *" maxlength="400"></textarea>
+      <input type="text" id="review-name" class="review-form-input" placeholder="Your name *" data-ph-en="Your name *" data-ph-ar="اسمك *" maxlength="60" autocomplete="name">
+      <textarea id="review-text" class="review-form-textarea" placeholder="Share your experience with Quality Laundry... *" data-ph-en="Share your experience with Quality Laundry... *" data-ph-ar="شاركنا تجربتك مع كواليتي لاندري... *" maxlength="400"></textarea>
       <div class="review-char-count"><span id="review-char-num">0</span> / 400</div>
 
-      <div class="review-form-error" id="review-error">Please fill in all fields and select a star rating.</div>
+      <div class="review-form-error" id="review-error" data-en="Please fill in all fields and select a star rating." data-ar="يرجى ملء جميع الحقول واختيار تقييم بالنجوم.">Please fill in all fields and select a star rating.</div>
 
-      <button class="reviews-submit-btn" onclick="submitReview()">Submit Review</button>
+      <button class="reviews-submit-btn" onclick="submitReview()" data-en="Submit Review" data-ar="إرسال التقييم">Submit Review</button>
 
-      <div class="review-success-toast" id="review-toast">
+      <div class="review-success-toast" id="review-toast" data-en="✅ Thank you! Your review has been posted." data-ar="✅ شكراً لك! تم نشر تقييمك.">
         ✅ Thank you! Your review has been posted.
       </div>
     </div>
@@ -2977,36 +3009,36 @@ section { padding: 80px 5%; }
       </div>
     </div>
     <div>
-      <div class="footer-col-title" data-en="Quick Links">Quick Links</div>
+      <div class="footer-col-title" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</div>
       <ul class="footer-links">
-        <li><a href="#about" data-en="About Us">About Us</a></li>
-        <li><a href="#services" data-en="Services">Services</a></li>
-        <li><a href="#products" data-en="Products">Products</a></li>
-        <li><a href="#gallery" data-en="Gallery">Gallery</a></li>
+        <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
+        <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+        <li><a href="#products" data-en="Products" data-ar="المنتجات">Products</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-ar="معرض الصور">Gallery</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-col-title" data-en="Services">Services</div>
+      <div class="footer-col-title" data-en="Services" data-ar="خدماتنا">Services</div>
       <ul class="footer-links">
-        <li><a href="#services" data-en="Clothes Washing">Clothes Washing</a></li>
-        <li><a href="#services" data-en="Dry Cleaning">Dry Cleaning</a></li>
-        <li><a href="#services" data-en="Ironing Service">Ironing Service</a></li>
-        <li><a href="#services" data-en="Carpet Cleaning">Carpet Cleaning</a></li>
+        <li><a href="#services" data-en="Clothes Washing" data-ar="غسيل ملابس">Clothes Washing</a></li>
+        <li><a href="#services" data-en="Dry Cleaning" data-ar="تنظيف جاف">Dry Cleaning</a></li>
+        <li><a href="#services" data-en="Ironing Service" data-ar="خدمة كوي">Ironing Service</a></li>
+        <li><a href="#services" data-en="Carpet Cleaning" data-ar="تنظيف سجاد">Carpet Cleaning</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-col-title" data-en="Contact">Contact</div>
+      <div class="footer-col-title" data-en="Contact" data-ar="تواصل معنا">Contact</div>
       <ul class="footer-links">
         <li><a href="tel:+97477558870">+974 77558870</a></li>
         <li><a href="mailto:hello@qualitylaundry.com">hello@qualitylaundry.com</a></li>
         <li><a href="#contact" data-en="123 Fresh Street">Umm Qarn - Street 260 - Building 81 - Shop 4 - Doha, Qatar</a></li>
-        <li><a href="#testimonials" data-en="Reviews">Reviews</a></li>
+        <li><a href="#testimonials" data-en="Reviews" data-ar="آراء العملاء">Reviews</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2024 <a href="#">Quality Laundry</a>. <span data-en="All rights reserved.">All rights reserved.</span></div>
-    <div class="footer-copy" data-en="Developed by Code Nexus">Developed by Code Nexus</div>
+    <div class="footer-copy">© 2024 <a href="#">Quality Laundry</a>. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></div>
+    <div class="footer-copy" data-en="Developed by Code Nexus" data-ar="تطوير بواسطة Code Nexus">Developed by Code Nexus</div>
   </div>
 </footer>
 
@@ -3576,12 +3608,18 @@ document.addEventListener('keydown', e => {
 
 /* ===== FORM SUBMIT ===== */
 function submitForm() {
+  const isAr = (typeof currentLang !== 'undefined') && currentLang === 'ar';
   const name = document.getElementById('form-name').value.trim();
   const phone = document.getElementById('form-phone').value.trim();
   const service = document.getElementById('form-service').value;
   const msg = document.getElementById('form-message').value.trim();
-  if(!name || !phone) { alert('Please fill in your name and phone number.'); return; }
-  const waMsg = `Hello Quality Laundry,\n\nNew Service Request:\n━━━━━━━━━━━━━━━━━━\nName: ${name}\nPhone: ${phone}\nService: ${service || 'Not specified'}\nMessage: ${msg || 'No message'}\n━━━━━━━━━━━━━━━━━━\nPlease contact me at your earliest convenience.`;
+  if(!name || !phone) {
+    alert(isAr ? 'الرجاء إدخال اسمك ورقم هاتفك.' : 'Please fill in your name and phone number.');
+    return;
+  }
+  const waMsg = isAr
+    ? `مرحباً كواليتي لاندري،\n\nطلب خدمة جديد:\n━━━━━━━━━━━━━━━━━━\nالاسم: ${name}\nرقم الهاتف: ${phone}\nالخدمة: ${service || 'غير محددة'}\nالرسالة: ${msg || 'لا توجد رسالة'}\n━━━━━━━━━━━━━━━━━━\nالرجاء التواصل معي في أقرب وقت ممكن.`
+    : `Hello Quality Laundry,\n\nNew Service Request:\n━━━━━━━━━━━━━━━━━━\nName: ${name}\nPhone: ${phone}\nService: ${service || 'Not specified'}\nMessage: ${msg || 'No message'}\n━━━━━━━━━━━━━━━━━━\nPlease contact me at your earliest convenience.`;
   window.open(waLink(waMsg), '_blank');
 }
 
@@ -3690,10 +3728,35 @@ function addFeaturedOfferToCart(itemName, itemPrice) {
 
 // Subscribe to a package — opens WhatsApp with pre-filled package details
 function subscribePackage(name, price, priceLine, features) {
+  const isAr = (typeof currentLang !== 'undefined') && currentLang === 'ar';
+  const packageFeatureAr = {
+    'Priority Service': 'خدمة أولوية',
+    'Free Stain Removal': 'إزالة بقع مجانية'
+  };
+  const tr = (s) => {
+    if (!isAr) return s;
+    if (typeof AR !== 'undefined' && (AR.packages[s] || AR.itemNames[s])) return AR.packages[s] || AR.itemNames[s];
+    if (packageFeatureAr[s]) return packageFeatureAr[s];
+    let m = s.match(/^(\d+)\s+Items$/);
+    if (m) return m[1] + ' قطعة';
+    m = s.match(/^(\d+)\s+Small Blankets$/);
+    if (m) return m[1] + ' بطانية صغيرة';
+    m = s.match(/^(\d+)\s+Large Blankets$/);
+    if (m) return m[1] + ' بطانية كبيرة';
+    m = s.match(/^(\d+)\s+Free Pickup & Delivery Services \(Monthly\)$/);
+    if (m) return m[1] + ' خدمات استلام وتوصيل مجانية (شهرياً)';
+    m = s.match(/^(\d+)\s+QAR\s*\/\s*Month$/);
+    if (m) return m[1] + ' ريال / شهرياً';
+    return s;
+  };
+  const dispName = tr(name);
+  const dispPriceLine = tr(priceLine || price);
   const featuresList = (features && features.length)
-    ? features.map(f => '  • ' + f).join('\n')
-    : '  • Premium cleaning service';
-  const message = `Hello Quality Laundry,\n\nI would like to subscribe to the following package:\n━━━━━━━━━━━━━━━━━━\nPackage: ${name}\nPrice: ${priceLine || price}\n\nFeatures included:\n${featuresList}\n━━━━━━━━━━━━━━━━━━\nPlease confirm my subscription and arrange pickup at your earliest convenience.`;
+    ? features.map(f => '  • ' + tr(f)).join('\n')
+    : (isAr ? '  • خدمة تنظيف فاخرة' : '  • Premium cleaning service');
+  const message = isAr
+    ? `مرحباً كواليتي لاندري،\n\nأود الاشتراك في الباقة التالية:\n━━━━━━━━━━━━━━━━━━\nالباقة: ${dispName}\nالسعر: ${dispPriceLine}\n\nالمزايا المشمولة:\n${featuresList}\n━━━━━━━━━━━━━━━━━━\nالرجاء تأكيد اشتراكي وترتيب موعد الاستلام في أقرب وقت ممكن.`
+    : `Hello Quality Laundry,\n\nI would like to subscribe to the following package:\n━━━━━━━━━━━━━━━━━━\nPackage: ${name}\nPrice: ${priceLine || price}\n\nFeatures included:\n${featuresList}\n━━━━━━━━━━━━━━━━━━\nPlease confirm my subscription and arrange pickup at your earliest convenience.`;
   window.open(waLink(message), '_blank');
 }
 
@@ -3735,15 +3798,21 @@ function renderCartItems() {
     emptyState.style.display = 'none';
     itemsContainer.style.display = 'block';
     
-    cartList.innerHTML = cartItems.map(item => `
+    const isAr = (typeof currentLang !== 'undefined') && currentLang === 'ar';
+    const removeLabel = isAr ? 'إزالة' : 'Remove';
+    cartList.innerHTML = cartItems.map(item => {
+      const displayName = isAr ? ((typeof AR !== 'undefined' && (AR.itemNames[item.name] || AR.packages[item.name])) || item.name) : item.name;
+      const displayType = item.type ? (isAr ? ((typeof AR !== 'undefined' && AR.tierLabels[item.type]) || item.type) : item.type) : '';
+      return `
       <div class="cart-item">
         <div class="cart-item-info">
-          <div class="cart-item-name">${item.name}${item.type ? `<span class="cart-item-type">${item.type}</span>` : ''}</div>
+          <div class="cart-item-name">${displayName}${displayType ? `<span class="cart-item-type">${displayType}</span>` : ''}</div>
           <div class="cart-item-price">${item.price}</div>
         </div>
-        <button class="cart-item-remove" onclick="removeFromCart(${item.id})">Remove</button>
+        <button class="cart-item-remove" onclick="removeFromCart(${item.id})">${removeLabel}</button>
       </div>
-    `).join('');
+    `;
+    }).join('');
     
     updateCartSummary();
   }
@@ -3771,18 +3840,23 @@ function updateCartSummary() {
   const checkoutBtn = document.getElementById('checkout-whatsapp-btn');
   
   if (notice && progressBar && statusText) {
+    const isAr = (typeof currentLang !== 'undefined') && currentLang === 'ar';
     const percentage = Math.min(100, (total / MIN_ORDER) * 100);
     progressBar.style.width = percentage + '%';
     
     if (total < MIN_ORDER) {
       notice.classList.add('show');
-      notice.textContent = 'Minimum order value is 50 QAR. Please add more items to continue.';
-      statusText.textContent = 'Add ' + remaining.toFixed(2) + ' QAR more to place your order.';
+      notice.textContent = isAr
+        ? 'الحد الأدنى للطلب هو 50 ريال. الرجاء إضافة المزيد من العناصر للمتابعة.'
+        : 'Minimum order value is 50 QAR. Please add more items to continue.';
+      statusText.textContent = isAr
+        ? 'أضف ' + remaining.toFixed(2) + ' ريال أخرى لإتمام طلبك.'
+        : 'Add ' + remaining.toFixed(2) + ' QAR more to place your order.';
       statusText.style.color = '#dc3545';
       if (checkoutBtn) checkoutBtn.classList.add('checkout-disabled');
     } else {
       notice.classList.remove('show');
-      statusText.textContent = 'Your order is ready for checkout!';
+      statusText.textContent = isAr ? 'طلبك جاهز لإتمام الشراء!' : 'Your order is ready for checkout!';
       statusText.style.color = '#28a745';
       if (checkoutBtn) checkoutBtn.classList.remove('checkout-disabled');
     }
@@ -3803,18 +3877,21 @@ function closeCart() {
 
 // Checkout via WhatsApp
 function checkoutViaWhatsApp() {
+  const isAr = (typeof currentLang !== 'undefined') && currentLang === 'ar';
   const name = document.getElementById('cart-name').value.trim();
   const phone = document.getElementById('cart-phone').value.trim();
   const house = document.getElementById('cart-house').value.trim();
   const mapsLink = document.getElementById('cart-maps-link').value.trim();
   
   if(!name || !phone || !house || !mapsLink) {
-    alert('Please fill in all required fields: Name, Phone Number, House Number, and Google Maps Location Link.');
+    alert(isAr
+      ? 'الرجاء تعبئة جميع الحقول المطلوبة: الاسم، رقم الهاتف، رقم المنزل، ورابط الموقع على خرائط جوجل.'
+      : 'Please fill in all required fields: Name, Phone Number, House Number, and Google Maps Location Link.');
     return;
   }
   
   if(cartItems.length === 0) {
-    alert('Your cart is empty. Please add items before checkout.');
+    alert(isAr ? 'سلة التسوق فارغة. الرجاء إضافة عناصر قبل إتمام الطلب.' : 'Your cart is empty. Please add items before checkout.');
     return;
   }
   
@@ -3827,17 +3904,23 @@ function checkoutViaWhatsApp() {
   });
   
   if(total < 50) {
-    alert('Minimum order value is 50 QAR. Your current total is ' + total.toFixed(2) + ' QAR. Please add more items to continue.');
+    alert(isAr
+      ? 'الحد الأدنى للطلب هو 50 ريال. إجمالي طلبك الحالي هو ' + total.toFixed(2) + ' ريال. الرجاء إضافة المزيد من العناصر للمتابعة.'
+      : 'Minimum order value is 50 QAR. Your current total is ' + total.toFixed(2) + ' QAR. Please add more items to continue.');
     return;
   }
   
-  // Build order items list
+  // Build order items list (translate item names/types when site is in Arabic)
   let itemsList = '';
   cartItems.forEach((item, index) => {
-    itemsList += `${index + 1}. ${item.name}${item.type ? ' (' + item.type + ')' : ''} - ${item.price}\n`;
+    const dispName = isAr ? ((typeof AR !== 'undefined' && (AR.itemNames[item.name] || AR.packages[item.name])) || item.name) : item.name;
+    const dispType = item.type ? (isAr ? ((typeof AR !== 'undefined' && AR.tierLabels[item.type]) || item.type) : item.type) : '';
+    itemsList += `${index + 1}. ${dispName}${dispType ? ' (' + dispType + ')' : ''} - ${item.price}\n`;
   });
   
-  const orderMessage = `🧺 New Order — Quality Laundry\n\n👤 Customer Information\n━━━━━━━━━━━━━━━━━━\nName: ${name}\nPhone: ${phone}\nHouse Number: ${house}\nGoogle Maps Location: ${mapsLink}\n\n🛒 Order Details\n━━━━━━━━━━━━━━━━━━\n${itemsList}\n💰 Total: ${total.toFixed(2)} QAR\n━━━━━━━━━━━━━━━━━━\nPlease confirm this order.`;
+  const orderMessage = isAr
+    ? `🧺 طلب جديد — كواليتي لاندري\n\n👤 بيانات العميل\n━━━━━━━━━━━━━━━━━━\nالاسم: ${name}\nرقم الهاتف: ${phone}\nرقم المنزل: ${house}\nموقع خرائط جوجل: ${mapsLink}\n\n🛒 تفاصيل الطلب\n━━━━━━━━━━━━━━━━━━\n${itemsList}\n💰 الإجمالي: ${total.toFixed(2)} ريال\n━━━━━━━━━━━━━━━━━━\nالرجاء تأكيد هذا الطلب.`
+    : `🧺 New Order — Quality Laundry\n\n👤 Customer Information\n━━━━━━━━━━━━━━━━━━\nName: ${name}\nPhone: ${phone}\nHouse Number: ${house}\nGoogle Maps Location: ${mapsLink}\n\n🛒 Order Details\n━━━━━━━━━━━━━━━━━━\n${itemsList}\n💰 Total: ${total.toFixed(2)} QAR\n━━━━━━━━━━━━━━━━━━\nPlease confirm this order.`;
   
   const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`;
   window.open(waLink, '_blank');
@@ -4095,6 +4178,489 @@ document.addEventListener('DOMContentLoaded', () => {
       if (err) err.style.display = 'none';
     });
   });
+});
+/* ===== ARABIC LANGUAGE SYSTEM ===== */
+let currentLang = localStorage.getItem('ql_lang') || 'en';
+
+/* Arabic translations for JS-rendered content */
+const AR = {
+  /* Services categories */
+  catLabels: {
+    'everyday': '👕 الملابس اليومية',
+    'suits':    '🥼 البدلات والرسمي',
+    'women':    '👗 ملابس السيدات',
+    'bedding':  '🛏️ الفراش والمنزل',
+    'curtains': '🪟 الستائر والأثاث',
+    'carpet':   '🏠 تنظيف السجاد',
+    'shoes':    '👟 تنظيف الأحذية',
+    'express':  '⚡ خدمة إكسبريس'
+  },
+  catSubtitles: {
+    'everyday': 'الثياب والقمصان والبناطيل وجميع الملابس اليومية',
+    'suits':    'البدلات والجاكيتات والملابس الرسمية',
+    'women':    'الفساتين والعبايات والأزياء النسائية',
+    'bedding':  'البطاطين والملاءات والمناشف',
+    'curtains': 'الستائر وأغطية الأريكة بجميع المقاسات',
+    'carpet':   'تنظيف عميق للسجاد بمعدات احترافية',
+    'shoes':    'تنظيف وعناية متخصصة لجميع أنواع الأحذية',
+    'express':  'إنجاز سريع في نفس اليوم — سريع وموثوق'
+  },
+  catPriceBadge: {
+    'everyday': '✦ يبدأ من 3 ريال',
+    'suits':    '✦ يبدأ من 6 ريال',
+    'women':    '✦ يبدأ من 3 ريال',
+    'bedding':  '✦ يبدأ من 3 ريال',
+    'curtains': '✦ يبدأ من 3 ريال',
+    'carpet':   '✦ 10 ريال / م²',
+    'shoes':    '✦ 20 ريال للزوج',
+    'express':  '⚡ خدمة إكسبريس'
+  },
+  /* Service item names */
+  itemNames: {
+    'Thobe':'ثوب','Colour Thobe':'ثوب ملون','Guthrah':'غترة','Colour Guthrah':'غترة ملونة',
+    'Pants':'بنطلون','Shirt':'قميص','T-Shirt':'تيشيرت','U Shirt':'فانيلة داخلية',
+    'Salwar':'سروال','Jalabiya':'جلابية','Over Roll':'أوفرول','Short':'شورت',
+    'Mens Suit':'بدلة رجالية','Military Suit':'بدلة عسكرية','Jacket':'جاكيت',
+    'Tie':'كرافت','Over Coat':'معطف خارجي','Ladies Dress':'فستان سيدات',
+    'Special Dress':'فستان خاص','Abaya And Hijab':'عباية وحجاب','Abaya':'عباية',
+    'Hijab':'حجاب','Blouse':'بلوزة','Shal':'شال','Bra':'حمالة صدر',
+    'Blanket Double':'بطانية مزدوجة','Blanket Small':'بطانية صغيرة','Bed Sheet':'ملاءة سرير',
+    'Pillow Cover':'غطاء وسادة','Towel':'منشفة','Bath Towel':'منشفة حمام',
+    'Face Towel':'منشفة وجه','Bath Robe':'روب حمام','Small Curtain':'ستارة صغيرة',
+    'Large Curtain':'ستارة كبيرة','Large Sofa Cover':'غطاء كنبة كبير',
+    'Small Sofa Cover':'غطاء كنبة صغير','Carpet':'سجادة','Shoes':'حذاء','Saver Bag':'شنطة توفير'
+  },
+  /* Service item descriptions */
+  itemDescs: {
+    'Thobe':'غسيل وكوي احترافي للثوب الأبيض الكلاسيكي. نهاية مشرقة مع طي دقيق خالٍ من التجاعيد.',
+    'Colour Thobe':'غسيل آمن للألوان للثياب بجميع ألوانها. يحافظ على النضارة وجودة القماش في كل غسلة.',
+    'Guthrah':'تنظيف دقيق وكوي حاد للغترة التقليدية للحصول على مظهر أنيق ومرتب.',
+    'Colour Guthrah':'عناية لطيفة بالقماش للغترات المزخرفة والملونة. يحافظ على الملمس الأصلي.',
+    'Pants':'غسيل وكوي احترافي لجميع أنواع البناطيل. طيات حادة بتشطيب أنيق في كل مرة.',
+    'Shirt':'تنظيف شامل وكوي دقيق للقمصان الرسمية والكاجوال. العناية بالياقة والأكمام.',
+    'T-Shirt':'غسيل منعش بمنظفات آمنة للألوان لجميع أقمشة التيشيرت. تجفيف مسطح للحفاظ على الشكل.',
+    'U Shirt':'تنظيف عميق صحي للفانيلات الداخلية بمنتجات آمنة للبشرة. نهاية ناعمة وخالية من الروائح.',
+    'Salwar':'غسيل وكوي دقيق لبناطيل السروال. يحافظ على شكل القماش وراحته.',
+    'Jalabiya':'تنظيف مناسب لقماش الجلابية التقليدية. التطريز الرقيق يُعامَل بعناية.',
+    'Over Roll':'تنظيف قوي للبدلات العملية. يزيل الشحم والغبار والبقع العنيدة.',
+    'Short':'غسيل وكوي سريع للشورت بجميع الأقمشة. يُعاد نظيفاً وجاهزاً للارتداء.',
+    'Mens Suit':'تنظيف جاف كامل للبدلات الثنائية والثلاثية. كوي بالبخار مع اهتمام خاص بالياقة.',
+    'Military Suit':'تنظيف متخصص للزي العسكري والرسمي. الأوسمة والشارات تُعامَل بدقة.',
+    'Jacket':'تنظيف جاف احترافي لجميع أنواع الجاكيتات. البطانة تُعالَج بعناية ويُعاد شكله.',
+    'Tie':'تنظيف جاف متخصص للكرافتات الحريرية والصناعية. معالجة البقع وكوي للحصول على مظهر جديد.',
+    'Over Coat':'تنظيف عميق وكوي بالبخار للمعاطف الثقيلة. يُعاد شكله دون انكماش.',
+    'Ladies Dress':'عناية لطيفة بالأقمشة للفساتين اليومية وشبه الرسمية. الألوان محمية والتصميم محافظ.',
+    'Special Dress':'تنظيف فاخر للفساتين المزخرفة ومناسبات الأعراس. الخرز والأقمشة الرقيقة تُعامَل بعناية قصوى.',
+    'Abaya And Hijab':'تنظيف مشترك للعباية والحجاب. يُسلَّم طازجاً ومكوياً ومعبأً بإتقان.',
+    'Abaya':'تنظيف جاف خبير للعبايات بجميع أنواع الأقمشة. التطريز والأحجار تُحافَظ عليها بمعالجة خاصة.',
+    'Hijab':'غسيل رقيق لجميع أقمشة الحجاب بما فيها الشيفون والجيرسيه والكتان. يُعاد ناعماً وطازجاً.',
+    'Blouse':'غسيل وكوي دقيق للبلوزات. الدانتيل والأزرار والأقمشة الشفافة تأخذ اهتماماً فردياً.',
+    'Shal':'غسيل يدوي ناعم للشالات والأوشحة. يحافظ على النعومة والملمس وتفاصيل الشراشيب.',
+    'Bra':'غسيل يدوي صحي للملابس الداخلية الرقيقة بمنظفات لطيفة. يحافظ على الشكل والمرونة.',
+    'Blanket Double':'تنظيف عميق للبطاطين المزدوجة الكبيرة. يزيل عث الغبار والروائح والبقع.',
+    'Blanket Small':'تنظيف احترافي للبطاطين المفردة. نهاية ناعمة مع شطف خالٍ من البقايا.',
+    'Bed Sheet':'غسيل بدرجة حرارة عالية للملاءات للقضاء على الحساسيات والبكتيريا. يُعاد مطوياً بإتقان.',
+    'Pillow Cover':'غسيل صحي شامل لأغطية الوسائد بجميع المقاسات. نعومة ونضارة بعد كل غسلة.',
+    'Towel':'غسيل ساخن صحي للمناشف. معالجة مضادة للبكتيريا تزيل التراكمات مع الحفاظ على النعومة.',
+    'Bath Towel':'خدمة تنظيف عميق لمناشف الحمام الكبيرة. يستعيد الامتصاص ويزيل الروائح الكريهة.',
+    'Face Towel':'تنظيف لطيف وفعال لمناشف الوجه واليد بمنظفات هيبوالرجينيك.',
+    'Bath Robe':'غسيل فاخر لأردية الحمام القطنية والتيري. الامتصاص والنعومة يُستعادان بعد كل تنظيف.',
+    'Small Curtain':'غسيل احترافي وكوي بالبخار للستائر الصغيرة. التجاعيد والحلقات تُعامَل بعناية.',
+    'Large Curtain':'خدمة تنظيف كاملة للستائر الثقيلة الكبيرة. قماش معالج ومكوي وجاهز للتعليق.',
+    'Large Sofa Cover':'خدمة تنظيف عميق لأغطية الكنب الكبيرة. معالجة البقع وعناية كاملة بالقماش.',
+    'Small Sofa Cover':'تنظيف لطيف وشامل لأغطية الكراسي والكنب الصغيرة. يُعاد شكله ولونه.',
+    'Carpet':'تنظيف صناعي عميق لجميع أنواع السجاد. استخراج عالي الضغط يزيل الغبار والبقع.',
+    'Shoes':'تنظيف متخصص للجلد والقماش والشمواه. معطر ومصمع ومُعاد بشكل أنيق.',
+    'Saver Bag':'حزمة اقتصادية — امئلأ الشنطة بالملابس المختلطة واستمتع بغسيل بسعر ثابت.'
+  },
+  /* Tier labels */
+  tierLabels: {
+    'Pressing • Normal':    'كوي • عادي',
+    'Pressing • Urgent':    'كوي • عاجل',
+    'Press Wash • Normal':  'غسيل وكوي • عادي',
+    'Press Wash • Urgent':  'غسيل وكوي • عاجل',
+    'Dry Cleaning • Normal':'تنظيف جاف • عادي',
+    'Dry Cleaning • Urgent':'تنظيف جاف • عاجل'
+  },
+  /* Cart & checkout */
+  cart: {
+    'Shopping Cart':   'سلة التسوق',
+    'Full Name *':     'الاسم الكامل *',
+    'Phone Number *':  'رقم الهاتف *',
+    'House Number *':  'رقم المنزل *',
+    'Google Maps Location Link *': 'رابط الموقع على خرائط جوجل *',
+    'Open Google Maps':'فتح خرائط جوجل',
+    'Need your exact location?': 'تحتاج موقعك الدقيق؟',
+    'Buy via WhatsApp':'الشراء عبر واتساب',
+    'Your cart is empty': 'سلة التسوق فارغة',
+    'Add services or products to get started': 'أضف خدمات أو منتجات للبدء',
+    'Subtotal:': 'المجموع الفرعي:',
+    'Total:':    'الإجمالي:',
+    'Add to Cart': 'أضف للسلة',
+    'Subscribe Now': 'اشترك الآن'
+  },
+  /* Packages */
+  packages: {
+    'Monthly Plans':        'الباقات الشهرية',
+    'Subscription Packages':'باقات الاشتراك',
+    'Choose a monthly plan that fits your household — save more with bundled pickup and delivery.':
+      'اختر الباقة الشهرية المناسبة لأسرتك — وفر أكثر مع خدمة الاستلام والتوصيل المجانية.',
+    'Silver Package':   'الباقة الفضية',
+    'Platinum Package': 'الباقة البلاتينية',
+    'Gold Package':     'الباقة الذهبية',
+    'Diamond Package':  'الباقة الماسية',
+    'Family Laundry Bag': 'شنطة الغسيل العائلية',
+    'Perfect for families! Get complete laundry and ironing service for your entire household at an unbeatable price. Ideal for weekly family laundry needs — includes free pickup & delivery.':
+      'مثالية للعائلات! احصل على خدمة غسيل وكوي كاملة لجميع أفراد الأسرة بسعر لا يُضاهى. مثالية للغسيل الأسبوعي العائلي — مع استلام وتوصيل مجاني.',
+    'BEST VALUE': 'أفضل قيمة',
+    'POPULAR':    'الأكثر طلباً',
+    'PREMIUM':    'بريميوم',
+    'LIMITED OFFER': 'عرض محدود',
+    'Full wash & iron for your entire household': 'غسيل وكوي كامل لجميع أفراد الأسرة',
+    'Eco-friendly, fabric-safe cleaning products': 'منتجات تنظيف صديقة للبيئة وآمنة للأقمشة',
+    'Free pickup & delivery included': 'استلام وتوصيل مجاني مشمول',
+    'Same-day & 24-hour turnaround available': 'إنجاز في نفس اليوم أو خلال ٢٤ ساعة'
+  },
+  /* Features strip */
+  features: {
+    'Professional Dry Cleaning': 'تنظيف جاف احترافي',
+    'Wash & Press':    'غسيل وكوي',
+    'Express Service': 'خدمة إكسبريس',
+    'Carpet Cleaning': 'تنظيف سجاد',
+    'Curtain Cleaning':'تنظيف ستائر',
+    'Sofa Cover Cleaning':'تنظيف أغطية كنب',
+    'Shoes Cleaning':  'تنظيف أحذية',
+    'Household Laundry':'غسيل منزلي'
+  },
+  /* Products coming soon */
+  products: {
+    'Coming Soon': 'قريباً',
+    "We're carefully curating a collection of professional-grade laundry products for you. Stay tuned — our store will be ready shortly!":
+      'نقوم بإعداد مجموعة من منتجات الغسيل الاحترافية لك. ترقب — متجرنا سيكون جاهزاً قريباً!',
+    'Premium Detergents': 'منظفات فاخرة',
+    'Fabric Softeners': 'ملينات أقمشة',
+    'Stain Removers': 'مزيلات بقع',
+    'Home Delivery': 'توصيل للمنزل',
+    'Notify Me When Available': 'أخبرني عند التوفر'
+  },
+  /* Gallery labels */
+  galleryLabels: {
+    'Modern Laundry Facility':'منشأة غسيل عصرية',
+    'Garment Care':'العناية بالملابس',
+    'Dry Cleaning Process':'عملية التنظيف الجاف',
+    'Professional Ironing':'كوي احترافي',
+    'Carpet Treatment':'معالجة السجاد',
+    'Fresh Bedding':'فراش نظيف',
+    'Delivery Service':'خدمة التوصيل',
+    'Curtain Cleaning':'تنظيف الستائر'
+  },
+  /* Testimonials */
+  testimonialRoles: {
+    'Regular Customer':'عميل دائم',
+    'Working Professional':'موظف محترف',
+    'Frequent User':'مستخدم متكرر'
+  },
+  /* No reviews */
+  noReviews: 'كن أول من يترك تقييماً!',
+  reviewCount: (n) => n === 1 ? 'تقييم واحد' : n + ' تقييم'
+};
+
+function applyLang(lang) {
+  currentLang = lang;
+  const isAr = lang === 'ar';
+  document.documentElement.lang = isAr ? 'ar' : 'en';
+  document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+
+  /* font family switch */
+  document.body.style.fontFamily = isAr
+    ? "'Tajawal', system-ui, sans-serif"
+    : "'Outfit', system-ui, sans-serif";
+
+  /* All data-en/data-ar elements */
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const val = isAr ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    if (val) el.innerHTML = val;
+  });
+
+  /* Placeholders */
+  document.querySelectorAll('[data-ph-en]').forEach(el => {
+    el.placeholder = isAr
+      ? (el.getAttribute('data-ph-ar') || el.getAttribute('data-ph-en'))
+      : el.getAttribute('data-ph-en');
+  });
+
+  /* Select options */
+  document.querySelectorAll('select option[data-en]').forEach(opt => {
+    const val = isAr ? opt.getAttribute('data-ar') : opt.getAttribute('data-en');
+    if (val) opt.textContent = val;
+  });
+
+  /* Lang toggle button */
+  const btn = document.getElementById('lang-toggle-btn');
+  if (btn) btn.textContent = isAr ? 'EN' : 'عربي';
+
+  /* Services: re-render with correct language */
+  reRenderServicesLang(isAr);
+
+  /* Gallery labels */
+  reRenderGalleryLang(isAr);
+
+  /* Testimonials */
+  buildTestimonialSlider();
+
+  /* Reviews panel */
+  renderReviews();
+
+  /* Cart modal dynamic text */
+  reRenderCartLang(isAr);
+
+  /* Services feature strip */
+  document.querySelectorAll('.svc-feature-pill span[data-en]').forEach(el => {
+    const key = el.getAttribute('data-en');
+    el.textContent = (isAr && AR.features[key]) ? AR.features[key] : key;
+  });
+
+  /* Mobile nav label */
+  const mobileLabel = document.getElementById('svc-mobile-label');
+  if (mobileLabel) {
+    const id = svcCatOrder[svcCurrentIdx];
+    mobileLabel.textContent = isAr ? (AR.catLabels[id] || id) : svcCatLabels[id];
+  }
+
+  /* Products coming soon */
+  reRenderProductsLang(isAr);
+
+  localStorage.setItem('ql_lang', lang);
+}
+
+function toggleLang() {
+  applyLang(currentLang === 'en' ? 'ar' : 'en');
+}
+
+function reRenderServicesLang(isAr) {
+  serviceCategories.forEach(cat => {
+    /* Category header */
+    const nameEl = document.querySelector(`#cat-${cat.id} .svc-cat-name`);
+    const subEl  = document.querySelector(`#cat-${cat.id} .svc-cat-sub`);
+    const badgeEl = document.querySelector(`#cat-${cat.id} .svc-cat-price-badge`);
+    if (nameEl)  nameEl.textContent  = isAr ? (AR.catLabels[cat.id]    || cat.id) : svcCatLabels[cat.id];
+    if (subEl)   subEl.textContent   = isAr ? (AR.catSubtitles[cat.id] || '') : (cat.subtitle || '');
+    if (badgeEl && !cat.express) badgeEl.textContent = isAr ? (AR.catPriceBadge[cat.id] || '') : (cat.priceBadge || badgeEl.textContent);
+
+    /* Tab button */
+    const tabBtn = document.querySelector(`.svc-tab[onclick="switchCat('${cat.id}')"]`);
+    if (tabBtn) tabBtn.textContent = isAr ? (AR.catLabels[cat.id] || cat.id) : svcCatLabels[cat.id];
+
+    /* Item cards */
+    const grid = document.getElementById('grid-' + cat.id);
+    if (!grid) return;
+    grid.querySelectorAll('.svc-item-card').forEach((card, idx) => {
+      const item = cat.items[idx];
+      if (!item) return;
+      const nameDiv = card.querySelector('.svc-item-name');
+      const descDiv = card.querySelector('.svc-item-card > div[style*="0.78rem"]');
+      if (nameDiv) nameDiv.textContent = isAr ? (AR.itemNames[item.name] || item.name) : item.name;
+      if (descDiv) descDiv.textContent = isAr ? (AR.itemDescs[item.name] || item.desc) : item.desc;
+
+      /* Tier labels */
+      if (item.tiers) {
+        const itemKey = cat.id + '-' + idx;
+        const priceDisplay = document.getElementById('price-display-' + itemKey);
+        if (priceDisplay) {
+          const tierIdx = tierSelections[itemKey] || 0;
+          const tier = item.tiers[tierIdx];
+          const labelText = isAr ? (AR.tierLabels[tier.label] || tier.label) : tier.label;
+          priceDisplay.innerHTML = `<span class="svc-tier-current-label">${labelText}</span><span class="svc-tier-current-price">${tier.price} QAR</span>`;
+        }
+        const panel = document.getElementById('tier-panel-' + itemKey);
+        if (panel) {
+          panel.querySelectorAll('.svc-tier-option').forEach((btn, i) => {
+            const t = item.tiers[i];
+            const lbl = btn.querySelector('.svc-tier-option-label');
+            if (lbl) lbl.textContent = isAr ? (AR.tierLabels[t.label] || t.label) : t.label;
+          });
+        }
+      }
+
+      /* Add to Cart button */
+      const waBtn = card.querySelector('.svc-item-wa');
+      if (waBtn) {
+        const svgEl = waBtn.querySelector('svg');
+        const svgHtml = svgEl ? svgEl.outerHTML : '';
+        waBtn.innerHTML = svgHtml + ' ' + (isAr ? 'أضف للسلة' : 'Add to Cart');
+      }
+    });
+  });
+}
+
+function reRenderGalleryLang(isAr) {
+  const grid = document.getElementById('gallery-grid');
+  if (!grid) return;
+  grid.querySelectorAll('.gallery-overlay-text').forEach((el, i) => {
+    const orig = galleryItems[i] ? galleryItems[i].label : '';
+    el.textContent = isAr ? (AR.galleryLabels[orig] || orig) : orig;
+  });
+}
+
+function reRenderCartLang(isAr) {
+  /* Cart form labels that are not data-en tagged */
+  const cartLabels = [
+    ['cart-name',       isAr ? 'الاسم الكامل *'    : 'Full Name *',    isAr ? 'اسمك الكامل'    : 'Your full name'],
+    ['cart-phone',      isAr ? 'رقم الهاتف *'       : 'Phone Number *', isAr ? 'رقم هاتفك'       : 'Your phone number'],
+    ['cart-house',      isAr ? 'رقم المنزل *'       : 'House Number *', isAr ? 'رقم منزلك'       : 'Enter your house number'],
+    ['cart-maps-link',  isAr ? 'رابط الموقع على جوجل *' : 'Google Maps Link *', isAr ? 'الصق رابط موقعك هنا' : 'Paste your Google Maps location link here']
+  ];
+  cartLabels.forEach(([id, labelTxt, ph]) => {
+    const el = document.getElementById(id);
+    if (el) el.placeholder = ph;
+    const lbl = document.querySelector(`label[for="${id}"]`);
+    if (lbl) lbl.textContent = labelTxt;
+  });
+
+  const checkoutBtn = document.getElementById('checkout-whatsapp-btn');
+  if (checkoutBtn) {
+    const svgEl = checkoutBtn.querySelector('svg');
+    const svgHtml = svgEl ? svgEl.outerHTML : '';
+    checkoutBtn.innerHTML = svgHtml + ' ' + (isAr ? 'الشراء عبر واتساب' : 'Buy via WhatsApp');
+  }
+
+  const emptyMsg = document.querySelector('#cart-empty-state p');
+  if (emptyMsg) emptyMsg.textContent = isAr ? 'سلة التسوق فارغة' : 'Your cart is empty';
+  const emptySubMsg = document.querySelector('#cart-empty-state p + p');
+  if (emptySubMsg) emptySubMsg.textContent = isAr ? 'أضف خدمات أو منتجات للبدء' : 'Add services or products to get started';
+
+  /* Re-render the actual cart items list + summary so already-added items switch language too */
+  if (typeof cartItems !== 'undefined') renderCartItems();
+}
+
+function reRenderProductsLang(isAr) {
+  const titleEl = document.querySelector('.coming-soon-title');
+  const descEl  = document.querySelector('.coming-soon-desc');
+  const notifyBtn = document.querySelector('.products-coming-soon .btn-primary');
+
+  if (titleEl) titleEl.textContent = isAr ? 'قريباً' : 'Coming Soon';
+  if (descEl)  descEl.textContent  = isAr
+    ? 'نقوم بإعداد مجموعة من منتجات الغسيل الاحترافية لك. ترقب — متجرنا سيكون جاهزاً قريباً!'
+    : "We're carefully curating a collection of professional-grade laundry products for you. Stay tuned — our store will be ready shortly!";
+  if (notifyBtn) notifyBtn.textContent = isAr ? 'أخبرني عند التوفر' : 'Notify Me When Available';
+
+  const featureMap = {
+    'Premium Detergents':'منظفات فاخرة',
+    'Fabric Softeners':'ملينات أقمشة',
+    'Stain Removers':'مزيلات بقع',
+    'Home Delivery':'توصيل للمنزل'
+  };
+  document.querySelectorAll('.coming-soon-feature').forEach(el => {
+    const span = el.querySelector('span');
+    const emoji = span ? span.outerHTML : '';
+    const origText = el.textContent.replace(/\p{Emoji}/gu,'').trim();
+    el.innerHTML = emoji + ' ' + (isAr ? (featureMap[origText] || origText) : origText);
+  });
+}
+
+/* Override renderReviews to support Arabic */
+const _origRenderReviews = renderReviews;
+window.renderReviews = function() {
+  const reviews = loadReviews();
+  const panel = document.getElementById('reviews-list-panel');
+  const avgScore = document.getElementById('reviews-avg-score');
+  const avgStars = document.getElementById('reviews-avg-stars');
+  const avgCount = document.getElementById('reviews-avg-count');
+  if (!panel) return;
+
+  const isAr = currentLang === 'ar';
+
+  if (reviews.length === 0) {
+    panel.innerHTML = `<div class="reviews-empty"><div class="reviews-empty-icon">💬</div><p>${isAr ? 'كن أول من يترك تقييماً!' : 'Be the first to leave a review!'}</p></div>`;
+    if (avgScore) avgScore.textContent = '—';
+    if (avgStars) avgStars.textContent = '☆☆☆☆☆';
+    if (avgCount) avgCount.textContent = isAr ? 'لا توجد تقييمات بعد' : 'No reviews yet';
+    return;
+  }
+
+  const avg = reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+  const avgRounded = Math.round(avg * 10) / 10;
+  if (avgScore) avgScore.textContent = avgRounded.toFixed(1);
+  if (avgStars) {
+    let stars = '';
+    for (let i = 1; i <= 5; i++) stars += i <= Math.round(avg) ? '★' : '☆';
+    avgStars.textContent = stars;
+  }
+  if (avgCount) {
+    avgCount.textContent = isAr
+      ? AR.reviewCount(reviews.length)
+      : (reviews.length === 1 ? '1 review' : reviews.length + ' reviews');
+  }
+
+  const sorted = [...reviews].sort((a, b) => b.ts - a.ts);
+  panel.innerHTML = sorted.map(r => `
+    <div class="review-card">
+      <div class="review-card-top">
+        <div class="review-card-name">${escapeHtml(r.name)}</div>
+        <div class="review-card-stars">${starsHtml(r.rating)}</div>
+      </div>
+      <div class="review-card-text">${escapeHtml(r.text)}</div>
+      <div class="review-card-date">${formatDate(r.ts)}</div>
+    </div>
+  `).join('');
+};
+
+/* Override submitReview to show Arabic toast */
+const _origSubmitReview = submitReview;
+window.submitReview = function() {
+  const nameEl  = document.getElementById('review-name');
+  const textEl  = document.getElementById('review-text');
+  const errorEl = document.getElementById('review-error');
+  const toastEl = document.getElementById('review-toast');
+  const isAr = currentLang === 'ar';
+
+  const name   = nameEl ? nameEl.value.trim() : '';
+  const text   = textEl ? textEl.value.trim() : '';
+  const ratingInput = document.querySelector('input[name="review-rating"]:checked');
+  const rating = ratingInput ? parseInt(ratingInput.value) : 0;
+
+  if (!name || !text || !rating) {
+    if (errorEl) {
+      errorEl.textContent = isAr
+        ? 'يرجى ملء جميع الحقول واختيار تقييم بالنجوم.'
+        : 'Please fill in all fields and select a star rating.';
+      errorEl.style.display = 'block';
+    }
+    return;
+  }
+  if (errorEl) errorEl.style.display = 'none';
+
+  const reviews = loadReviews();
+  reviews.push({ name, text, rating, ts: Date.now() });
+  saveReviews(reviews);
+  renderReviews();
+
+  if (nameEl) nameEl.value = '';
+  if (textEl) { textEl.value = ''; updateCharCount(); }
+  const sp = document.getElementById('star-picker');
+  if (sp && sp._resetStars) sp._resetStars();
+
+  if (toastEl) {
+    toastEl.textContent = isAr ? '✅ شكراً لك! تم نشر تقييمك.' : '✅ Thank you! Your review has been posted.';
+    toastEl.style.display = 'flex';
+    setTimeout(() => { toastEl.style.display = 'none'; }, 4000);
+  }
+};
+
+/* Override switchCat to update label in current lang */
+const _origSwitchCat = switchCat;
+window.switchCat = function(id) {
+  _origSwitchCat(id);
+  const isAr = currentLang === 'ar';
+  const mobileLabel = document.getElementById('svc-mobile-label');
+  if (mobileLabel) {
+    mobileLabel.textContent = isAr ? (AR.catLabels[id] || id) : svcCatLabels[id];
+  }
+};
+
+/* Apply saved language on load */
+document.addEventListener('DOMContentLoaded', function() {
+  if (currentLang === 'ar') applyLang('ar');
 });
 </script>
 </body>
