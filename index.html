@@ -1867,6 +1867,20 @@ section { padding: 80px 5%; }
   max-width: 900px;
   margin: 36px auto 0;
 }
+/* Two wide cards side by side */
+.featured-offers-duo {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+.featured-offers-duo .featured-offer-wide {
+  height: 100%;
+}
+.featured-offers-duo .featured-offer-wide-inner {
+  height: 100%;
+}
 .featured-offer-wide {
   border-radius: 24px;
   overflow: hidden;
@@ -1888,6 +1902,13 @@ section { padding: 80px 5%; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* At medium widths, stack image-over-body inside each duo card first so text doesn't get cramped */
+@media(max-width: 1100px) {
+  .featured-offers-duo {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+  }
 }
 @media(max-width: 768px) {
   .featured-offer-wide-inner {
@@ -2520,7 +2541,7 @@ html[dir="rtl"] .featured-offers-grid { direction: rtl; }
   
 
   <!-- FEATURED OFFERS -->
-  <div class="featured-offers-single reveal">
+  <div class="featured-offers-single featured-offers-duo reveal">
     <div class="featured-offer-card featured-offer-wide">
       <div class="featured-offer-badge" data-en="⚡ LIMITED OFFER" data-ar="⚡ عرض محدود">⚡ LIMITED OFFER</div>
       <div class="featured-offer-wide-inner">
@@ -2545,6 +2566,31 @@ html[dir="rtl"] .featured-offers-grid { direction: rtl; }
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
             <span data-en="Add to Cart — 79 QAR" data-ar="أضف للسلة — 79 ريال">Add to Cart — 79 QAR</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-offer-card featured-offer-wide">
+      <div class="featured-offer-badge" style="background:linear-gradient(135deg,#39BCF2,#2080A7);" data-en="📦 MONTHLY BUNDLE" data-ar="📦 باقة شهرية">📦 MONTHLY BUNDLE</div>
+      <div class="featured-offer-wide-inner">
+        <div class="featured-offer-wide-img">
+          <img loading="lazy" src="https://i.postimg.cc/9fqG9KQc/baqh.png" alt="Family Bag Subscription" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="featured-offer-body">
+          <div class="featured-offer-title" data-en="Family Bag Subscription" data-ar="اشتراك شنطة الغسيل العائلية">Family Bag Subscription</div>
+          <div class="featured-offer-price" data-en="289 QAR / Month" data-ar="289 ريال / شهرياً">289 QAR / Month</div>
+          <div class="featured-offer-price" style="font-size:0.98rem;color:var(--text-light);margin-top:-6px;" data-en="4 Bags per Month" data-ar="4 أكياس شهرياً">4 Bags per Month</div>
+          <p class="featured-offer-desc" data-en="The package includes:" data-ar="الباقة تشمل:">The package includes:</p>
+          <ul class="featured-offer-features">
+            <li data-en="Wash &amp; iron service" data-ar="غسيل وكوي">Wash &amp; iron service</li>
+            <li data-en="Free pickup &amp; delivery" data-ar="استلام وتوصيل مجاني">Free pickup &amp; delivery</li>
+            <li data-en="Valid for 30 days" data-ar="صلاحية الاستخدام 30 يوم">Valid for 30 days</li>
+            <li data-en="Extra bags at a discounted subscriber price" data-ar="أي كيس إضافي بسعر مخفض للمشترك">Extra bags at a discounted subscriber price</li>
+          </ul>
+          <button class="featured-offer-btn" onclick="subscribePackage('Family Bag Subscription', '289 QAR', '289 QAR / Month', ['4 Bags per Month','Wash &amp; Iron Service','Free Pickup &amp; Delivery','Valid for 30 Days','Extra Bags at Discounted Subscriber Price'])" style="max-width:280px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span data-en="Subscribe Now" data-ar="اشترك الآن">Subscribe Now</span>
           </button>
         </div>
       </div>
@@ -3693,19 +3739,55 @@ function initObserver() {
 
 /* ===== SHOPPING CART SYSTEM ===== */
 let cartItems = [];
+const CART_STORAGE_KEY = 'qualityLaundryCart';
+const CART_SESSION_FLAG = 'qualityLaundrySessionActive';
+
+// A "session" = one continuous visit in one browser tab (sessionStorage is
+// cleared automatically when the tab/window closes, unlike localStorage which
+// never expires on its own). If this flag is missing, either this is a brand
+// new visitor on this device, or the previous visitor's tab was fully closed —
+// either way, any cart left in localStorage is stale and must not carry over.
+function isFreshBrowserSession() {
+  return sessionStorage.getItem(CART_SESSION_FLAG) !== '1';
+}
+
+function markSessionActive() {
+  sessionStorage.setItem(CART_SESSION_FLAG, '1');
+}
 
 // Load cart from localStorage on page load
 function loadCart() {
-  const saved = localStorage.getItem('qualityLaundryCart');
-  if(saved) {
-    cartItems = JSON.parse(saved);
+  if (isFreshBrowserSession()) {
+    // New visit on this device/browser — never inherit a previous
+    // customer's leftover cart, even if checkout was never completed.
+    cartItems = [];
+    localStorage.removeItem(CART_STORAGE_KEY);
+    markSessionActive();
     updateCartUI();
+    return;
   }
+
+  try {
+    const saved = localStorage.getItem(CART_STORAGE_KEY);
+    cartItems = saved ? JSON.parse(saved) : [];
+  } catch (e) {
+    // Corrupted or unreadable cart data — reset safely rather than crash.
+    cartItems = [];
+  }
+  updateCartUI();
 }
 
 // Save cart to localStorage
 function saveCart() {
-  localStorage.setItem('qualityLaundryCart', JSON.stringify(cartItems));
+  localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
+  updateCartUI();
+}
+
+// Fully reset the cart: clears in-memory items and the persisted copy.
+// Used after a successful checkout so nothing can linger for the next visitor.
+function clearCart() {
+  cartItems = [];
+  localStorage.removeItem(CART_STORAGE_KEY);
   updateCartUI();
 }
 
@@ -3925,10 +4007,10 @@ function checkoutViaWhatsApp() {
   const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`;
   window.open(waLink, '_blank');
   
-  // Clear cart after successful order
+  // Clear cart after successful order — removes it from localStorage entirely
+  // so no trace is left behind for the next person using this device/browser.
   setTimeout(() => {
-    cartItems = [];
-    saveCart();
+    clearCart();
     closeCart();
     document.getElementById('cart-name').value = '';
     document.getElementById('cart-phone').value = '';
@@ -4319,7 +4401,14 @@ const AR = {
     'Full wash & iron for your entire household': 'غسيل وكوي كامل لجميع أفراد الأسرة',
     'Eco-friendly, fabric-safe cleaning products': 'منتجات تنظيف صديقة للبيئة وآمنة للأقمشة',
     'Free pickup & delivery included': 'استلام وتوصيل مجاني مشمول',
-    'Same-day & 24-hour turnaround available': 'إنجاز في نفس اليوم أو خلال ٢٤ ساعة'
+    'Same-day & 24-hour turnaround available': 'إنجاز في نفس اليوم أو خلال ٢٤ ساعة',
+    'Family Bag Subscription': 'اشتراك شنطة الغسيل العائلية',
+    '289 QAR / Month': '289 ريال / شهرياً',
+    '4 Bags per Month': '4 أكياس شهرياً',
+    'Wash & Iron Service': 'غسيل وكوي',
+    'Free Pickup & Delivery': 'استلام وتوصيل مجاني',
+    'Valid for 30 Days': 'صلاحية الاستخدام 30 يوم',
+    'Extra Bags at Discounted Subscriber Price': 'أي كيس إضافي بسعر مخفض للمشترك'
   },
   /* Features strip */
   features: {
