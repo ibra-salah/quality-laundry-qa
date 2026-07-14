@@ -203,10 +203,9 @@
   margin-top: 18px;
   border: 2px solid var(--brand-light);
   border-radius: 12px;
-  position: relative; /* Changed to allow absolute positioning of options */
+  overflow: hidden;
   background: var(--white);
   box-shadow: var(--shadow-sm);
-  z-index: 10;
 }
 .package-selector-header {
   padding: 12px 16px;
@@ -241,39 +240,13 @@
 }
 .package-selector-options {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: -2px;
-  right: -2px;
-  background: var(--white);
-  border: 2px solid var(--brand-light);
-  border-top: none;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  z-index: 100;
-  max-height: 300px;
-  overflow-y: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 .package-selector-options.open {
   display: block;
-}
-.package-selector-header {
-  padding: 12px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  background: var(--brand-light);
-  transition: background var(--transition);
-  border-radius: 10px; /* Base radius */
-}
-.package-selector.selector-open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.package-selector.selector-open .package-selector-header {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  max-height: 400px;
 }
 .package-option {
   padding: 12px 16px;
@@ -4022,23 +3995,18 @@ function subscribePackage(name, price, priceLine, features) {
 /* NEW PACKAGE SELECTOR FUNCTIONS */
 function togglePackageSelector(id) {
   const options = document.getElementById(id);
-  const selector = options.closest('.package-selector');
   const allSelectors = document.querySelectorAll('.package-selector-options');
-  const allParentSelectors = document.querySelectorAll('.package-selector');
   
   // Close others
   allSelectors.forEach(sel => {
     if (sel.id !== id) {
       sel.classList.remove('open');
-      sel.closest('.package-selector').classList.remove('selector-open');
       const otherArrow = sel.previousElementSibling.querySelector('.selector-arrow');
       if (otherArrow) otherArrow.style.transform = 'rotate(0deg)';
     }
   });
 
   options.classList.toggle('open');
-  selector.classList.toggle('selector-open');
-  
   const arrow = options.previousElementSibling.querySelector('.selector-arrow');
   if (options.classList.contains('open')) {
     arrow.style.transform = 'rotate(180deg)';
