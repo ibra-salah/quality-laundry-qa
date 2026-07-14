@@ -198,6 +198,113 @@
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ===== PACKAGE SELECTOR STYLES ===== */
+.package-selector {
+  margin-top: 18px;
+  border: 2px solid var(--brand-light);
+  border-radius: 12px;
+  position: relative; /* Changed to allow absolute positioning of options */
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  z-index: 10;
+}
+.package-selector-header {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: var(--brand-light);
+  transition: background var(--transition);
+}
+.package-selector-header:hover {
+  background: #c0deeb;
+}
+.selected-package-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.selected-package-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--brand-primary);
+}
+.selected-package-price {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-secondary);
+}
+.selector-arrow {
+  transition: transform 0.3s ease;
+  color: var(--brand-primary);
+}
+.package-selector-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -2px;
+  right: -2px;
+  background: var(--white);
+  border: 2px solid var(--brand-light);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.package-selector-options.open {
+  display: block;
+}
+.package-selector-header {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: var(--brand-light);
+  transition: background var(--transition);
+  border-radius: 10px; /* Base radius */
+}
+.package-selector.selector-open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.package-selector.selector-open .package-selector-header {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.package-option {
+  padding: 12px 16px;
+  border-top: 1px solid var(--brand-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.package-option:hover {
+  background: rgba(57,188,242,0.08);
+}
+.package-option-info {
+  display: flex;
+  flex-direction: column;
+}
+.package-option-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--brand-primary);
+}
+.package-option-bags {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+.package-option-price {
+  font-weight: 700;
+  color: var(--brand-secondary);
+}
+
 /* ===== ACTIVE NAV LINK ===== */
 .nav-links a.nav-active {
   color: var(--brand-primary);
@@ -2542,54 +2649,124 @@ html[dir="rtl"] .featured-offers-grid { direction: rtl; }
 
   <!-- FEATURED OFFERS -->
   <div class="featured-offers-single featured-offers-duo reveal">
-    <div class="featured-offer-card featured-offer-wide">
-      <div class="featured-offer-badge" data-en="⚡ LIMITED OFFER" data-ar="⚡ عرض محدود">⚡ LIMITED OFFER</div>
+    <!-- Card 1: Ironing Only -->
+    <div class="featured-offer-card featured-offer-wide" id="ironing-card">
+      <div class="featured-offer-badge" data-en="✨ PREMIUM IRONING" data-ar="✨ خدمات الكي المميزة">✨ PREMIUM IRONING</div>
       <div class="featured-offer-wide-inner">
         <div class="featured-offer-wide-img">
-          <img loading="lazy" src="https://i.postimg.cc/9fqG9KQc/baqh.png" alt="Family Laundry Package" style="width:100%;height:100%;object-fit:cover;">
+          <img loading="lazy" src="https://i.postimg.cc/vHsJvNBB/kyy.jpg" alt="Ironing Service" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="featured-offer-body">
-          <div class="featured-offer-title" data-en="Family Laundry Bag" data-ar="شنطة الغسيل العائلية">Family Laundry Bag</div>
-          <div class="featured-offer-price" data-en="Wash &amp; Iron — 79 QAR" data-ar="غسيل وكوي — 79 ريال">Wash &amp; Iron — 79 QAR</div>
-          <div class="featured-offer-price" style="font-size:0.98rem;color:var(--text-light);margin-top:-6px;" data-en="Iron Only — 75 QAR" data-ar="كوي فقط — 75 ريال">Iron Only — 75 QAR</div>
-          <p class="featured-offer-desc" data-en="Perfect for families! Get complete laundry and ironing service for your entire household at an unbeatable price. Ideal for weekly family laundry needs — includes free pickup &amp; delivery." data-ar="مثالية للعائلات! احصل على خدمة غسيل وكوي كاملة لجميع أفراد الأسرة بسعر لا يُضاهى. مثالية للغسيل الأسبوعي العائلي — مع استلام وتوصيل مجاني.">Perfect for families! Get complete laundry and ironing service for your entire household at an unbeatable price. Ideal for weekly family laundry needs — includes free pickup &amp; delivery.</p>
-          <ul class="featured-offer-features">
-            <li data-en="Full wash &amp; iron for your entire household" data-ar="غسيل وكوي كامل لجميع أفراد الأسرة">Full wash &amp; iron for your entire household</li>
-            <li data-en="Eco-friendly, fabric-safe cleaning products" data-ar="منتجات تنظيف صديقة للبيئة وآمنة للأقمشة">Eco-friendly, fabric-safe cleaning products</li>
-            <li data-en="Free pickup &amp; delivery included" data-ar="استلام وتوصيل مجاني مشمول">Free pickup &amp; delivery included</li>
-            <li data-en="Same-day &amp; 24-hour turnaround available" data-ar="إنجاز في نفس اليوم أو خلال ٢٤ ساعة">Same-day &amp; 24-hour turnaround available</li>
-          </ul>
-          <button class="featured-offer-btn" onclick="addFeaturedOfferToCart('Family Laundry Bag', '79 QAR')" style="max-width:280px;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            <span data-en="Add to Cart — 79 QAR" data-ar="أضف للسلة — 79 ريال">Add to Cart — 79 QAR</span>
+          <div class="featured-offer-title" data-en="Ironing Only Service" data-ar="خدمات الكي فقط">Ironing Only Service</div>
+          <p class="featured-offer-desc" data-en="Get your clothes professionally ironed and delivered to your doorstep. Perfect for those who prefer to wash at home but want that professional crisp look." data-ar="احصل على ملابسك مكوية باحترافية ومسلمة لباب منزلك. مثالية لمن يفضل الغسيل في المنزل ويرغب في مظهر مكوي ومثالي.">Get your clothes professionally ironed and delivered to your doorstep. Perfect for those who prefer to wash at home but want that professional crisp look.</p>
+          
+          <!-- Package Selector -->
+          <div class="package-selector">
+            <div class="package-selector-header" onclick="togglePackageSelector('ironing-options')">
+              <div class="selected-package-info">
+                <span class="selected-package-name" data-en="Bronze Package" data-ar="الباقة البرونزية">Bronze Package</span>
+                <span class="selected-package-price">279 QAR</span>
+              </div>
+              <div class="selector-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+            <div class="package-selector-options" id="ironing-options">
+              <div class="package-option" onclick="selectPackage('ironing-card', 'Platinum Package', 'الباقة البلاتينية', '1119', '16 Bags', '16 كيس')">
+                <div class="package-option-info">
+                  <span class="package-option-name" data-en="Platinum Package" data-ar="الباقة البلاتينية">Platinum Package</span>
+                  <span class="package-option-bags" data-en="16 Bags" data-ar="16 كيس">16 Bags</span>
+                </div>
+                <span class="package-option-price">1119 QAR</span>
+              </div>
+              <div class="package-option" onclick="selectPackage('ironing-card', 'Gold Package', 'الباقة الذهبية', '839', '12 Bags', '12 كيس')">
+                <div class="package-option-info">
+                  <span class="package-option-name" data-en="Gold Package" data-ar="الباقة الذهبية">Gold Package</span>
+                  <span class="package-option-bags" data-en="12 Bags" data-ar="12 كيس">12 Bags</span>
+                </div>
+                <span class="package-option-price">839 QAR</span>
+              </div>
+              <div class="package-option" onclick="selectPackage('ironing-card', 'Silver Package', 'الباقة الفضية', '559', '8 Bags', '8 كيس')">
+                <div class="package-option-info">
+                  <span class="package-option-name" data-en="Silver Package" data-ar="الباقة الفضية">Silver Package</span>
+                  <span class="package-option-bags" data-en="8 Bags" data-ar="8 كيس">8 Bags</span>
+                </div>
+                <span class="package-option-price">559 QAR</span>
+              </div>
+              <div class="package-option" onclick="selectPackage('ironing-card', 'Bronze Package', 'الباقة البرونزية', '279', '4 Bags', '4 كيس')">
+                <div class="package-option-info">
+                  <span class="package-option-name" data-en="Bronze Package" data-ar="الباقة البرونزية">Bronze Package</span>
+                  <span class="package-option-bags" data-en="4 Bags" data-ar="4 كيس">4 Bags</span>
+                </div>
+                <span class="package-option-price">279 QAR</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="featured-offer-btn" onclick="subscribeCustomPackage('Ironing Only (Bronze)', 'كي فقط (البرونزية)', '279', '4 Bags', '4 كيس')" style="margin-top:20px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span data-en="Subscribe Now" data-ar="اشترك الآن">Subscribe Now</span>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="featured-offer-card featured-offer-wide">
-      <div class="featured-offer-badge" style="background:linear-gradient(135deg,#39BCF2,#2080A7);" data-en="📦 MONTHLY BUNDLE" data-ar="📦 باقة شهرية">📦 MONTHLY BUNDLE</div>
+    <!-- Card 2: Wash & Iron -->
+    <div class="featured-offer-card featured-offer-wide" id="wash-iron-card">
+      <div class="featured-offer-badge" style="background:linear-gradient(135deg,#39BCF2,#2080A7);" data-en="💎 COMPLETE CARE" data-ar="💎 عناية متكاملة">💎 COMPLETE CARE</div>
       <div class="featured-offer-wide-inner">
         <div class="featured-offer-wide-img">
-          <img loading="lazy" src="https://i.postimg.cc/0jLV7Qf7/baqh-shhryh.jpg" alt="Family Bag Subscription" style="width:100%;height:100%;object-fit:cover;">
+          <img loading="lazy" src="https://i.postimg.cc/gkWCKTJ0/ghaseel-kyy.jpg" alt="Wash & Iron Service" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="featured-offer-body">
-          <div class="featured-offer-title" data-en="Family Bag Subscription" data-ar="اشتراك شنطة الغسيل العائلية">Family Bag Subscription</div>
-          <div class="featured-offer-price" data-en="289 QAR / Month" data-ar="289 ريال / شهرياً">289 QAR / Month</div>
-          <div class="featured-offer-price" style="font-size:0.98rem;color:var(--text-light);margin-top:-6px;" data-en="4 Bags per Month" data-ar="4 أكياس شهرياً">4 Bags per Month</div>
-          <p class="featured-offer-desc" data-en="The package includes:" data-ar="الباقة تشمل:">The package includes:</p>
-          <ul class="featured-offer-features">
-            <li data-en="Wash &amp; iron service" data-ar="غسيل وكوي">Wash &amp; iron service</li>
-            <li data-en="Free pickup &amp; delivery" data-ar="استلام وتوصيل مجاني">Free pickup &amp; delivery</li>
-            <li data-en="Valid for 30 days" data-ar="صلاحية الاستخدام 30 يوم">Valid for 30 days</li>
-            <li data-en="Extra bags at a discounted subscriber price" data-ar="أي كيس إضافي بسعر مخفض للمشترك">Extra bags at a discounted subscriber price</li>
-          </ul>
-          <button class="featured-offer-btn" onclick="subscribePackage('Family Bag Subscription', '289 QAR', '289 QAR / Month', ['4 Bags per Month','Wash &amp; Iron Service','Free Pickup &amp; Delivery','Valid for 30 Days','Extra Bags at Discounted Subscriber Price'])" style="max-width:280px;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <div class="featured-offer-title" data-en="Wash & Iron Service" data-ar="خدمة الغسيل والكي معاً">Wash & Iron Service</div>
+          <p class="featured-offer-desc" data-en="Complete care for your wardrobe. We wash, dry, and iron your clothes with the utmost care using premium detergents and advanced techniques." data-ar="عناية كاملة بملابسك. نقوم بغسل وتجفيف وكوي ملابسك بأقصى درجات العناية باستخدام أفضل المنظفات والتقنيات الحديثة.">Complete care for your wardrobe. We wash, dry, and iron your clothes with the utmost care using premium detergents and advanced techniques.</p>
+          
+          <!-- Package Selector -->
+          <div class="package-selector">
+            <div class="package-selector-header" onclick="togglePackageSelector('wash-iron-options')">
+              <div class="selected-package-info">
+                <span class="selected-package-name" data-en="Bronze Package" data-ar="الباقة البرونزية">Bronze Package</span>
+                <span class="selected-package-price">289 QAR</span>
+              </div>
+              <div class="selector-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+            <div class="package-selector-options" id="wash-iron-options">
+              <div class="package-option" onclick="selectPackage('wash-iron-card', 'Platinum Package', 'الباقة البلاتينية', '1159', '16 Bags', '16 كيس')">
+                <div class="package-option-info">
+                  <span class="package-option-name" data-en="Platinum Package" data-ar="الباقة البلاتينية">Platinum Package</span>
+                  <span class="package-option-bags" data-en="16 Bags" data-ar="16 كيس">16 Bags</span>
+                </div>
+                <span class="package-option-price">1159 QAR</span>
+              </div>
+              <div class="package-option" onclick="selectPackage('wash-iron-card', 'Gold Package', 'الباقة الذهبية', '869', '12 Bags', '12 كيس')">
+                <div class="package-option-info">
+                  <span class="package-option-name" data-en="Gold Package" data-ar="الباقة الذهبية">Gold Package</span>
+                  <span class="package-option-bags" data-en="12 Bags" data-ar="12 كيس">12 Bags</span>
+                </div>
+                <span class="package-option-price">869 QAR</span>
+              </div>
+              <div class="package-option" onclick="selectPackage('wash-iron-card', 'Silver Package', 'الباقة الفضية', '579', '8 Bags', '8 كيس')">
+                <div class="package-option-info">
+                  <span class="package-option-name" data-en="Silver Package" data-ar="الباقة الفضية">Silver Package</span>
+                  <span class="package-option-bags" data-en="8 Bags" data-ar="8 كيس">8 Bags</span>
+                </div>
+                <span class="package-option-price">579 QAR</span>
+              </div>
+              <div class="package-option" onclick="selectPackage('wash-iron-card', 'Bronze Package', 'الباقة البرونزية', '289', '4 Bags', '4 كيس')">
+                <div class="package-option-info">
+                  <span class="package-option-name" data-en="Bronze Package" data-ar="الباقة البرونزية">Bronze Package</span>
+                  <span class="package-option-bags" data-en="4 Bags" data-ar="4 كيس">4 Bags</span>
+                </div>
+                <span class="package-option-price">289 QAR</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="featured-offer-btn" onclick="subscribeCustomPackage('Wash & Iron (Bronze)', 'غسيل وكي (البرونزية)', '289', '4 Bags', '4 كيس')" style="margin-top:20px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             <span data-en="Subscribe Now" data-ar="اشترك الآن">Subscribe Now</span>
           </button>
         </div>
@@ -3842,6 +4019,69 @@ function subscribePackage(name, price, priceLine, features) {
   window.open(waLink(message), '_blank');
 }
 
+/* NEW PACKAGE SELECTOR FUNCTIONS */
+function togglePackageSelector(id) {
+  const options = document.getElementById(id);
+  const selector = options.closest('.package-selector');
+  const allSelectors = document.querySelectorAll('.package-selector-options');
+  const allParentSelectors = document.querySelectorAll('.package-selector');
+  
+  // Close others
+  allSelectors.forEach(sel => {
+    if (sel.id !== id) {
+      sel.classList.remove('open');
+      sel.closest('.package-selector').classList.remove('selector-open');
+      const otherArrow = sel.previousElementSibling.querySelector('.selector-arrow');
+      if (otherArrow) otherArrow.style.transform = 'rotate(0deg)';
+    }
+  });
+
+  options.classList.toggle('open');
+  selector.classList.toggle('selector-open');
+  
+  const arrow = options.previousElementSibling.querySelector('.selector-arrow');
+  if (options.classList.contains('open')) {
+    arrow.style.transform = 'rotate(180deg)';
+  } else {
+    arrow.style.transform = 'rotate(0deg)';
+  }
+}
+
+function selectPackage(cardId, nameEn, nameAr, price, bags, bagsAr) {
+  const card = document.getElementById(cardId);
+  const isAr = currentLang === 'ar';
+  
+  // Update header display
+  const headerName = card.querySelector('.selected-package-name');
+  headerName.textContent = isAr ? nameAr : nameEn;
+  headerName.setAttribute('data-en', nameEn);
+  headerName.setAttribute('data-ar', nameAr);
+  
+  const headerPrice = card.querySelector('.selected-package-price');
+  headerPrice.textContent = price + (isAr ? ' ريال' : ' QAR');
+  
+  // Close dropdown
+  card.querySelector('.package-selector-options').classList.remove('open');
+  card.querySelector('.selector-arrow').style.transform = 'rotate(0deg)';
+  
+  // Update "Subscribe Now" button data
+  const btn = card.querySelector('.featured-offer-btn');
+  const serviceNameEn = cardId === 'ironing-card' ? 'Ironing Only' : 'Wash & Iron';
+  const serviceNameAr = cardId === 'ironing-card' ? 'كي فقط' : 'غسيل وكي';
+  
+  btn.setAttribute('onclick', `subscribeCustomPackage('${serviceNameEn} (${nameEn})', '${serviceNameAr} (${nameAr})', '${price}', '${bags}', '${bagsAr}')`);
+}
+
+function subscribeCustomPackage(nameEn, nameAr, price, bags, bagsAr) {
+  const isAr = currentLang === 'ar';
+  const dispName = isAr ? nameAr : nameEn;
+  const dispBags = isAr ? bagsAr : bags;
+  const message = isAr
+    ? `مرحباً كواليتي لاندري،\n\nأود الاشتراك في الباقة التالية:\n━━━━━━━━━━━━━━━━━━\nالخدمة: ${dispName}\nالسعر: ${price} ريال\nالكمية: ${dispBags}\n━━━━━━━━━━━━━━━━━━\nالرجاء تأكيد اشتراكي وترتيب موعد الاستلام.`
+    : `Hello Quality Laundry,\n\nI would like to subscribe to the following package:\n━━━━━━━━━━━━━━━━━━\nService: ${nameEn}\nPrice: ${price} QAR\nQuantity: ${bags}\n━━━━━━━━━━━━━━━━━━\nPlease confirm my subscription and arrange pickup.`;
+  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+}
+
 // Remove item from cart
 function removeFromCart(itemId) {
   cartItems = cartItems.filter(item => item.id !== itemId);
@@ -4612,6 +4852,21 @@ function reRenderCartLang(isAr) {
     const svgHtml = svgEl ? svgEl.outerHTML : '';
     checkoutBtn.innerHTML = svgHtml + ' ' + (isAr ? 'الشراء عبر واتساب' : 'Buy via WhatsApp');
   }
+
+  // Update Package Selectors
+  document.querySelectorAll('.selected-package-name').forEach(el => {
+    const en = el.getAttribute('data-en');
+    const ar = el.getAttribute('data-ar');
+    if (en && ar) el.textContent = isAr ? ar : en;
+  });
+  document.querySelectorAll('.selected-package-price').forEach(el => {
+    const price = el.textContent.replace(/[^\d]/g, '');
+    if (price) el.textContent = price + (isAr ? ' ريال' : ' QAR');
+  });
+  document.querySelectorAll('.package-option-price').forEach(el => {
+    const price = el.textContent.replace(/[^\d]/g, '');
+    if (price) el.textContent = price + (isAr ? ' ريال' : ' QAR');
+  });
 
   const emptyMsg = document.querySelector('#cart-empty-state p');
   if (emptyMsg) emptyMsg.textContent = isAr ? 'سلة التسوق فارغة' : 'Your cart is empty';
